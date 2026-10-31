@@ -1,0 +1,23 @@
+[
+  {
+    "id": "good_hammer",
+    "name": "Молот",
+    "kind": "tool",
+    "slot": "hand",
+    "price": 10,
+    "modifiers": [
+      "hammer_bonus"
+    ]
+  },
+  {
+    "id": "anvil",
+    "name": "Наковальня",
+    "kind": "equipment",
+    "line": "anvil",
+    "grade": 1,
+    "price": 20,
+    "modifiers": [
+      "has_anvil"
+    ]
+  }
+]

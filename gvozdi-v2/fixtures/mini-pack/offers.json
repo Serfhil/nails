@@ -1,0 +1,63 @@
+[
+  { "id": "ask_day_off", "delivery": "now", "title": "Просьба",
+    "text": "{participant} мнётся у печи и просит выходной.",
+    "options": [
+      { "id": "yes", "label": "Отпустить", "effects": [
+          { "type": "add_modifier", "template": "day_off", "target": "participant" } ] },
+      { "id": "no", "label": "Не отпускать", "effects": [
+          { "type": "add_modifier", "template": "grumpy", "target": "participant" } ] }
+    ] },
+
+  { "id": "neighbor_bread", "delivery": "board", "board_days": 2, "title": "Хлеб для соседки",
+    "text": "Соседке нужно {qty} буханок за {days} дн. Заплатит {reward} мон.",
+    "data": { "qty": 4, "days": 2, "reward": 15 },
+    "options": [
+      { "id": "take", "label": "Взять", "obligation": {
+          "id": "neighbor_bread_ob", "title": "Хлеб для соседки",
+          "requires": [ { "good": "bread", "qty": { "$data": "qty" } } ],
+          "deadline_days": { "$data": "days" },
+          "on_done": [ { "type": "add_modifier", "template": "pending_payment", "target": "world",
+                         "data": { "amount": { "$data": "reward" } } } ],
+          "on_fail": [ { "type": "run_event", "event": "order_failed", "data": { "penalty": -10 } } ],
+          "on_decline": [] } },
+      { "id": "skip", "label": "Не брать" }
+    ] },
+
+  { "id": "royal_order", "delivery": "now", "title": "Гонец из замка",
+    "text": "Граф желает к пиру лучшей выпечки. Срок — пять дней.",
+    "options": [
+      { "id": "take_cake", "label": "Испечь два торта",
+        "enabled_when": { "type": "has_modifier", "subject": "workshop", "template": "has_oven" },
+        "disabled_text": "Без большой печи торт не испечь.",
+        "obligation": {
+          "id": "royal_cake_ob", "title": "Торты для графа",
+          "requires": [ { "good": "cake", "qty": 2 } ],
+          "deadline_days": 5,
+          "on_done": [ { "type": "var", "target": "world", "var": "money", "add": 200 } ],
+          "on_fail": [ { "type": "run_event", "event": "order_failed", "data": { "penalty": -40 } } ],
+          "on_decline": [ { "type": "add_modifier", "template": "bad_reputation", "target": "world" } ] } },
+      { "id": "take_pastry", "label": "Предложить пирожные",
+        "open_when": { "type": "var", "subject": "hero", "var": "bake_xp", "field": "level", "op": ">=", "value": 2 },
+        "obligation": {
+          "id": "royal_pastry_ob", "title": "Пирожные для графа",
+          "requires": [ { "good": "pastry", "qty": 3 } ],
+          "deadline_days": 5,
+          "on_done": [ { "type": "var", "target": "world", "var": "money", "add": 180 } ],
+          "on_fail": [ { "type": "run_event", "event": "order_failed" } ],
+          "on_decline": [] } },
+      { "id": "gift", "label": "Отправить торт в подарок",
+        "cost": [ { "good": "cake", "qty": 1 } ],
+        "effects": [ { "type": "add_modifier", "template": "royal_favor", "target": "world" } ] },
+      { "id": "refuse", "label": "Отказать",
+        "effects": [ { "type": "notify", "text": "Гонец пожал плечами и уехал." } ] }
+    ] },
+
+  { "id": "victory_offer", "delivery": "now", "title": "Приглашение ко двору",
+    "text": "Граф доволен и зовёт вас придворным пекарем.",
+    "options": [
+      { "id": "go", "label": "Принять место при дворе",
+        "effects": [ { "type": "end_game", "title": "Придворный пекарь",
+                       "text": "Теперь ваш хлеб едят за графским столом.", "tag": "goal" } ] },
+      { "id": "stay", "label": "Остаться в своей пекарне" }
+    ] }
+]

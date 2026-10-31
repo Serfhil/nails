@@ -1,0 +1,42 @@
+{
+  "id": "base",
+  "name": "Базовый пак",
+  "version": "",
+  "names": {
+    "money": "Монеты",
+    "money_short": "мон.",
+    "stress": "Усталость",
+    "slots": {
+      "hand": "В руке"
+    },
+    "roles": {
+      "hero": "Мастер",
+      "worker": "Подручный",
+      "family": "Семья",
+      "pet": "Питомец"
+    }
+  },
+  "settings": {
+    "day_start": 6,
+    "day_end": 18,
+    "market_hours": 2,
+    "trade_hours": 2,
+    "trader_raw_target": {
+      "ore": 5
+    },
+    "trade_open_when": null,
+    "shop": [
+      "good_hammer"
+    ],
+    "pools": {
+      "daily": {
+        "chance": 0.5
+      }
+    },
+    "max_event_chain": 32
+  },
+  "start": {
+    "event": "start_default",
+    "hero": "hero"
+  }
+}

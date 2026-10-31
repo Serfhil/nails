@@ -1,0 +1,20 @@
+[
+  { "id": "baker", "name": "Пекарь", "role": "hero", "works": true, "hire_pool": false,
+    "vars": {}, "slots": ["hand"], "modifiers": ["sharp_mind"],
+    "blurb": "Встаёт затемно, пахнет хлебом." },
+  { "id": "vanya", "name": "Ваня", "role": "worker", "works": true, "hire_pool": true,
+    "vars": { "speed": 1.2, "defect": 0.15, "learn_speed": 0.8, "hire_cost": 15, "wage": 2 },
+    "slots": ["hand"], "modifiers": [],
+    "blurb": "Шустрый, но торопыга." },
+  { "id": "masha", "name": "Маша", "role": "worker", "works": true, "hire_pool": false,
+    "vars": { "speed": 0.9, "defect": 0.02, "learn_speed": 1.5, "hire_cost": 25, "wage": 3 },
+    "slots": ["hand"], "modifiers": ["trader_knack"],
+    "blurb": "Неторопливая, зато всё запоминает и умеет торговаться." },
+  { "id": "grandma", "name": "Бабушка", "role": "family", "role_name": "Старшая в доме", "works": false, "hire_pool": false,
+    "vars": {}, "slots": [], "modifiers": [],
+    "blurb": "Печёт пироги лучше всех, но никому не скажет как." },
+  { "id": "cat", "name": "Кот Пушок", "role": "pet", "works": false, "hire_pool": false,
+    "vars": {}, "slots": [], "modifiers": [],
+    "blurb": "Рыжий. Считает муку своей.",
+    "visible": { "type": "event_count", "event": "cat_mischief", "op": ">=", "value": 1 } }
+]

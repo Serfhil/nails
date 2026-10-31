@@ -1,0 +1,549 @@
+[
+ {
+  "id": "money",
+  "name": "Монеты",
+  "owner": "world",
+  "start": 0,
+  "min": -100,
+  "format": "money"
+ },
+ {
+  "id": "stress",
+  "name": "Усталость",
+  "owner": "character",
+  "start": 0,
+  "min": 0,
+  "max": 100,
+  "good": "down",
+  "visible": {
+   "any": [
+    {
+     "type": "self_is_hero"
+    },
+    {
+     "type": "role",
+     "subject": "self",
+     "role": "worker"
+    }
+   ]
+  },
+  "ladder": [
+   {
+    "at": 0,
+    "id": "fresh",
+    "name": "Бодр",
+    "modifiers": []
+   },
+   {
+    "at": 40,
+    "id": "tired",
+    "name": "Устал",
+    "modifiers": [
+     "tired_hands"
+    ]
+   },
+   {
+    "at": 70,
+    "id": "edge",
+    "name": "На пределе",
+    "modifiers": [
+     "edge_slow",
+     "edge_blur"
+    ]
+   },
+   {
+    "at": 100,
+    "id": "broken",
+    "name": "Валится с ног",
+    "modifiers": []
+   }
+  ]
+ },
+ {
+  "id": "smith_xp",
+  "name": "Кузнечное дело",
+  "owner": "character",
+  "start": 0,
+  "min": 0,
+  "ladder": [
+   {
+    "at": 0,
+    "id": "s_novice",
+    "name": "Неумеха",
+    "modifiers": [
+     "clumsy"
+    ]
+   },
+   {
+    "at": 12,
+    "id": "s_helper",
+    "name": "Подручный",
+    "modifiers": []
+   },
+   {
+    "at": 40,
+    "id": "s_smith",
+    "name": "Кузнец",
+    "modifiers": [
+     "wage_smith"
+    ]
+   },
+   {
+    "at": 90,
+    "id": "s_master",
+    "name": "Мастер",
+    "modifiers": [
+     "wage_master"
+    ]
+   },
+   {
+    "at": 170,
+    "id": "s_grand",
+    "name": "Великий мастер",
+    "modifiers": [
+     "wage_grand",
+     "grand_hand"
+    ]
+   }
+  ],
+  "visible": {
+   "any": [
+    {
+     "type": "self_is_hero"
+    },
+    {
+     "type": "role",
+     "subject": "self",
+     "role": "worker"
+    }
+   ]
+  }
+ },
+ {
+  "id": "weapon_xp",
+  "name": "Оружейное дело",
+  "owner": "character",
+  "start": 0,
+  "min": 0,
+  "visible": {
+   "any": [
+    {
+     "type": "has_modifier",
+     "subject": "self",
+     "template": "blade_lore"
+    },
+    {
+     "type": "var",
+     "subject": "self",
+     "var": "weapon_xp",
+     "op": ">",
+     "value": 0
+    }
+   ]
+  },
+  "ladder": [
+   {
+    "at": 0,
+    "id": "w_novice",
+    "name": "Клинок не слушается",
+    "modifiers": [
+     "blade_clumsy"
+    ]
+   },
+   {
+    "at": 10,
+    "id": "w_temper",
+    "name": "Знает закалку",
+    "modifiers": []
+   },
+   {
+    "at": 30,
+    "id": "w_smith",
+    "name": "Оружейник",
+    "modifiers": [
+     "blade_sure"
+    ]
+   },
+   {
+    "at": 60,
+    "id": "w_master",
+    "name": "Мастер клинка",
+    "modifiers": [
+     "blade_sure",
+     "blade_quick"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "armor_xp",
+  "name": "Бронное дело",
+  "owner": "character",
+  "start": 0,
+  "min": 0,
+  "visible": {
+   "any": [
+    {
+     "type": "has_modifier",
+     "subject": "self",
+     "template": "armor_lore"
+    },
+    {
+     "type": "var",
+     "subject": "self",
+     "var": "armor_xp",
+     "op": ">",
+     "value": 0
+    }
+   ]
+  },
+  "ladder": [
+   {
+    "at": 0,
+    "id": "a_novice",
+    "name": "Путается в кольцах",
+    "modifiers": [
+     "mail_slow"
+    ]
+   },
+   {
+    "at": 15,
+    "id": "a_rings",
+    "name": "Кольчужник",
+    "modifiers": []
+   },
+   {
+    "at": 40,
+    "id": "a_master",
+    "name": "Бронник",
+    "modifiers": [
+     "mail_quick"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "art_xp",
+  "name": "Узорная ковка",
+  "owner": "character",
+  "start": 0,
+  "min": 0,
+  "visible": {
+   "any": [
+    {
+     "type": "has_modifier",
+     "subject": "self",
+     "template": "art_lore"
+    },
+    {
+     "type": "var",
+     "subject": "self",
+     "var": "art_xp",
+     "op": ">",
+     "value": 0
+    }
+   ]
+  },
+  "ladder": [
+   {
+    "at": 0,
+    "id": "r_novice",
+    "name": "Завитки кривые",
+    "modifiers": []
+   },
+   {
+    "at": 12,
+    "id": "r_pattern",
+    "name": "Узорщик",
+    "modifiers": []
+   },
+   {
+    "at": 35,
+    "id": "r_artist",
+    "name": "Художник по железу",
+    "modifiers": [
+     "art_eye"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "soot",
+  "name": "Копоть в трубе",
+  "owner": "world",
+  "start": 0,
+  "min": 0,
+  "max": 100,
+  "good": "down",
+  "ladder": [
+   {
+    "at": 0,
+    "id": "clean",
+    "name": "Труба чистая",
+    "modifiers": []
+   },
+   {
+    "at": 60,
+    "id": "sooty",
+    "name": "Закопчена",
+    "modifiers": []
+   },
+   {
+    "at": 85,
+    "id": "smoking",
+    "name": "Сажа валит",
+    "modifiers": []
+   },
+   {
+    "at": 100,
+    "id": "fire",
+    "name": "Пожар!",
+    "modifiers": []
+   }
+  ]
+ },
+ {
+  "id": "fame",
+  "name": "Молва",
+  "owner": "world",
+  "start": 0,
+  "min": -20,
+  "max": 200,
+  "ladder": [
+   {
+    "at": -20,
+    "id": "f_shame",
+    "name": "Дурная слава",
+    "modifiers": [
+     "fame_bad"
+    ]
+   },
+   {
+    "at": 0,
+    "id": "f_none",
+    "name": "Безвестный",
+    "modifiers": []
+   },
+   {
+    "at": 15,
+    "id": "f_village",
+    "name": "Знают в деревне",
+    "modifiers": []
+   },
+   {
+    "at": 40,
+    "id": "f_county",
+    "name": "Знают в округе",
+    "modifiers": [
+     "fame_county"
+    ]
+   },
+   {
+    "at": 70,
+    "id": "f_castle",
+    "name": "Слух дошёл до замка",
+    "modifiers": [
+     "fame_castle"
+    ]
+   },
+   {
+    "at": 130,
+    "id": "f_great",
+    "name": "Слава на всё графство",
+    "modifiers": [
+     "fame_great"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "speed",
+  "name": "Сноровка",
+  "owner": "character",
+  "start": 1,
+  "min": 0.1,
+  "visible": {
+   "any": [
+    {
+     "type": "self_is_hero"
+    },
+    {
+     "type": "role",
+     "subject": "self",
+     "role": "worker"
+    }
+   ]
+  }
+ },
+ {
+  "id": "defect",
+  "name": "Брак",
+  "owner": "character",
+  "start": 0.05,
+  "min": 0,
+  "max": 1,
+  "good": "down",
+  "format": "pct",
+  "visible": {
+   "any": [
+    {
+     "type": "self_is_hero"
+    },
+    {
+     "type": "role",
+     "subject": "self",
+     "role": "worker"
+    }
+   ]
+  }
+ },
+ {
+  "id": "learn_speed",
+  "name": "Обучаемость",
+  "owner": "character",
+  "start": 1,
+  "min": 0,
+  "visible": false
+ },
+ {
+  "id": "sell_price",
+  "name": "Цена продажи",
+  "owner": "character",
+  "start": 1,
+  "min": 0,
+  "visible": false
+ },
+ {
+  "id": "buy_price",
+  "name": "Цена покупки",
+  "owner": "character",
+  "start": 1,
+  "min": 0,
+  "good": "down",
+  "visible": false
+ },
+ {
+  "id": "commission",
+  "name": "Доля торговца",
+  "owner": "character",
+  "start": 0.25,
+  "min": 0,
+  "max": 1,
+  "good": "down",
+  "visible": false,
+  "format": "pct"
+ },
+ {
+  "id": "wage",
+  "name": "Жалованье",
+  "owner": "character",
+  "start": 0,
+  "min": 0,
+  "format": "money",
+  "good": "down",
+  "visible": {
+   "type": "role",
+   "subject": "self",
+   "role": "worker"
+  }
+ },
+ {
+  "id": "hire_cost",
+  "name": "Цена найма",
+  "owner": "character",
+  "start": 0,
+  "min": 0,
+  "format": "money",
+  "visible": false
+ },
+ {
+  "id": "household_expense",
+  "name": "Расход на дом",
+  "owner": "world",
+  "start": 4,
+  "min": 0,
+  "format": "money",
+  "good": "down"
+ },
+ {
+  "id": "world_sell_price",
+  "name": "Спрос",
+  "owner": "world",
+  "start": 1,
+  "min": 0,
+  "visible": false
+ },
+ {
+  "id": "world_buy_price",
+  "name": "Цены на рынке",
+  "owner": "world",
+  "start": 1,
+  "min": 0,
+  "good": "down",
+  "visible": false
+ },
+ {
+  "id": "max_workers",
+  "name": "Мест для подмастерьев",
+  "owner": "workshop",
+  "start": 0,
+  "min": 0
+ },
+ {
+  "id": "equipment_slots",
+  "name": "Мест для снаряда",
+  "owner": "workshop",
+  "start": 0,
+  "min": 0
+ },
+ {
+  "id": "upkeep",
+  "name": "Содержание",
+  "owner": "workshop",
+  "start": 0,
+  "min": 0,
+  "format": "money",
+  "good": "down"
+ },
+ {
+  "id": "goodwill",
+  "name": "Добрососедство",
+  "owner": "world",
+  "start": 5,
+  "min": -30,
+  "max": 100,
+  "ladder": [
+   {
+    "at": -30,
+    "id": "g_outcast",
+    "name": "Чужак",
+    "modifiers": [
+     "goodwill_cold"
+    ]
+   },
+   {
+    "at": 0,
+    "id": "g_neighbor",
+    "name": "Сосед",
+    "modifiers": []
+   },
+   {
+    "at": 25,
+    "id": "g_own",
+    "name": "Свой человек",
+    "modifiers": [
+     "goodwill_kind"
+    ]
+   },
+   {
+    "at": 60,
+    "id": "g_soul",
+    "name": "Душа деревни",
+    "modifiers": [
+     "goodwill_kind",
+     "goodwill_soul"
+    ]
+   }
+  ]
+ }
+]

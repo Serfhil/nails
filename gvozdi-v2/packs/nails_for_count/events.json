@@ -1,0 +1,5365 @@
+[
+ {
+  "id": "start_default",
+  "trigger": {
+   "signal": "game_start",
+   "conditions": []
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "money",
+    "add": 20
+   },
+   {
+    "type": "goods",
+    "good": "iron",
+    "qty": 6
+   },
+   {
+    "type": "add_workshop",
+    "workshop": "village_smithy"
+   },
+   {
+    "type": "give_item",
+    "item": "hammer_father",
+    "target": "hero"
+   },
+   {
+    "type": "add_character",
+    "character": "marfa",
+    "as": "family"
+   },
+   {
+    "type": "add_character",
+    "character": "agrippina",
+    "as": "family"
+   },
+   {
+    "type": "add_character",
+    "character": "vasyatka",
+    "as": "family"
+   },
+   {
+    "type": "add_character",
+    "character": "ugolyok"
+   },
+   {
+    "type": "notify",
+    "kind": "seal",
+    "popup": true,
+    "text": "Отец оставил вам кузню на краю деревни, молот да добрую память. Железо в углу, горн остыл, в кошельке двадцать монет. Говорят, сам граф ищет хорошего кузнеца — да кто ж возьмёт неумеху? Начните с гвоздей: гвозди берут все."
+   },
+   {
+    "type": "notify",
+    "text": "Отцовский молот висит на гвозде у двери — возьмите его в руку."
+   }
+  ]
+ },
+ {
+  "id": "night_rest",
+  "trigger": {
+   "signal": "night",
+   "conditions": []
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "hero",
+    "var": "stress",
+    "add": -20
+   },
+   {
+    "type": "var",
+    "target": "all_workers",
+    "var": "stress",
+    "add": -35
+   }
+  ]
+ },
+ {
+  "id": "lvl_helper",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "smith_xp"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "s_helper"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal",
+   "where": {
+    "type": "self_is_hero"
+   }
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "text": "Руки привыкли к молоту: вы теперь подручный. По силам подковы, а из полосового железа — петли и скобы. Их берут все, от плотника до старосты."
+   }
+  ]
+ },
+ {
+  "id": "lvl_smith",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "smith_xp"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "s_smith"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal",
+   "where": {
+    "type": "self_is_hero"
+   }
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "popup": true,
+    "text": "Вы — настоящий кузнец! По силам котелки и косы (косам нужен точильный круг). Отцовскую кузню пора перестраивать в мастерскую, а в лавке продают тиски и закалочную ванну."
+   }
+  ]
+ },
+ {
+  "id": "lvl_master",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "smith_xp"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "s_master"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal",
+   "where": {
+    "type": "self_is_hero"
+   }
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "popup": true,
+    "text": "Мастер! С точильным кругом — топоры, с тисками — замки, а в мастерской можно сложить большой горн для лемехов. В рыночной лавке для вас припасли мастерский молот."
+   }
+  ]
+ },
+ {
+  "id": "lvl_grand",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "smith_xp"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "s_grand"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal",
+   "where": {
+    "type": "self_is_hero"
+   }
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "popup": true,
+    "text": "Великий мастер. Железо само ложится под молот, а заморский рессорный станок теперь вам по уму. В деревне вашим именем пугают нерадивых подмастерьев."
+   }
+  ]
+ },
+ {
+  "id": "worker_lvl",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "smith_xp"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal",
+   "where": {
+    "type": "role",
+    "subject": "self",
+    "role": "worker"
+   }
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "{participant} поднаторел в кузнечном деле."
+   }
+  ]
+ },
+ {
+  "id": "weapon_lvl",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "weapon_xp"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal"
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "{participant} лучше чувствует клинок."
+   }
+  ]
+ },
+ {
+  "id": "armor_lvl",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "armor_xp"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal"
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "{participant} ловчее плетёт кольчугу."
+   }
+  ]
+ },
+ {
+  "id": "art_lvl",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "art_xp"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal"
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "У {participant} завитки выходят всё краше."
+   }
+  ]
+ },
+ {
+  "id": "fame_village",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "fame"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "f_village"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "text": "О вас заговорили в деревне: бабы у колодца хвалят ваши гвозди."
+   }
+  ]
+ },
+ {
+  "id": "fame_county",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "fame"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "f_county"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "text": "Молва пошла по округе: за вашим товаром едут из соседних сёл и платят щедрее."
+   }
+  ]
+ },
+ {
+  "id": "fame_castle",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "fame"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "f_castle"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "popup": true,
+    "text": "Слух о кузнеце Демьяне дошёл до графского замка."
+   }
+  ]
+ },
+ {
+  "id": "fame_great",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "fame"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "f_great"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "popup": true,
+    "text": "Ваше клеймо знают по всему графству. Даже тёща теперь говорит соседкам «мой зять»."
+   }
+  ]
+ },
+ {
+  "id": "fame_shame",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "fame"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "f_shame"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "down"
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 3
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "Про вас идёт дурная слава. Покупатели обходят лавку стороной — выполняйте заказы, чтобы её смыть."
+   }
+  ]
+ },
+ {
+  "id": "stress_tired",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "stress"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "tired"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal",
+   "where": {
+    "type": "self_is_hero"
+   }
+  },
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "{participant} устал: руки дрожат, брака больше. Посидите на завалинке или проведите вечер с Марфой."
+   }
+  ]
+ },
+ {
+  "id": "stress_edge",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "stress"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "edge"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal",
+   "where": {
+    "type": "self_is_hero"
+   }
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "{participant} на пределе. Ещё немного — и сляжете, а сердце надорвётся. Отдохните!"
+   }
+  ]
+ },
+ {
+  "id": "worker_edge",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "stress"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "edge"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal",
+   "where": {
+    "type": "role",
+    "subject": "self",
+    "role": "worker"
+   }
+  },
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "{participant} еле стоит на ногах — отпустите передохнуть."
+   }
+  ]
+ },
+ {
+  "id": "hero_breakdown",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "stress"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "broken"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal",
+   "where": {
+    "type": "self_is_hero"
+   }
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "{participant} рухнул у горна. Два дня пластом, и сердце теперь пошаливает."
+   },
+   {
+    "type": "add_modifier",
+    "template": "breakdown",
+    "target": "participant"
+   },
+   {
+    "type": "add_modifier",
+    "template": "overwork_scar",
+    "target": "participant"
+   },
+   {
+    "type": "var",
+    "target": "participant",
+    "var": "stress",
+    "set": 55
+   }
+  ]
+ },
+ {
+  "id": "scar_first",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "overwork_scar",
+     "min_count": 1
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Сердце колет после срыва. Знахарка Агафья берёт двадцать монет и снимает надрыв. Дорого, зато жив."
+   }
+  ]
+ },
+ {
+  "id": "worker_breakdown",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "stress"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "broken"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "participant": {
+   "from": "signal",
+   "where": {
+    "type": "role",
+    "subject": "self",
+    "role": "worker"
+   }
+  },
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "{participant} свалился без сил. Два дня от него толку не будет."
+   },
+   {
+    "type": "add_modifier",
+    "template": "breakdown",
+    "target": "participant"
+   },
+   {
+    "type": "var",
+    "target": "participant",
+    "var": "stress",
+    "set": 50
+   }
+  ]
+ },
+ {
+  "id": "scar_warning",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "overwork_scar",
+     "min_count": 2
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "popup": true,
+    "text": "Знахарка Агафья качает головой: «Третьего надрыва сердце не выдержит. Не рви жилы, кузнец, и приходи — подлечу»."
+   }
+  ]
+ },
+ {
+  "id": "heart_crisis",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "overwork_scar",
+     "min_count": 3
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "hero",
+      "template": "heart_deadline"
+     }
+    }
+   ]
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "heart_deadline",
+    "target": "hero"
+   },
+   {
+    "type": "show_offer",
+    "offer": "heart_crisis_offer"
+   }
+  ]
+ },
+ {
+  "id": "death_overwork",
+  "trigger": {
+   "signal": "modifier_expired",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "template",
+     "op": "==",
+     "value": "heart_deadline"
+    },
+    {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "overwork_scar",
+     "min_count": 3
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "end_game",
+    "tag": "fail",
+    "title": "Сгорел у горна",
+    "text": "Третий надрыв оказался последним. Демьяна проводили всей деревней, а Кузьма на поминках сказал: «Работящий был мужик. Слишком уж работящий»."
+   }
+  ]
+ },
+ {
+  "id": "soot_warn",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "soot"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "sooty"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Труба закоптилась. Пора прочистить — сажа любит загораться. А бочка с водой у горна ещё никому не мешала."
+   }
+  ]
+ },
+ {
+  "id": "soot_danger",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "soot"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "smoking"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "Из трубы валит чёрный дым, на крышу летят искры! Прочистите трубу, пока не полыхнуло."
+   }
+  ]
+ },
+ {
+  "id": "soot_sparks",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "soot",
+     "op": ">=",
+     "value": 92
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "popup": true,
+    "text": "Искры уже сыплются на солому у горна! Ещё немного сажи — и займётся крыша. Трубу прочистить, а лучше поставить бочку с водой."
+   }
+  ]
+ },
+ {
+  "id": "fire_blaze",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "soot"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "fire"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    },
+    {
+     "not": {
+      "type": "has_item",
+      "subject": "world",
+      "item": "water_barrel"
+     }
+    }
+   ]
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "fire_deadline",
+    "target": "world"
+   },
+   {
+    "type": "show_offer",
+    "offer": "fire_blaze_offer"
+   }
+  ]
+ },
+ {
+  "id": "fire_end",
+  "trigger": {
+   "signal": "modifier_expired",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "template",
+     "op": "==",
+     "value": "fire_deadline"
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "soot",
+     "op": ">=",
+     "value": 85
+    },
+    {
+     "not": {
+      "type": "has_item",
+      "subject": "world",
+      "item": "water_barrel"
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "end_game",
+    "tag": "fail",
+    "title": "Пожар",
+    "text": "Сажа в трубе вспыхнула, огонь перекинулся на крышу. Тушили всей деревней, Уголёк выносил котят, Марфа — иконы. Кузня сгорела дотла. Теперь вы подручный у кузнеца в Заречье."
+   }
+  ]
+ },
+ {
+  "id": "fire_saved",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "soot"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "fire"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    },
+    {
+     "type": "has_item",
+     "subject": "world",
+     "item": "water_barrel"
+    }
+   ]
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "Сажа в трубе вспыхнула! Вы окатили горн из бочки — кузня цела, но товар попорчен, а бочка треснула."
+   },
+   {
+    "type": "run_event",
+    "event": "fire_aftermath"
+   }
+  ]
+ },
+ {
+  "id": "fire_aftermath",
+  "effects": [
+   {
+    "type": "remove",
+    "what": "item",
+    "target": "world",
+    "item": "water_barrel"
+   },
+   {
+    "type": "var",
+    "target": "world",
+    "var": "soot",
+    "set": 25
+   },
+   {
+    "type": "goods",
+    "good": "nails",
+    "qty": -10
+   },
+   {
+    "type": "goods",
+    "good": "horseshoes",
+    "qty": -3
+   },
+   {
+    "type": "goods",
+    "good": "coal",
+    "qty": -5
+   },
+   {
+    "type": "var",
+    "target": "hero",
+    "var": "stress",
+    "add": 20
+   }
+  ]
+ },
+ {
+  "id": "debt_start",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "money",
+     "op": "<",
+     "value": 0
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Кошелёк пуст — лавочник Савва записал вас в долговую книгу. Пока в долгах, на рынке всё дороже. Дед Евсей шепнул: на болоте за Смородинкой руду можно копать даром."
+   },
+   {
+    "type": "add_modifier",
+    "template": "in_debt",
+    "target": "world"
+   },
+   {
+    "type": "add_modifier",
+    "template": "bog_known",
+    "target": "world"
+   }
+  ]
+ },
+ {
+  "id": "debt_danger",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "money",
+     "op": "<=",
+     "value": -40
+    }
+   ]
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "Савва грозится ославить вас на всю деревню. Продайте товар или рассчитайте подмастерьев, пока стыд не съел совсем!"
+   }
+  ]
+ },
+ {
+  "id": "debt_creditors",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "money",
+     "op": "<=",
+     "value": -55
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 2
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "popup": true,
+    "text": "Савва пришёл к воротам с двумя соседями и долговой книгой. Ещё немного — и объявит долг на сходе."
+   }
+  ]
+ },
+ {
+  "id": "shame_final",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "money",
+     "op": "<=",
+     "value": -70
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "shame_deadline"
+     }
+    }
+   ]
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "shame_deadline",
+    "target": "world"
+   },
+   {
+    "type": "show_offer",
+    "offer": "shame_offer"
+   }
+  ]
+ },
+ {
+  "id": "shame_end",
+  "trigger": {
+   "signal": "modifier_expired",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "template",
+     "op": "==",
+     "value": "shame_deadline"
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "money",
+     "op": "<=",
+     "value": -60
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "end_game",
+    "tag": "fail",
+    "title": "Помер со стыда",
+    "text": "Долг перед Саввой вырос так, что стыдно стало выйти за ворота. Демьян слёг и больше не встал. Говорят, от стыда не умирают — в деревне теперь думают иначе."
+   }
+  ]
+ },
+ {
+  "id": "mil_loan",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "money",
+     "op": "<",
+     "value": -20
+    },
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "mil_favor",
+     "min_count": 2
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "mil_loan_offer"
+   }
+  ]
+ },
+ {
+  "id": "grey_beard_ev",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 32
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "smithy_upgraded"
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "grey_beard",
+    "target": "hero"
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "В бороде седина, а вы всё стучите в отцовской кузне. Годы идут…"
+   }
+  ]
+ },
+ {
+  "id": "aching_back_ev",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 40
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "smithy_upgraded"
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "aching_back",
+    "target": "hero"
+   },
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "Спину ломит, руки не те. Если ничего не менять, так и состаритесь у этого горна."
+   }
+  ]
+ },
+ {
+  "id": "old_age_warn",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 44
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "smithy_upgraded"
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "popup": true,
+    "text": "Кузьма вздохнул: «Дед, а ведь граф про тебя так и не слыхал. Либо перестраивай кузню, либо доживай тихо. Время-то уходит»."
+   }
+  ]
+ },
+ {
+  "id": "old_age_final",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 48
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "smithy_upgraded"
+     }
+    }
+   ]
+  },
+  "stops_time": true,
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "old_age_deadline",
+    "target": "world"
+   },
+   {
+    "type": "show_offer",
+    "offer": "old_age_offer"
+   }
+  ]
+ },
+ {
+  "id": "old_age_end",
+  "trigger": {
+   "signal": "modifier_expired",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "template",
+     "op": "==",
+     "value": "old_age_deadline"
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "smithy_upgraded"
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "end_game",
+    "tag": "fail",
+    "title": "Тихая старость",
+    "text": "Годы прошли, как дым из трубы. Демьян так и ковал гвозди в отцовской кузне, пока борода не стала белой. Внуки говорят: дед был хороший кузнец. Только граф о нём так и не узнал."
+   }
+  ]
+ },
+ {
+  "id": "theft_warning",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "calc",
+     "name": "wealth",
+     "op": ">",
+     "value": 350
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 4
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Соседи шепчут: у вашего плетня по ночам кто-то топчется. Деньги лучше пустить в дело — или запереть в сундук."
+   },
+   {
+    "type": "add_modifier",
+    "template": "thief_watching",
+    "target": "world"
+   }
+  ]
+ },
+ {
+  "id": "theft_warning_big",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "calc",
+     "name": "wealth",
+     "op": ">",
+     "value": 700
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 4
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "О вашей кубышке судачат уже и в Заречье. Ох, не к добру…"
+   },
+   {
+    "type": "add_modifier",
+    "template": "thief_watching",
+    "target": "world"
+   }
+  ]
+ },
+ {
+  "id": "theft_box",
+  "trigger": {
+   "signal": "modifier_expired",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "template",
+     "op": "==",
+     "value": "thief_watching"
+    },
+    {
+     "type": "has_item",
+     "subject": "world",
+     "item": "strongbox"
+    }
+   ]
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Ночью кто-то ковырял сундук — замок не поддался. Вор ушёл ни с чем."
+   }
+  ]
+ },
+ {
+  "id": "theft_cat",
+  "trigger": {
+   "signal": "modifier_expired",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "template",
+     "op": "==",
+     "value": "thief_watching"
+    },
+    {
+     "not": {
+      "type": "has_item",
+      "subject": "world",
+      "item": "strongbox"
+     }
+    },
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "cat_guard"
+    }
+   ]
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Ночью Уголёк поднял такой вой, что вор перемахнул через плетень и был таков."
+   }
+  ]
+ },
+ {
+  "id": "theft_big",
+  "trigger": {
+   "signal": "modifier_expired",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "template",
+     "op": "==",
+     "value": "thief_watching"
+    },
+    {
+     "not": {
+      "type": "has_item",
+      "subject": "world",
+      "item": "strongbox"
+     }
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "cat_guard"
+     }
+    },
+    {
+     "type": "calc",
+     "name": "wealth",
+     "op": ">",
+     "value": 700
+    }
+   ]
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "money",
+    "add": -120
+   },
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "Воры знали, где искать: из-под половицы унесли целый мешок монет!"
+   }
+  ]
+ },
+ {
+  "id": "theft",
+  "trigger": {
+   "signal": "modifier_expired",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "template",
+     "op": "==",
+     "value": "thief_watching"
+    },
+    {
+     "not": {
+      "type": "has_item",
+      "subject": "world",
+      "item": "strongbox"
+     }
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "cat_guard"
+     }
+    },
+    {
+     "type": "calc",
+     "name": "wealth",
+     "op": ">",
+     "value": 350
+    }
+   ]
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "money",
+    "add": -60
+   },
+   {
+    "type": "goods",
+    "good": "nails",
+    "qty": -10
+   },
+   {
+    "type": "goods",
+    "good": "swords",
+    "qty": -1
+   },
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "Ночью обнесли кузню: унесли деньги и товар со склада!"
+   }
+  ]
+ },
+ {
+  "id": "low_raw",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "calc",
+     "name": "cost_hours",
+     "op": "<",
+     "value": 3
+    }
+   ]
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Сырья осталось на пару часов работы — пора на рынок."
+   }
+  ]
+ },
+ {
+  "id": "idle_alarm",
+  "trigger": {
+   "signal": "idle_no_cost",
+   "conditions": []
+  },
+  "participant": {
+   "from": "signal"
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "{participant} сидит без дела: нечем работать."
+   }
+  ]
+ },
+ {
+  "id": "dusk_call",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "hour",
+     "op": ">=",
+     "value": 16
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "stress",
+     "op": ">=",
+     "value": 35
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "hero",
+      "template": "evening_done"
+     }
+    }
+   ]
+  },
+  "stops_time": true,
+  "repeat": {
+   "cooldown_days": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "text": "Марфа зовёт с крыльца: «Демьян, хватит стучать, иди вечерять!»"
+   }
+  ]
+ },
+ {
+  "id": "market_praise",
+  "trigger": {
+   "signal": "market_trip",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "sold",
+     "op": ">=",
+     "value": 50
+    }
+   ]
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": 2
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "На рынке ваш товар разобрали и нахваливали."
+   }
+  ]
+ },
+ {
+  "id": "sword_made",
+  "trigger": {
+   "signal": "action_done",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "action",
+     "op": "==",
+     "value": "forge_sword"
+    }
+   ]
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": 1
+   }
+  ]
+ },
+ {
+  "id": "frol_arrives",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 4
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_to_hire_pool",
+    "character": "frol"
+   },
+   {
+    "type": "notify",
+    "text": "В деревню пришёл Фрол из Заречья — ищет место подмастерья. Медленный, говорят, зато торговаться мастак."
+   }
+  ]
+ },
+ {
+  "id": "timokha_arrives",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 9
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 15
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_to_hire_pool",
+    "character": "timokha"
+   },
+   {
+    "type": "notify",
+    "text": "Тимоха, сын пасечника, наслышан о вашей кузне и просится в подмастерья. Говорят, парень ровный и поёт хорошо."
+   }
+  ]
+ },
+ {
+  "id": "hired_welcome",
+  "trigger": {
+   "signal": "hired",
+   "conditions": []
+  },
+  "participant": {
+   "from": "signal"
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "{participant} повязал кожаный фартук и встал к горну."
+   }
+  ]
+ },
+ {
+  "id": "marfa_stash",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "marfa_warmth",
+     "min_count": 4
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "money",
+    "add": 40
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "popup": true,
+    "text": "После тёплого вечера Марфа достала из-за иконы узелок: «Отец твой на чёрный день откладывал. А по-моему, день как раз светлый — купи что-нибудь для кузни»."
+   }
+  ]
+ },
+ {
+  "id": "miller_friend",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "miller_thanks",
+     "min_count": 3
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Мельник Прохор хлопнул вас по плечу: «Коли мастерская тесна станет — у моей запруды вода без дела крутится. Молот на колесо посадим»."
+   }
+  ]
+ },
+ {
+  "id": "cat_guard_ev",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "cat_friend",
+     "min_count": 3
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "cat_guard",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Сытый Уголёк теперь спит на сундуке с деньгами и шипит на чужих."
+   }
+  ]
+ },
+ {
+  "id": "son_apprentice",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "son_forge",
+     "min_count": 3
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "remove",
+    "what": "character",
+    "target": "char:vasyatka"
+   },
+   {
+    "type": "add_to_hire_pool",
+    "character": "vasyatka"
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "popup": true,
+    "text": "Васятка насмотрелся на горн и заявил: «Тятя, бери в подмастерья!» Платы за науку не просит — только на пряники."
+   }
+  ]
+ },
+ {
+  "id": "son_scribe",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "son_letters",
+     "min_count": 3
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "son_bookkeeper",
+    "target": "hero"
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "popup": true,
+    "text": "Васятка выучился грамоте и счёту. Теперь на рынке он считает за вас — и купцы больше не обвешивают."
+   }
+  ]
+ },
+ {
+  "id": "swordsmith_visit",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_bellows"
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "gordey_offer"
+   }
+  ]
+ },
+ {
+  "id": "gordey_returns",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "gordey_hosted"
+    },
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_to_hire_pool",
+    "character": "gordey"
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Странник Гордей вернулся: «Слыхал, у тебя теперь мастерская. Возьмёшь старого оружейника?»"
+   }
+  ]
+ },
+ {
+  "id": "knight_visit",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "obligation",
+     "id": "count_shoes_ob",
+     "state": "done"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "knight_offer"
+   }
+  ]
+ },
+ {
+  "id": "wife_rose",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 5
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "rose_offer"
+   }
+  ]
+ },
+ {
+  "id": "star_fall",
+  "trigger": {
+   "signal": "night",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 8
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "weapon_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "star_offer"
+   }
+  ]
+ },
+ {
+  "id": "star_blade_ready",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "stock",
+     "good": "star_blade",
+     "op": ">=",
+     "value": 1
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "star_blade_offer"
+   }
+  ]
+ },
+ {
+  "id": "duke_envoy",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "event_count",
+     "event": "sword_made",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 40
+    },
+    {
+     "not": {
+      "any": [
+       {
+        "type": "obligation",
+        "id": "duke_swords_ob",
+        "state": "active"
+       },
+       {
+        "type": "obligation",
+        "id": "duke_swords_ob",
+        "state": "done"
+       },
+       {
+        "type": "obligation",
+        "id": "duke_mixed_ob",
+        "state": "active"
+       },
+       {
+        "type": "obligation",
+        "id": "duke_mixed_ob",
+        "state": "done"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 2,
+   "cooldown_days": 5
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "duke_order"
+   }
+  ]
+ },
+ {
+  "id": "duke_win",
+  "trigger": {
+   "conditions": [
+    {
+     "any": [
+      {
+       "type": "obligation",
+       "id": "duke_swords_ob",
+       "state": "done"
+      },
+      {
+       "type": "obligation",
+       "id": "duke_mixed_ob",
+       "state": "done"
+      }
+     ]
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "duke_court"
+   }
+  ]
+ },
+ {
+  "id": "guild_invite",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded"
+    },
+    {
+     "type": "worker_count",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 100
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    }
+   ]
+  },
+  "repeat": {
+   "max": 2,
+   "cooldown_days": 7
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "guild_offer"
+   }
+  ]
+ },
+ {
+  "id": "steward_1",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    },
+    {
+     "not": {
+      "any": [
+       {
+        "type": "obligation",
+        "id": "count_nails_ob",
+        "state": "active"
+       },
+       {
+        "type": "obligation",
+        "id": "count_nails_ob",
+        "state": "done"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 3,
+   "cooldown_days": 4
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "count_nails"
+   }
+  ]
+ },
+ {
+  "id": "steward_2",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 7
+    },
+    {
+     "type": "obligation",
+     "id": "count_nails_ob",
+     "state": "done"
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 25
+    },
+    {
+     "not": {
+      "any": [
+       {
+        "type": "obligation",
+        "id": "count_shoes_ob",
+        "state": "active"
+       },
+       {
+        "type": "obligation",
+        "id": "count_shoes_ob",
+        "state": "done"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 3,
+   "cooldown_days": 4
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "count_shoes"
+   }
+  ]
+ },
+ {
+  "id": "steward_3",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "obligation",
+     "id": "count_shoes_ob",
+     "state": "done"
+    },
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded"
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 40
+    },
+    {
+     "not": {
+      "any": [
+       {
+        "type": "obligation",
+        "id": "count_estate_ob",
+        "state": "active"
+       },
+       {
+        "type": "obligation",
+        "id": "count_estate_ob",
+        "state": "done"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 3,
+   "cooldown_days": 4
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "count_estate"
+   }
+  ]
+ },
+ {
+  "id": "count_victory",
+  "trigger": {
+   "conditions": [
+    {
+     "any": [
+      {
+       "type": "obligation",
+       "id": "count_tools_ob",
+       "state": "done"
+      },
+      {
+       "type": "obligation",
+       "id": "count_grille_ob",
+       "state": "done"
+      },
+      {
+       "type": "obligation",
+       "id": "count_sword_ob",
+       "state": "done"
+      }
+     ]
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "count_court"
+   }
+  ]
+ },
+ {
+  "id": "noble_failed",
+  "data_defaults": {
+   "loss": -10
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": {
+     "$data": "loss"
+    }
+   },
+   {
+    "type": "add_modifier",
+    "template": "bad_name",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "Заказ знатного господина сорван. Молва об этом бежит быстрее гонца."
+   }
+  ]
+ },
+ {
+  "id": "village_failed",
+  "data_defaults": {
+   "loss": -3
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": {
+     "$data": "loss"
+    }
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Заказчик ворчит на всю деревню: кузнец, мол, слово не держит."
+   }
+  ]
+ },
+ {
+  "id": "wife_pie",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": []
+  },
+  "weight": 3,
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "pie_comfort",
+    "target": "hero"
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Марфа испекла пирог с капустой. Жизнь налаживается."
+   }
+  ]
+ },
+ {
+  "id": "mil_visit",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 2
+    }
+   ]
+  },
+  "weight": 2,
+  "repeat": {
+   "cooldown_days": 5
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "mil_visit_offer"
+   }
+  ]
+ },
+ {
+  "id": "cat_hammer",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "cat_guard"
+     }
+    }
+   ]
+  },
+  "weight": 2,
+  "repeat": {
+   "cooldown_days": 3
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "hammer_lost",
+    "target": "hero"
+   },
+   {
+    "type": "notify",
+    "text": "Уголёк утащил молоток под печку. Полдня искали всей семьёй."
+   }
+  ]
+ },
+ {
+  "id": "cat_cream",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "cat_guard"
+     }
+    }
+   ]
+  },
+  "weight": 2,
+  "repeat": {
+   "cooldown_days": 2
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "cat_cream_offer"
+   }
+  ]
+ },
+ {
+  "id": "son_asks",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "role",
+     "subject": "char:vasyatka",
+     "role": "family"
+    }
+   ]
+  },
+  "weight": 2,
+  "repeat": {
+   "cooldown_days": 2
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "son_offer"
+   }
+  ]
+ },
+ {
+  "id": "kuzma_hammer",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": []
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 5
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "kuzma_offer"
+   }
+  ]
+ },
+ {
+  "id": "holiday",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": []
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 7
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "holiday_joy",
+    "target": "hero"
+   },
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": 2
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Престольный праздник! Колокола звонят, бабы пекут блины, а ваши гвозди держат новые лавки в церкви."
+   }
+  ]
+ },
+ {
+  "id": "fair",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 4
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 6
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "fair_prices",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "В Заречье ярмарка! Сегодня на рынке берут всё и платят щедрее."
+   }
+  ]
+ },
+ {
+  "id": "cold_snap",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": []
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 5
+  },
+  "participant": {
+   "pick": "random",
+   "among": "characters",
+   "where": {
+    "not": {
+     "type": "has_modifier",
+     "subject": "self",
+     "template": "cold"
+    }
+   }
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "cold",
+    "target": "participant"
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "{participant} простыл на сквозняке. Баня бы помогла."
+   }
+  ]
+ },
+ {
+  "id": "bad_iron",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "stock",
+     "good": "iron",
+     "op": ">=",
+     "value": 4
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 6
+  },
+  "effects": [
+   {
+    "type": "goods",
+    "good": "iron",
+    "qty": -3
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Крица попалась с песком — три куска пошли в отвал."
+   }
+  ]
+ },
+ {
+  "id": "neighbor_gossip",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 3
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 4
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": 1
+   },
+   {
+    "type": "notify",
+    "text": "Кузьма на всю улицу хвалит ваши гвозди. Привирает, конечно, но приятно."
+   }
+  ]
+ },
+ {
+  "id": "worker_day_off",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": []
+  },
+  "weight": 2,
+  "repeat": {
+   "cooldown_days": 3
+  },
+  "participant": {
+   "pick": "random",
+   "among": "workers",
+   "where": {
+    "not": {
+     "type": "incapacitated",
+     "subject": "self"
+    }
+   }
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "ask_day_off"
+   }
+  ]
+ },
+ {
+  "id": "eremka_curious",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "hired",
+     "character": "eremka"
+    }
+   ]
+  },
+  "weight": 2,
+  "repeat": {
+   "cooldown_days": 4
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "eremka_offer"
+   }
+  ]
+ },
+ {
+  "id": "timokha_song",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "hired",
+     "character": "timokha"
+    }
+   ]
+  },
+  "weight": 2,
+  "repeat": {
+   "cooldown_days": 3
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "song_mood",
+    "target": "hero"
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Тимоха с утра затянул «Во кузнице» — и работа пошла веселей."
+   }
+  ]
+ },
+ {
+  "id": "ord_miller",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": []
+  },
+  "weight": 3,
+  "repeat": {
+   "cooldown_days": 2
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "miller_order"
+   }
+  ]
+ },
+ {
+  "id": "ord_nails_carpenter",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": []
+  },
+  "weight": 3,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_nails",
+    "data": {
+     "client": "Плотник Ефим",
+     "qty": 10,
+     "days": 3,
+     "reward": 56,
+     "fame": 3
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_nails_elder",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 4
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_nails",
+    "data": {
+     "client": "Староста Никифор",
+     "qty": 16,
+     "days": 4,
+     "reward": 90,
+     "fame": 5
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_shoes_peasant",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    }
+   ]
+  },
+  "weight": 3,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_shoes",
+    "data": {
+     "client": "Мужик Савелий",
+     "qty": 2,
+     "days": 2,
+     "reward": 32,
+     "fame": 3
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_shoes_coach",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 15
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_shoes",
+    "data": {
+     "client": "Ямщик Архип",
+     "qty": 5,
+     "days": 3,
+     "reward": 80,
+     "fame": 5
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_pots_widow",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_pots",
+    "data": {
+     "client": "Вдова Пелагея",
+     "qty": 2,
+     "days": 3,
+     "reward": 58,
+     "fame": 4
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_pots_tavern",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 40
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_pots",
+    "data": {
+     "client": "Кабатчик Лука",
+     "qty": 4,
+     "days": 4,
+     "reward": 118,
+     "fame": 6
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_axes",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_grindstone"
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_axes",
+    "data": {
+     "client": "Артель лесорубов",
+     "qty": 3,
+     "days": 4,
+     "reward": 115,
+     "fame": 6
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_grille_church",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "art_lore"
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_grille",
+    "data": {
+     "client": "Отец Варфоломей",
+     "qty": 1,
+     "days": 4,
+     "reward": 78,
+     "fame": 8
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_sword_boyar",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "blade_lore"
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_sword",
+    "data": {
+     "client": "Боярский сын Ратибор",
+     "qty": 1,
+     "days": 4,
+     "reward": 110,
+     "fame": 6
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_mail_knight",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "armor_lore"
+    }
+   ]
+  },
+  "weight": 1,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_mail",
+    "data": {
+     "client": "Сэр Бодун",
+     "qty": 1,
+     "days": 5,
+     "reward": 145,
+     "fame": 7
+    }
+   }
+  ]
+ },
+ {
+  "id": "steward_4",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "obligation",
+     "id": "count_estate_ob",
+     "state": "done"
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 60
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "not": {
+      "any": [
+       {
+        "type": "obligation",
+        "id": "count_treasury_ob",
+        "state": "active"
+       },
+       {
+        "type": "obligation",
+        "id": "count_treasury_ob",
+        "state": "done"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 3,
+   "cooldown_days": 4
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "count_treasury"
+   }
+  ]
+ },
+ {
+  "id": "steward_5",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "obligation",
+     "id": "count_treasury_ob",
+     "state": "done"
+    },
+    {
+     "any": [
+      {
+       "type": "has_modifier",
+       "subject": "world",
+       "template": "yard_built"
+      },
+      {
+       "type": "has_modifier",
+       "subject": "world",
+       "template": "river_built"
+      }
+     ]
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 90
+    },
+    {
+     "not": {
+      "any": [
+       {
+        "type": "obligation",
+        "id": "count_tools_ob",
+        "state": "active"
+       },
+       {
+        "type": "obligation",
+        "id": "count_tools_ob",
+        "state": "done"
+       },
+       {
+        "type": "obligation",
+        "id": "count_grille_ob",
+        "state": "active"
+       },
+       {
+        "type": "obligation",
+        "id": "count_grille_ob",
+        "state": "done"
+       },
+       {
+        "type": "obligation",
+        "id": "count_sword_ob",
+        "state": "active"
+       },
+       {
+        "type": "obligation",
+        "id": "count_sword_ob",
+        "state": "done"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "max": 3,
+   "cooldown_days": 4
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "count_big"
+   }
+  ]
+ },
+ {
+  "id": "yard_hint",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "obligation",
+     "id": "count_estate_ob",
+     "state": "done"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "text": "Пантелей, уезжая, обронил: «Казну и замок доверяют тому, у кого двор, а не сарай. Будет у тебя кузнечный двор — будет и разговор»"
+   }
+  ]
+ },
+ {
+  "id": "count_rush_ev",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "count_known"
+    },
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 9
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    }
+   ]
+  },
+  "repeat": {
+   "max": 2,
+   "cooldown_days": 9
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "count_rush"
+   }
+  ]
+ },
+ {
+  "id": "count_hunt",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "count_known"
+    },
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 14
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "count_hunt_offer"
+   }
+  ]
+ },
+ {
+  "id": "count_feast",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "count_patron"
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 8
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": 5
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "На пиру в замке граф поднял кубок «за кузнеца, который держит слово». Молва разлетелась по всем сёлам."
+   }
+  ]
+ },
+ {
+  "id": "dunya_arrives",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 14
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 30
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_to_hire_pool",
+    "character": "dunya"
+   },
+   {
+    "type": "notify",
+    "text": "Дуняша, дочь бондаря, пришла сама: «Девке у горна не место? А вы проверьте». Говорят, тонкую работу делает без помарки."
+   }
+  ]
+ },
+ {
+  "id": "stepan_arrives",
+  "trigger": {
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "yard_built"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_to_hire_pool",
+    "character": "stepan"
+   },
+   {
+    "type": "notify",
+    "text": "К новому двору прибился Степан, бывший бурлак: «Лемех подать? Да хоть два». Силач, просит хорошо."
+   }
+  ]
+ },
+ {
+  "id": "kuzma_courting",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 6
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "kuzma_plea"
+   }
+  ]
+ },
+ {
+  "id": "kuzma_test_ev",
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "kuzma_test"
+   }
+  ]
+ },
+ {
+  "id": "kuzma_wedding_ev",
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "kuzma_wedding"
+   }
+  ]
+ },
+ {
+  "id": "kuzma_sad",
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "goodwill",
+    "add": -5
+   },
+   {
+    "type": "add_modifier",
+    "template": "kuzma_done",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "popup": true,
+    "text": "Пелагея отказала Кузьме: «Петли у тебя чужие, слово — тоже». Кузьма неделю ходил мимо кузни, не здороваясь. Сватовство кончилось ничем."
+   }
+  ]
+ },
+ {
+  "id": "kuzma_lie_found",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "kuzma_lie"
+    },
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "kuzma_done"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "goodwill",
+    "add": -4
+   },
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": -3
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Пелагея разглядела на «Кузьминой» подкове ваше клеймо. Посмеялась на всю деревню: «Жених-то с подсказкой!» Кузьма теперь краснеет при встрече, а соседи — хихикают."
+   }
+  ]
+ },
+ {
+  "id": "kuzma_joins",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "kuzma_taught"
+    },
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "kuzma_done"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_to_hire_pool",
+    "character": "kuzma"
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Кузьма вошёл во вкус: «Демьян, возьми в подручные. Пелагея говорит — ремесло в доме не помешает». Просит немного."
+   }
+  ]
+ },
+ {
+  "id": "kuzma_truth_bonus",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "kuzma_truth"
+    },
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "kuzma_done"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "pelageya_milk",
+    "target": "world"
+   },
+   {
+    "type": "var",
+    "target": "world",
+    "var": "goodwill",
+    "add": 4
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Пелагея пришла с кринкой молока: «Спасибо, что не обманул. Кузьма мне и без подковы мил». Теперь молоко у вас каждое утро."
+   }
+  ]
+ },
+ {
+  "id": "kuzma_helps",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "kuzma_done"
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "kuzma_lie"
+     }
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "soot",
+     "op": ">=",
+     "value": 30
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 6
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "soot",
+    "add": -25
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Кузьма по-соседски залез на крышу и прочистил вам трубу. «Свои люди — сочтёмся»."
+   }
+  ]
+ },
+ {
+  "id": "tikhon_arrives",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 12
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "rival_forge",
+    "target": "world"
+   },
+   {
+    "type": "show_offer",
+    "offer": "tikhon_intro"
+   }
+  ]
+ },
+ {
+  "id": "tikhon_talk",
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "tikhon_deal"
+   }
+  ]
+ },
+ {
+  "id": "tikhon_won",
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "tikhon_verdict"
+   }
+  ]
+ },
+ {
+  "id": "tikhon_lost",
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": -10
+   },
+   {
+    "type": "add_modifier",
+    "template": "rival_gloat",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "danger",
+    "popup": true,
+    "text": "Староста отдал венок Тихону. Тот раскланялся и крикнул: «Приходите в Заречье — у меня дешевле!» Покупатели ещё неделю будут ездить к нему."
+   }
+  ]
+ },
+ {
+  "id": "tikhon_leaves",
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "rival_done",
+    "target": "world"
+   },
+   {
+    "type": "remove_modifier",
+    "template": "rival_forge",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "seal",
+    "popup": true,
+    "text": "Тихон заколотил свою кузню и подался в город — «там, говорят, платят больше». Покупатели вернулись к вам. Спор с Тихоном кончился сам собой."
+   }
+  ]
+ },
+ {
+  "id": "ice_cracks",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 9
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "На Смородинке трещит лёд, вода поднимается. Старики качают головами: «Снесёт мост — до лета без купцов сидеть». Запасите железа."
+   }
+  ]
+ },
+ {
+  "id": "flood",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 10
+    },
+    {
+     "type": "event_count",
+     "event": "ice_cracks",
+     "op": ">=",
+     "value": 1
+    }
+   ]
+  },
+  "stops_time": true,
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "bridge_out",
+    "target": "world"
+   },
+   {
+    "type": "add_modifier",
+    "template": "bog_known",
+    "target": "world"
+   },
+   {
+    "type": "show_offer",
+    "offer": "bridge_offer"
+   }
+  ]
+ },
+ {
+  "id": "bridge_by_count",
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "bridge_fixed",
+    "target": "world"
+   },
+   {
+    "type": "remove_modifier",
+    "template": "bridge_out",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "info",
+    "popup": true,
+    "text": "Графские плотники наконец поставили мост — без единого вашего гвоздя. Обозы снова ходят, цены вернулись."
+   }
+  ]
+ },
+ {
+  "id": "tax_smithy",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 10
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "smithy_upgraded"
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 8
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "tax_offer",
+    "data": {
+     "amount": 15,
+     "nails": 5
+    }
+   }
+  ]
+ },
+ {
+  "id": "tax_town",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 10
+    },
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded"
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "yard_built"
+     }
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "river_built"
+     }
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 8
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "tax_offer",
+    "data": {
+     "amount": 30,
+     "nails": 10
+    }
+   }
+  ]
+ },
+ {
+  "id": "tax_yard",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 10
+    },
+    {
+     "any": [
+      {
+       "type": "has_modifier",
+       "subject": "world",
+       "template": "yard_built"
+      },
+      {
+       "type": "has_modifier",
+       "subject": "world",
+       "template": "river_built"
+      }
+     ]
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 8
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "tax_offer",
+    "data": {
+     "amount": 50,
+     "nails": 16
+    }
+   }
+  ]
+ },
+ {
+  "id": "tax_penalty",
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "money",
+    "add": -50
+   },
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": -5
+   },
+   {
+    "type": "notify",
+    "kind": "danger",
+    "popup": true,
+    "text": "Мытарь вернулся с двумя стражниками и взял недоимку с лихвой — пятьдесят монет. Вся улица видела."
+   }
+  ]
+ },
+ {
+  "id": "marfa_ill",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 8
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "hero",
+      "template": "marfa_sick_strain"
+     }
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 12
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "marfa_sick_strain",
+    "target": "hero"
+   },
+   {
+    "type": "add_modifier",
+    "template": "sick_house",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "popup": true,
+    "text": "Марфа слегла с жаром. Дом, кузня и Васятка — всё на вас, а на травы уходят деньги. Агафья поставила бы её на ноги быстрее."
+   }
+  ]
+ },
+ {
+  "id": "mil_moves_in",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "event_count",
+     "event": "mil_visit",
+     "op": ">=",
+     "value": 2
+    },
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 15
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "mil_moves_offer"
+   }
+  ]
+ },
+ {
+  "id": "son_birthday",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 10
+    },
+    {
+     "type": "role",
+     "subject": "char:vasyatka",
+     "role": "family"
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "birthday_offer"
+   }
+  ]
+ },
+ {
+  "id": "cat_kittens",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "cat_friend"
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "kittens_offer"
+   }
+  ]
+ },
+ {
+  "id": "mill_fire",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 7
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 15
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "mill_fire_offer"
+   }
+  ]
+ },
+ {
+  "id": "pilgrims",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 5
+    },
+    {
+     "type": "stock",
+     "good": "nails",
+     "op": ">=",
+     "value": 4
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 8
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "pilgrims_offer"
+   }
+  ]
+ },
+ {
+  "id": "gypsy_horses",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    },
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 6
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 10
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "gypsy_offer"
+   }
+  ]
+ },
+ {
+  "id": "evsey_bog",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 5
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "bog_known"
+     }
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "bog_known",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "text": "Дед Евсей, греясь у горна, рассказал: на болоте за Смородинкой ржавая руда сама из земли лезет. Копать тяжело, зато даром."
+   }
+  ]
+ },
+ {
+  "id": "lucky_find",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 4
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "goods",
+    "good": "nails",
+    "qty": 6
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Васятка нашёл на чердаке отцовский ящик с гвоздями. Шесть связок как с неба!"
+   }
+  ]
+ },
+ {
+  "id": "pelageya_pies",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "kuzma_done"
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "world",
+      "template": "kuzma_lie"
+     }
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 5
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "pie_comfort",
+    "target": "hero"
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "text": "Пелагея прислала с Кузьмой пирог с грибами. Соседство — великое дело."
+   }
+  ]
+ },
+ {
+  "id": "workers_raise",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "worker_count",
+     "op": ">=",
+     "value": 2
+    },
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 14
+    }
+   ]
+  },
+  "repeat": {
+   "max": 2,
+   "cooldown_days": 10
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "raise_offer"
+   }
+  ]
+ },
+ {
+  "id": "apprentice_brawl",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "worker_count",
+     "op": ">=",
+     "value": 2
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 8
+  },
+  "participant": {
+   "pick": "random",
+   "among": "workers",
+   "where": {
+    "not": {
+     "type": "incapacitated",
+     "subject": "self"
+    }
+   }
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "brawl_offer"
+   }
+  ]
+ },
+ {
+  "id": "apprentice_burn",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "worker_count",
+     "op": ">=",
+     "value": 1
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 9
+  },
+  "participant": {
+   "pick": "random",
+   "among": "workers",
+   "where": {
+    "not": {
+     "type": "incapacitated",
+     "subject": "self"
+    }
+   }
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "breakdown",
+    "target": "participant"
+   },
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "{participant} схватился за раскалённую заготовку голой рукой. Два дня с перевязанной ладонью — к горну ни ногой."
+   }
+  ]
+ },
+ {
+  "id": "inspection",
+  "trigger": {
+   "signal": "morning",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded"
+    },
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 12
+    }
+   ]
+  },
+  "repeat": {
+   "max": 2,
+   "cooldown_days": 10
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "inspection_offer"
+   }
+  ]
+ },
+ {
+  "id": "hard_frost",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 10
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 10
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "frost_fuel",
+    "target": "world"
+   },
+   {
+    "type": "add_modifier",
+    "template": "frost_chill",
+    "target": "hero"
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Ударил лютый мороз. Дров уходит втрое, пальцы примерзают к клещам. Свои дрова нарубить — дешевле выйдет."
+   }
+  ]
+ },
+ {
+  "id": "great_fair",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 12
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 10
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "great_fair_prices",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "good",
+    "popup": true,
+    "text": "Покровская ярмарка! Съехалось полграфства — два дня товар рвут из рук. Везите на рынок всё, что есть."
+   }
+  ]
+ },
+ {
+  "id": "iron_shortage",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 8
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 9
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "iron_dear",
+    "target": "world"
+   },
+   {
+    "type": "add_modifier",
+    "template": "bog_known",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Обоз с крицей увяз в распутицу — железо втридорога три дня. Болотная руда за Смородинкой ждёт тех, кто не боится грязи."
+   }
+  ]
+ },
+ {
+  "id": "coalman_drunk",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 6
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 8
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "coal_dear",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Угольщик Фома запил — уголь на рынке подорожал."
+   }
+  ]
+ },
+ {
+  "id": "rain_week",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 5
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 9
+  },
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "rain_gloom",
+    "target": "hero"
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Зарядили дожди. Сыро, темно, в кузне капает с потолка — и на душе тоже."
+   }
+  ]
+ },
+ {
+  "id": "rust_damp",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "stock",
+     "good": "iron",
+     "op": ">=",
+     "value": 10
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 7
+  },
+  "effects": [
+   {
+    "type": "goods",
+    "good": "iron",
+    "qty": -5
+   },
+   {
+    "type": "notify",
+    "kind": "warn",
+    "text": "Сырость добралась до склада: пять криц поржавели насквозь. Много железа впрок держать — к убытку."
+   }
+  ]
+ },
+ {
+  "id": "pot_scandal",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    },
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 10
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 10
+  },
+  "effects": [
+   {
+    "type": "var",
+    "target": "world",
+    "var": "fame",
+    "add": -6
+   },
+   {
+    "type": "add_modifier",
+    "template": "bad_name",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "У кабатчика прохудился котелок — говорят, ваш. Брехня, конечно, но молва уже пошла. Заказы, сданные в срок, её смоют."
+   }
+  ]
+ },
+ {
+  "id": "foreign_merchant",
+  "trigger": {
+   "signal": "morning",
+   "pool": "daily",
+   "conditions": [
+    {
+     "type": "day",
+     "op": ">=",
+     "value": 16
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    }
+   ]
+  },
+  "weight": 1,
+  "repeat": {
+   "cooldown_days": 8
+  },
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "merchant_offer"
+   }
+  ]
+ },
+ {
+  "id": "gw_own",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "goodwill"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "g_own"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "text": "Вы в деревне свой человек: то молока принесут, то дров подкинут — расход на дом меньше."
+   }
+  ]
+ },
+ {
+  "id": "gw_soul",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "goodwill"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "g_soul"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "up"
+    }
+   ]
+  },
+  "repeat": {
+   "max": 1
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "seal",
+    "text": "Вся деревня за вас горой. Даже Савва при встрече снимает шапку."
+   }
+  ]
+ },
+ {
+  "id": "gw_outcast",
+  "trigger": {
+   "signal": "ladder_step",
+   "conditions": [
+    {
+     "type": "data",
+     "name": "var",
+     "op": "==",
+     "value": "goodwill"
+    },
+    {
+     "type": "data",
+     "name": "step",
+     "op": "==",
+     "value": "g_outcast"
+    },
+    {
+     "type": "data",
+     "name": "dir",
+     "op": "==",
+     "value": "down"
+    }
+   ]
+  },
+  "repeat": {
+   "cooldown_days": 3
+  },
+  "effects": [
+   {
+    "type": "notify",
+    "kind": "danger",
+    "text": "Соседи от вас отвернулись — и покупатели тоже. Помогайте людям: ссориться со всей деревней кузнецу не с руки."
+   }
+  ]
+ },
+ {
+  "id": "ord_hinges_cooper",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    }
+   ]
+  },
+  "weight": 3,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_hinges",
+    "data": {
+     "client": "Бондарь Игнат",
+     "qty": 4,
+     "days": 3,
+     "reward": 70,
+     "fame": 3
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_hinges_church",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 20
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_hinges",
+    "data": {
+     "client": "Церковный староста",
+     "qty": 8,
+     "days": 4,
+     "reward": 140,
+     "fame": 5
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_scythes_mowers",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_grindstone"
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_scythes",
+    "data": {
+     "client": "Артель косарей",
+     "qty": 3,
+     "days": 4,
+     "reward": 135,
+     "fame": 5
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_scythes_estate",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_grindstone"
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 40
+    }
+   ]
+  },
+  "weight": 1,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_scythes",
+    "data": {
+     "client": "Приказчик помещика",
+     "qty": 5,
+     "days": 5,
+     "reward": 230,
+     "fame": 6
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_plow_peasants",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_big_hearth"
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_plowshares",
+    "data": {
+     "client": "Мир деревни",
+     "qty": 2,
+     "days": 5,
+     "reward": 160,
+     "fame": 6
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_plow_landlord",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_big_hearth"
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 60
+    }
+   ]
+  },
+  "weight": 1,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_plowshares",
+    "data": {
+     "client": "Помещик Голованов",
+     "qty": 4,
+     "days": 6,
+     "reward": 330,
+     "fame": 8
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_locks_merchant",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_vise"
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_locks",
+    "data": {
+     "client": "Лавочник Савва",
+     "qty": 2,
+     "days": 4,
+     "reward": 170,
+     "fame": 5
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_locks_church",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_vise"
+    },
+    {
+     "type": "var",
+     "subject": "world",
+     "var": "fame",
+     "op": ">=",
+     "value": 50
+    }
+   ]
+  },
+  "weight": 1,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_locks",
+    "data": {
+     "client": "Монастырский эконом",
+     "qty": 3,
+     "days": 5,
+     "reward": 260,
+     "fame": 7
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_chains_ferry",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_water_wheel"
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_chains",
+    "data": {
+     "client": "Паромщик Ефрем",
+     "qty": 2,
+     "days": 5,
+     "reward": 240,
+     "fame": 7
+    }
+   }
+  ]
+ },
+ {
+  "id": "ord_springs_lady",
+  "trigger": {
+   "signal": "morning",
+   "pool": "orders",
+   "conditions": [
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_spring_press"
+    }
+   ]
+  },
+  "weight": 2,
+  "effects": [
+   {
+    "type": "show_offer",
+    "offer": "board_springs",
+    "data": {
+     "client": "Помещица Голованова",
+     "qty": 2,
+     "days": 5,
+     "reward": 300,
+     "fame": 8
+    }
+   }
+  ]
+ }
+]

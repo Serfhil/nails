@@ -1,0 +1,7 @@
+[
+  {
+    "id": "craft",
+    "name": "Работа",
+    "view": "select"
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "start_default",
+    "trigger": {
+      "signal": "morning"
+    },
+    "effects": [
+      {
+        "type": "var",
+        "target": "world",
+        "var": "money",
+        "add": 30
+      },
+      {
+        "type": "goods",
+        "good": "ore",
+        "qty": 5
+      },
+      {
+        "type": "add_workshop",
+        "workshop": "shed"
+      },
+      {
+        "type": "give_item",
+        "item": "good_hammer",
+        "target": "hero"
+      }
+    ]
+  },
+  {
+    "id": "order_board",
+    "trigger": {
+      "signal": "morning",
+      "pool": "daily",
+      "conditions": []
+    },
+    "weight": 1,
+    "repeat": {
+      "max": null,
+      "cooldown_days": 2
+    },
+    "effects": [
+      {
+        "type": "show_offer",
+        "offer": "order"
+      }
+    ]
+  },
+  {
+    "id": "win",
+    "trigger": {
+      "conditions": [
+        {
+          "type": "var",
+          "subject": "hero",
+          "var": "craft_xp",
+          "field": "level",
+          "op": ">=",
+          "value": 1
+        }
+      ]
+    },
+    "repeat": {
+      "max": 1
+    },
+    "effects": [
+      {
+        "type": "show_offer",
+        "offer": "victory"
+      }
+    ]
+  },
+  {
+    "id": "burnout",
+    "trigger": {
+      "conditions": [
+        {
+          "type": "var",
+          "subject": "hero",
+          "var": "stress",
+          "op": ">=",
+          "value": 100
+        }
+      ]
+    },
+    "repeat": {
+      "max": 1
+    },
+    "effects": [
+      {
+        "type": "end_game",
+        "title": "Надорвался",
+        "text": "Работа без отдыха свалила мастера.",
+        "tag": "fail"
+      }
+    ]
+  }
+]

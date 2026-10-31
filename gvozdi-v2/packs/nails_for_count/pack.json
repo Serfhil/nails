@@ -1,0 +1,58 @@
+{
+ "id": "nails_for_count",
+ "name": "Гвозди для графа",
+ "version": "0.2.0",
+ "description": "Деревенский кузнец Демьян начинает с гвоздей руками, а дома ждут жена, тёща, сын и кот. Учите подмастерьев, берите заказы соседей и знати — и, глядишь, из старой кузни вырастет мастерская на всю округу.",
+ "names": {
+  "money": "Монеты",
+  "money_short": "мон.",
+  "stress": "Усталость",
+  "slots": {
+   "hand": "В руке",
+   "apron": "Фартук",
+   "belt": "На поясе"
+  },
+  "roles": {
+   "hero": "Хозяин кузни",
+   "worker": "Подмастерье",
+   "family": "Семья",
+   "pet": "Домашняя скотина"
+  }
+ },
+ "settings": {
+  "day_start": 6,
+  "day_end": 18,
+  "market_hours": 2,
+  "trade_hours": 3,
+  "trader_raw_target": {
+   "iron": 20,
+   "coal": 6
+  },
+  "trade_open_when": {
+   "type": "role",
+   "subject": "self",
+   "role": "worker"
+  },
+  "shop": [
+   "hammer_good",
+   "leather_apron",
+   "long_tongs",
+   "hammer_master",
+   "apron_master",
+   "tongs_master"
+  ],
+  "pools": {
+   "daily": {
+    "chance": 0.65
+   },
+   "orders": {
+    "chance": 0.7
+   }
+  },
+  "max_event_chain": 32
+ },
+ "start": {
+  "event": "start_default",
+  "hero": "hero"
+ }
+}

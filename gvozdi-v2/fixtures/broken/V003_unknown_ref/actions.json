@@ -1,0 +1,190 @@
+[
+  {
+    "id": "make_widget",
+    "name": "Делать изделие",
+    "mode": "both",
+    "hours": 1,
+    "speed_scaled": true,
+    "roles": {
+      "actor": {
+        "who": "hero_or_worker"
+      }
+    },
+    "cost": [
+      {
+        "good": "ore",
+        "qty": 1
+      }
+    ],
+    "outputs": [
+      {
+        "good": "widget",
+        "qty": 1
+      }
+    ],
+    "per_hour": [
+      {
+        "target": "actor",
+        "var": "craft_xp",
+        "add": 1,
+        "scale_by": "learn_speed"
+      },
+      {
+        "target": "actor",
+        "var": "stress",
+        "add": 2
+      }
+    ],
+    "tags": [
+      "craft"
+    ]
+  },
+  {
+    "id": "polish",
+    "name": "Полировать",
+    "mode": "once",
+    "hours": 1,
+    "roles": {
+      "actor": {
+        "who": "hero"
+      }
+    },
+    "open_when": {
+      "type": "has_modifier",
+      "subject": "workshop",
+      "template": "has_anvil"
+    },
+    "cost": [
+      {
+        "good": "widget",
+        "qty": 1
+      }
+    ],
+    "outputs": [
+      {
+        "good": "widget",
+        "qty": 1
+      }
+    ],
+    "per_hour": [
+      {
+        "target": "actor",
+        "var": "polish_xp",
+        "add": 1
+      }
+    ]
+  },
+  {
+    "id": "rest",
+    "name": "Отдыхать",
+    "mode": "once",
+    "hours": 2,
+    "roles": {
+      "actor": {
+        "who": "hero"
+      }
+    },
+    "per_hour": [
+      {
+        "target": "actor",
+        "var": "stres",
+        "add": -5
+      }
+    ],
+    "effects": [
+      {
+        "type": "add_modifier",
+        "template": "rested",
+        "target": "actor"
+      }
+    ]
+  },
+  {
+    "id": "hire",
+    "name": "Нанять",
+    "mode": "once",
+    "hours": 1,
+    "roles": {
+      "actor": {
+        "who": "hero"
+      },
+      "candidate": {
+        "who": "pool"
+      }
+    },
+    "cost": [
+      {
+        "var": "money",
+        "from": "candidate",
+        "qty_from": "hire_cost"
+      }
+    ],
+    "effects": [
+      {
+        "type": "hire",
+        "target": "candidate"
+      }
+    ]
+  },
+  {
+    "id": "buy_anvil",
+    "name": "Купить наковальню",
+    "mode": "once",
+    "hours": 1,
+    "roles": {
+      "actor": {
+        "who": "hero"
+      }
+    },
+    "enabled_when": {
+      "not": {
+        "type": "has_item",
+        "subject": "workshop",
+        "item": "anvil"
+      },
+      "text": "Уже есть"
+    },
+    "cost": [
+      {
+        "var": "money",
+        "qty": 20
+      }
+    ],
+    "effects": [
+      {
+        "type": "give_item",
+        "item": "anvil",
+        "target": "workshop"
+      }
+    ]
+  },
+  {
+    "id": "upgrade",
+    "name": "Перестроить",
+    "mode": "once",
+    "hours": 4,
+    "roles": {
+      "actor": {
+        "who": "hero"
+      }
+    },
+    "open_when": {
+      "type": "workshop_type",
+      "subject": "workshop",
+      "workshop": "shed"
+    },
+    "cost": [
+      {
+        "var": "money",
+        "qty": 50
+      }
+    ],
+    "effects": [
+      {
+        "type": "replace_workshop",
+        "target": "workshop",
+        "workshop": "hall"
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "shed",
+    "name": "Сарай",
+    "vars": {
+      "max_workers": 1,
+      "equipment_slots": 1,
+      "upkeep": 0
+    },
+    "modifiers": []
+  },
+  {
+    "id": "hall",
+    "name": "Мастерская",
+    "vars": {
+      "max_workers": 2,
+      "equipment_slots": 2,
+      "upkeep": 1
+    },
+    "modifiers": []
+  }
+]

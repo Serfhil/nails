@@ -1,0 +1,151 @@
+[
+  { "id": "start_default", "trigger": { "signal": "game_start", "conditions": [] },
+    "repeat": { "max": 1 },
+    "effects": [
+      { "type": "var", "target": "world", "var": "money", "add": 30 },
+      { "type": "goods", "good": "flour", "qty": 6 },
+      { "type": "add_workshop", "workshop": "home_kitchen" },
+      { "type": "give_item", "item": "peel", "target": "hero" },
+      { "type": "add_character", "character": "grandma", "as": "family" },
+      { "type": "add_character", "character": "cat" },
+      { "type": "notify", "text": "Утро. Печь остыла, мука в ларе, лопата у двери." }
+    ] },
+
+  { "id": "night_rest", "trigger": { "signal": "night", "conditions": [] },
+    "effects": [ { "type": "var", "target": "hero", "var": "stress", "add": -30 } ] },
+
+  { "id": "level_up", "trigger": { "signal": "ladder_step", "conditions": [
+      { "type": "data", "name": "var", "op": "==", "value": "bake_xp" },
+      { "type": "data", "name": "dir", "op": "==", "value": "up" } ] },
+    "participant": { "from": "signal" },
+    "effects": [ { "type": "notify", "text": "{participant} шагнул в мастерстве: уровень {level}.", "kind": "seal" } ] },
+
+  { "id": "tired_warning", "trigger": { "signal": "ladder_step", "conditions": [
+      { "type": "data", "name": "var", "op": "==", "value": "stress" },
+      { "type": "data", "name": "step", "op": "==", "value": "tired" },
+      { "type": "data", "name": "dir", "op": "==", "value": "up" } ] },
+    "participant": { "from": "signal" },
+    "stops_time": true, "repeat": { "cooldown_days": 1 },
+    "effects": [ { "type": "notify", "text": "{participant} еле держится на ногах. Пора отдохнуть.", "kind": "warn" } ] },
+
+  { "id": "collapse", "trigger": { "signal": "ladder_step", "conditions": [
+      { "type": "data", "name": "var", "op": "==", "value": "stress" },
+      { "type": "data", "name": "step", "op": "==", "value": "collapse" } ] },
+    "participant": { "from": "signal" },
+    "stops_time": true,
+    "effects": [
+      { "type": "add_modifier", "template": "breakdown", "target": "participant" },
+      { "type": "add_modifier", "template": "burn_scar", "target": "participant" },
+      { "type": "var", "target": "participant", "var": "stress", "set": 60 },
+      { "type": "notify", "text": "{participant} рухнул у печи и обжёгся.", "kind": "danger" }
+    ] },
+
+  { "id": "death_by_overwork", "trigger": { "conditions": [
+      { "type": "has_modifier", "subject": "hero", "template": "burn_scar", "min_count": 3 } ] },
+    "repeat": { "max": 1 },
+    "effects": [ { "type": "end_game", "title": "Сгорел на работе",
+                   "text": "Третий срыв оказался последним. Печь остыла навсегда.", "tag": "fail" } ] },
+
+  { "id": "debt_warning", "trigger": { "conditions": [
+      { "type": "var", "subject": "world", "var": "money", "op": "<", "value": 0 } ] },
+    "repeat": { "cooldown_days": 1 },
+    "effects": [ { "type": "notify", "text": "Кошелёк пуст, лавочник хмурится.", "kind": "warn" } ] },
+
+  { "id": "debt_shame", "trigger": { "conditions": [
+      { "type": "var", "subject": "world", "var": "money", "op": "<=", "value": -50 } ] },
+    "repeat": { "max": 1 },
+    "effects": [ { "type": "end_game", "title": "Долговая яма",
+                   "text": "Пекарню забрали за долги. Стыдно показаться на улице.", "tag": "fail" } ] },
+
+  { "id": "grandma_pie", "trigger": { "signal": "morning", "pool": "daily", "conditions": [] },
+    "weight": 2,
+    "effects": [
+      { "type": "add_modifier", "template": "cozy_evening", "target": "hero" },
+      { "type": "notify", "text": "Бабушка испекла пирог. На душе спокойно.", "kind": "good" } ] },
+
+  { "id": "cat_mischief", "trigger": { "signal": "morning", "pool": "daily", "conditions": [
+      { "type": "stock", "good": "flour", "op": ">=", "value": 1 } ] },
+    "weight": 1,
+    "effects": [
+      { "type": "goods", "good": "flour", "qty": -1 },
+      { "type": "notify", "text": "Кот разорвал мешок муки и сделал вид, что это не он." } ] },
+
+  { "id": "worker_day_off", "trigger": { "signal": "morning", "pool": "daily", "conditions": [] },
+    "weight": 2,
+    "participant": { "pick": "random", "among": "workers",
+                     "where": { "not": { "type": "incapacitated", "subject": "self" } } },
+    "repeat": { "cooldown_days": 3 },
+    "effects": [ { "type": "show_offer", "offer": "ask_day_off" } ] },
+
+  { "id": "neighbor_order", "trigger": { "signal": "morning", "pool": "daily", "conditions": [] },
+    "weight": 2,
+    "effects": [ { "type": "show_offer", "offer": "neighbor_bread", "data": { "qty": 6, "days": 2, "reward": 25 } } ] },
+
+  { "id": "cold_snap", "trigger": { "signal": "morning", "pool": "daily", "conditions": [] },
+    "weight": 1,
+    "participant": { "pick": "random", "among": "characters",
+                     "where": { "not": { "type": "has_modifier", "subject": "self", "template": "flu" } } },
+    "repeat": { "cooldown_days": 4 },
+    "effects": [
+      { "type": "add_modifier", "template": "flu", "target": "participant" },
+      { "type": "notify", "text": "{participant} простыл на сквозняке.", "kind": "warn" } ] },
+
+  { "id": "masha_arrives", "trigger": { "conditions": [
+      { "type": "day", "op": ">=", "value": 3 } ] },
+    "repeat": { "max": 1 },
+    "effects": [
+      { "type": "add_to_hire_pool", "character": "masha" },
+      { "type": "notify", "text": "В деревню пришла Маша — ищет работу." } ] },
+
+  { "id": "hired_welcome", "trigger": { "signal": "hired", "conditions": [] },
+    "participant": { "from": "signal" },
+    "effects": [ { "type": "notify", "text": "{participant} повязал фартук.", "kind": "good" } ] },
+
+  { "id": "idle_alarm", "trigger": { "signal": "idle_no_cost", "conditions": [] },
+    "participant": { "from": "signal" },
+    "stops_time": true, "repeat": { "cooldown_days": 1 },
+    "effects": [ { "type": "notify", "text": "{participant} сидит без дела: кончилось сырьё.", "kind": "warn" } ] },
+
+  { "id": "low_flour", "trigger": { "conditions": [
+      { "type": "calc", "name": "cost_hours", "op": "<", "value": 3 } ] },
+    "stops_time": true, "repeat": { "cooldown_days": 1 },
+    "effects": [ { "type": "notify", "text": "Муки осталось на пару часов работы.", "kind": "warn" } ] },
+
+  { "id": "pastry_discovered", "trigger": { "signal": "became_visible", "conditions": [
+      { "type": "data", "name": "id", "op": "==", "value": "bake_pastry" } ] },
+    "repeat": { "max": 1 },
+    "effects": [ { "type": "notify", "text": "Руки сами вспомнили бабушкин рецепт пирожных!", "kind": "good", "popup": true } ] },
+
+  { "id": "royal_messenger", "trigger": { "conditions": [
+      { "type": "var", "subject": "hero", "var": "bake_xp", "field": "level", "op": ">=", "value": 1 },
+      { "type": "day", "op": ">=", "value": 2 } ] },
+    "repeat": { "max": 1 },
+    "effects": [ { "type": "show_offer", "offer": "royal_order" } ] },
+
+  { "id": "order_failed", "data_defaults": { "penalty": -20 },
+    "effects": [
+      { "type": "var", "target": "world", "var": "money", "add": { "$data": "penalty" } },
+      { "type": "add_modifier", "template": "bad_reputation", "target": "world" },
+      { "type": "notify", "text": "Заказчик в гневе. Штраф: {penalty} мон.", "kind": "danger" } ] },
+
+  { "id": "royal_victory", "trigger": { "conditions": [
+      { "any": [ { "type": "obligation", "id": "royal_cake_ob", "state": "done" },
+                 { "type": "obligation", "id": "royal_pastry_ob", "state": "done" } ] } ] },
+    "repeat": { "max": 1 },
+    "effects": [ { "type": "show_offer", "offer": "victory_offer" } ] },
+
+  { "id": "theft_warning", "trigger": { "conditions": [
+      { "type": "calc", "name": "wealth", "op": ">", "value": 150 } ] },
+    "repeat": { "cooldown_days": 3 },
+    "effects": [
+      { "type": "notify", "text": "У забора кто-то топчется по вечерам.", "kind": "warn" },
+      { "type": "add_modifier", "template": "thief_watching", "target": "world" } ] },
+
+  { "id": "theft", "trigger": { "signal": "modifier_expired", "conditions": [
+      { "type": "data", "name": "template", "op": "==", "value": "thief_watching" },
+      { "type": "calc", "name": "wealth", "op": ">", "value": 150 } ] },
+    "effects": [
+      { "type": "var", "target": "world", "var": "money", "add": -40 },
+      { "type": "goods", "good": "bread", "qty": -5 },
+      { "type": "notify", "text": "Ночью обнесли кладовую!", "kind": "danger" } ] }
+]

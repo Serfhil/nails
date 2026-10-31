@@ -1,0 +1,47 @@
+[
+  {
+    "id": "skilled",
+    "name": "Умелец",
+    "text": "Руки помнят",
+    "var": "speed",
+    "op": "pct",
+    "value": 10,
+    "duration": {
+      "kind": "source"
+    }
+  },
+  {
+    "id": "hammer_bonus",
+    "name": "Хороший молот",
+    "text": "Бьёт ровно",
+    "var": "speed",
+    "op": "pct",
+    "value": 10,
+    "duration": {
+      "kind": "source"
+    }
+  },
+  {
+    "id": "has_anvil",
+    "name": "Есть наковальня",
+    "flag": true,
+    "duration": {
+      "kind": "source"
+    },
+    "visible": false
+  },
+  {
+    "id": "rested",
+    "name": "Отдохнул",
+    "text": "Усталость копится медленнее",
+    "var": "stress",
+    "applies_to": "change",
+    "direction": "gain",
+    "op": "pct",
+    "value": -20,
+    "duration": {
+      "kind": "days",
+      "n": 1
+    }
+  }
+]

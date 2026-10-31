@@ -1,0 +1,24 @@
+# Личное и устаревшее — не публикуется
+chat-context/
+_archive/
+.claude/
+
+# Зависимости и сборка (сайт собирает GitHub Actions)
+node_modules/
+gvozdi-v2/dist/
+gvozdi-v2/sim-out*/
+
+# Граф: публикуется только результат, без кэша и локальных путей
+graphify-out/cache/
+graphify-out/.graphify_*
+!graphify-out/.graphify_labels.json
+graphify-out/.needs_update
+graphify-out/cost.json
+
+# Системное
+.DS_Store
+Thumbs.db
+*.log
+
+# Личная песочница владельца по дизайну — не часть проекта (designvariants/CLAUDE.md)
+gvozdi-v2/docs/ui/styleguide/designvariants/

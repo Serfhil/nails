@@ -1,0 +1,4275 @@
+[
+ {
+  "id": "count_nails",
+  "delivery": "now",
+  "title": "Управляющий графа",
+  "text": "К кузне подкатила бричка. Пантелей, управляющий графа, утирает лоб: «Его сиятельство строит новый амбар. Нужно 20 связок гвоздей за 4 дня. Справишься — заплачу 75 монет, и граф о тебе узнает».",
+  "options": [
+   {
+    "id": "take",
+    "label": "Возьмусь",
+    "obligation": {
+     "id": "count_nails_ob",
+     "title": "Гвозди для графского амбара",
+     "requires": [
+      {
+       "good": "nails",
+       "qty": 20
+      }
+     ],
+     "deadline_days": 4,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 75
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 10
+      },
+      {
+       "type": "add_modifier",
+       "template": "count_known",
+       "target": "world"
+      },
+      {
+       "type": "notify",
+       "kind": "seal",
+       "popup": true,
+       "text": "Пантелей пересчитал гвозди и довольно крякнул: «Будет о тебе добрая молва — приеду снова. Его сиятельство любит подковы для своих рысаков»."
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -8
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -5
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "later",
+    "label": "Не сейчас, не управлюсь",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Пантелей пожал плечами: «Загляну ещё. Граф ждать не любит, но я — терпеливый»."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "count_shoes",
+  "delivery": "now",
+  "title": "Подковы для графских конюшен",
+  "text": "Пантелей снова у ворот: «Графские конюшни ждут подков. Десять четвёрок за пять дней — 170 монет. Рысаки у графа злые, подковы нужны крепкие».",
+  "options": [
+   {
+    "id": "take",
+    "label": "Скую",
+    "obligation": {
+     "id": "count_shoes_ob",
+     "title": "Подковы для графских конюшен",
+     "requires": [
+      {
+       "good": "horseshoes",
+       "qty": 10
+      }
+     ],
+     "deadline_days": 5,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 170
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 20
+      },
+      {
+       "type": "notify",
+       "kind": "seal",
+       "popup": true,
+       "text": "Пантелей, понизив голос: «Его сиятельство затевает хозяйство в усадьбе. Такие заказы дают только настоящей мастерской — с подмастерьями. Поставь мастерскую, да чтоб о ней в округе знали, — тогда приеду»."
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -12
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -8
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "later",
+    "label": "Пока не по силам",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Пантелей вздохнул: «Ладно. Но конюхи без подков долго не протянут»."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "count_big",
+  "delivery": "now",
+  "title": "Большой заказ графа",
+  "text": "Пантелей привёз грамоту с сургучной печатью: «Его сиятельству к осенней охоте нужна работа, достойная замка. Двор у тебя знатный — выбирай, мастер, что тебе по руке. Срок — восемь дней».",
+  "options": [
+   {
+    "id": "tools",
+    "label": "Восемь топоров и три лемеха для замкового хозяйства",
+    "enabled_when": {
+     "all": [
+      {
+       "type": "var",
+       "subject": "hero",
+       "var": "smith_xp",
+       "field": "level",
+       "op": ">=",
+       "value": 3
+      },
+      {
+       "type": "has_modifier",
+       "subject": "workshop",
+       "template": "has_grindstone"
+      },
+      {
+       "type": "has_modifier",
+       "subject": "workshop",
+       "template": "has_big_hearth"
+      }
+     ],
+     "text": "Нужны мастер, точильный круг и большой горн."
+    },
+    "obligation": {
+     "id": "count_tools_ob",
+     "title": "Топоры и лемеха для графа",
+     "requires": [
+      {
+       "good": "axes",
+       "qty": 8
+      },
+      {
+       "good": "plowshares",
+       "qty": 3
+      }
+     ],
+     "deadline_days": 8,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 520
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 30
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -20
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -15
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "grille",
+    "label": "Узорные ворота для графского сада (4 решётки и 10 связок петель)",
+    "open_when": {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "art_lore"
+    },
+    "obligation": {
+     "id": "count_grille_ob",
+     "title": "Ворота для графского сада",
+     "requires": [
+      {
+       "good": "grilles",
+       "qty": 4
+      },
+      {
+       "good": "hinges",
+       "qty": 10
+      }
+     ],
+     "deadline_days": 8,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 480
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 30
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -20
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -15
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "sword",
+    "label": "Три парадных меча и два замка для оружейной",
+    "open_when": {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "blade_lore"
+    },
+    "obligation": {
+     "id": "count_sword_ob",
+     "title": "Парадные мечи для графа",
+     "requires": [
+      {
+       "good": "swords",
+       "qty": 3
+      },
+      {
+       "good": "locks",
+       "qty": 2
+      }
+     ],
+     "deadline_days": 8,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 500
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 30
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -20
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -15
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "later",
+    "label": "Подумаю",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Пантелей свернул грамоту: «Подумай. Я ещё заеду»."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "count_court",
+  "delivery": "now",
+  "title": "Приглашение ко двору",
+  "text": "Граф сам приехал в мастерскую, повертел в руках вашу работу и сказал: «Будь моим придворным кузнецом. Дом при замке, жалованье и почёт. И жену бери, и тёщу… ну, тёщу — как знаешь».",
+  "options": [
+   {
+    "id": "accept",
+    "label": "Принять место при дворе",
+    "effects": [
+     {
+      "type": "end_game",
+      "tag": "goal",
+      "title": "Придворный кузнец",
+      "text": "Теперь ваши гвозди держат графский замок, а подковы звенят на графских рысаках. Марфа ходит в шёлковом платке, Васятка учится у замкового писаря, а тёща рассказывает всем, что всегда в вас верила."
+     }
+    ]
+   },
+   {
+    "id": "stay",
+    "label": "Остаться в своей мастерской",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "count_favor",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "text": "Граф хмыкнул: «Своё дело — оно, конечно… Но заказы мои — твои». Что берёт граф, то берут и все."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mil_visit_offer",
+  "delivery": "now",
+  "title": "Тёща в гостях",
+  "text": "Приехала тёща Агриппина. С порога: «Ну, зятёк, что-то кузня у тебя покосилась. И Марфушка похудела».",
+  "options": [
+   {
+    "id": "endure",
+    "label": "Терпеть и улыбаться",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "mil_strain",
+      "target": "hero"
+     }
+    ]
+   },
+   {
+    "id": "gift",
+    "label": "Подарить ей платок",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 8
+     }
+    ],
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "mil_favor",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Тёща повязала платок и даже улыбнулась. Почти."
+     }
+    ]
+   },
+   {
+    "id": "hide",
+    "label": "Сбежать в кузню до темноты",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "wife_sulk",
+      "target": "hero"
+     },
+     {
+      "type": "notify",
+      "text": "Марфа одна отдувалась за двоих и теперь с вами не разговаривает."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cat_cream_offer",
+  "delivery": "now",
+  "title": "Уголёк",
+  "text": "Уголёк трётся о ноги и выразительно смотрит на кринку со сметаной.",
+  "options": [
+   {
+    "id": "feed",
+    "label": "Налить сметаны",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 1
+     }
+    ],
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "cat_friend",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Уголёк замурлыкал так, что задрожала наковальня."
+     }
+    ]
+   },
+   {
+    "id": "shoo",
+    "label": "Брысь!",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "hammer_lost",
+      "target": "hero"
+     },
+     {
+      "type": "notify",
+      "text": "Уголёк обиделся и утащил молоток. Ищите теперь."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "son_offer",
+  "delivery": "now",
+  "title": "Васятка",
+  "text": "Васятка крутится у горна: «Тятя, а можно я мехи покачаю? А правда, что буквы складываются в слова?»",
+  "options": [
+   {
+    "id": "forge",
+    "label": "Взять в кузню, пусть качает мехи",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "son_forge",
+      "target": "world"
+     },
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": -5
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Васятка качал мехи до седьмого пота и сиял, как новый грош."
+     }
+    ]
+   },
+   {
+    "id": "letters",
+    "label": "Отвести к дьячку учиться грамоте",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 2
+     }
+    ],
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "son_letters",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "text": "Дьячок взял две монеты и пообещал, что к зиме Васятка будет читать Псалтырь."
+     }
+    ]
+   },
+   {
+    "id": "play",
+    "label": "Пусть бегает, мал ещё",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Васятка убежал пускать кораблики в луже."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "kuzma_offer",
+  "delivery": "now",
+  "title": "Сосед Кузьма",
+  "text": "Сосед Кузьма мнётся у ворот: «Демьян, дай молот на часок — тын подправить. Верну к обеду, вот те крест».",
+  "options": [
+   {
+    "id": "lend",
+    "label": "Дать молот",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "lent_hammer",
+      "target": "hero"
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 2
+     },
+     {
+      "type": "notify",
+      "text": "Молот Кузьма вернул к ужину. Зато всей улице рассказал, какой вы добрый сосед."
+     }
+    ]
+   },
+   {
+    "id": "refuse",
+    "label": "Самому нужен",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": -1
+     },
+     {
+      "type": "notify",
+      "text": "Кузьма ушёл, ворча про жадных кузнецов."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ask_day_off",
+  "delivery": "now",
+  "title": "Просьба",
+  "text": "{participant} мнётся у горна: «Хозяин, мне бы выходной — к матушке сходить».",
+  "options": [
+   {
+    "id": "yes",
+    "label": "Отпустить",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "day_off",
+      "target": "participant"
+     }
+    ]
+   },
+   {
+    "id": "no",
+    "label": "Работы много, не отпущу",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "grumpy",
+      "target": "participant"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "eremka_offer",
+  "delivery": "now",
+  "title": "Ерёмка любопытствует",
+  "text": "Ерёмка подглядывает за вашим молотом: «Хозяин, покажи, как ты так бьёшь, что искры веером!»",
+  "options": [
+   {
+    "id": "teach",
+    "label": "Показать",
+    "effects": [
+     {
+      "type": "var",
+      "target": "char:eremka",
+      "var": "smith_xp",
+      "add": 6
+     },
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": 4
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Ерёмка повторил удар — и даже ничего не сломал."
+     }
+    ]
+   },
+   {
+    "id": "watch",
+    "label": "Сам смотри и учись",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Ерёмка обиженно засопел и пошёл ковать гвозди. Криво."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "gordey_offer",
+  "delivery": "now",
+  "title": "Странник",
+  "text": "На гул мехов зашёл седой странник с трубкой: «Хорошо гудят. Пустишь переночевать старого оружейника? За хлеб расскажу, как калят клинки».",
+  "options": [
+   {
+    "id": "host",
+    "label": "Накормить и оставить ночевать",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 5
+     }
+    ],
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "blade_lore",
+      "target": "hero"
+     },
+     {
+      "type": "add_modifier",
+      "template": "gordey_hosted",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Странник Гордей до петухов рассказывал про закалку. Теперь вы знаете секрет: сталь, масло и терпение. Из стали теперь можно ковать мечи."
+     }
+    ]
+   },
+   {
+    "id": "talk",
+    "label": "Посидеть с ним у горна до утра",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "blade_lore",
+      "target": "hero"
+     },
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": 20
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Всю ночь Гордей показывал на старом обломке, как калят клинок. Под утро он ушёл, не простившись. Из стали теперь можно ковать мечи."
+     }
+    ]
+   },
+   {
+    "id": "refuse",
+    "label": "Не пускать — мало ли кто бродит",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Странник ушёл в ночь. Мехи тоскливо вздохнули."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "knight_offer",
+  "delivery": "now",
+  "title": "Сэр Бодун",
+  "text": "С графскими конюхами приехал рыцарь сэр Бодун. Шлем у него помят так, будто им забивали сваи. «Выправишь, кузнец?»",
+  "options": [
+   {
+    "id": "free",
+    "label": "Выправить даром",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "armor_lore",
+      "target": "hero"
+     },
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": 10
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 3
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Пока вы выправляли шлем, сэр Бодун показал, как плетут кольчугу: кольцо к кольцу, как бабы вяжут чулок."
+     }
+    ]
+   },
+   {
+    "id": "paid",
+    "label": "За плату",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 15
+     },
+     {
+      "type": "notify",
+      "text": "Сэр Бодун расплатился, надел шлем и уехал, гремя как ведро."
+     }
+    ]
+   },
+   {
+    "id": "refuse",
+    "label": "Некогда, сэр",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Сэр Бодун уехал в помятом шлеме. Гордо."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rose_offer",
+  "delivery": "now",
+  "title": "Марфа вздыхает",
+  "text": "Марфа вздыхает у окна: «У мельничихи на окне кованая роза стоит… А мне хоть бы гвоздик подарил».",
+  "options": [
+   {
+    "id": "promise",
+    "label": "Выкую, душа моя",
+    "obligation": {
+     "id": "rose_ob",
+     "title": "Роза для Марфы",
+     "requires": [
+      {
+       "good": "rose",
+       "qty": 1
+      }
+     ],
+     "deadline_days": 3,
+     "on_done": [
+      {
+       "type": "add_modifier",
+       "template": "art_lore",
+       "target": "hero"
+      },
+      {
+       "type": "add_modifier",
+       "template": "rose_glow",
+       "target": "hero"
+      },
+      {
+       "type": "notify",
+       "kind": "seal",
+       "popup": true,
+       "text": "Марфа поставила розу на окно и всю неделю пела. А вы заметили: завитки у вас выходят на загляденье. Можно ковать и узорные решётки!"
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "add_modifier",
+       "template": "wife_sulk",
+       "target": "hero"
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "add_modifier",
+       "template": "wife_sulk",
+       "target": "hero"
+      }
+     ]
+    }
+   },
+   {
+    "id": "no",
+    "label": "Некогда мне глупостями заниматься",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "wife_sulk",
+      "target": "hero"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mil_loan_offer",
+  "delivery": "now",
+  "title": "Тёщина кубышка",
+  "text": "Тёща Агриппина прослышала про долги, вздохнула и достала из-под юбки кубышку: «На, зятёк, 60 монет. Через десять дней вернёшь 80 — не чужие ведь люди».",
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять 60 монет",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 60
+     }
+    ],
+    "obligation": {
+     "id": "mil_debt_ob",
+     "title": "Долг тёще",
+     "requires": [
+      {
+       "var": "money",
+       "qty": 80
+      }
+     ],
+     "deadline_days": 10,
+     "on_done": [
+      {
+       "type": "add_modifier",
+       "template": "mil_favor",
+       "target": "world"
+      },
+      {
+       "type": "notify",
+       "kind": "good",
+       "text": "Тёща пересчитала монеты дважды и осталась довольна."
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": -10
+      },
+      {
+       "type": "add_modifier",
+       "template": "wife_sulk",
+       "target": "hero"
+      },
+      {
+       "type": "notify",
+       "kind": "danger",
+       "text": "Тёща ославила вас на три села."
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": -10
+      },
+      {
+       "type": "add_modifier",
+       "template": "wife_sulk",
+       "target": "hero"
+      },
+      {
+       "type": "notify",
+       "kind": "danger",
+       "text": "Тёща ославила вас на три села."
+      }
+     ]
+    }
+   },
+   {
+    "id": "refuse",
+    "label": "Гордость не позволяет",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Тёща спрятала кубышку: «Ну, гляди, гордый»."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "star_offer",
+  "delivery": "now",
+  "title": "Падучая звезда",
+  "text": "Ночью над мельницей пролетела звезда и упала за запрудой. Гордей сказывал: из небесного железа куют клинки, о которых поют былины.",
+  "options": [
+   {
+    "id": "go",
+    "label": "Пойти искать",
+    "effects": [
+     {
+      "type": "goods",
+      "good": "star_iron",
+      "qty": 1
+     },
+     {
+      "type": "add_modifier",
+      "template": "sleepless",
+      "target": "hero"
+     },
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": 15
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Под утро вы нашли в воронке тёплый чёрный камень. Небесное железо! Такое доверяют только оружейнику."
+     }
+    ]
+   },
+   {
+    "id": "sleep",
+    "label": "Перекреститься и спать дальше",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Утром мальчишки бегали за запруду, но ничего не нашли."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "star_blade_offer",
+  "delivery": "now",
+  "title": "Звёздный клинок",
+  "text": "Звёздный клинок лежит на наковальне и светится, как вода под луной. Слух о нём уже бежит по округе.",
+  "options": [
+   {
+    "id": "legend",
+    "label": "Повесить над горном — пусть сложат былину",
+    "effects": [
+     {
+      "type": "end_game",
+      "tag": "goal",
+      "title": "Кузнец-легенда",
+      "text": "Про Демьяна и звёздный клинок сложили былину. Её поют гусляры от Заречья до моря, а к вашей кузне водят детей — посмотреть на меч, который светится в темноте."
+     }
+    ]
+   },
+   {
+    "id": "count",
+    "label": "Поднести графу",
+    "effects": [
+     {
+      "type": "goods",
+      "good": "star_blade",
+      "qty": -1
+     },
+     {
+      "type": "add_modifier",
+      "template": "count_favor",
+      "target": "world"
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 40
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "text": "Граф принял клинок и долго молчал. Потом сказал: «Такого мастера я не забуду»."
+     }
+    ]
+   },
+   {
+    "id": "sell",
+    "label": "Продать заезжему купцу",
+    "effects": [
+     {
+      "type": "goods",
+      "good": "star_blade",
+      "qty": -1
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 500
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Купец отсчитал пятьсот монет и увёз клинок за море."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "duke_order",
+  "delivery": "now",
+  "title": "Гонец герцога",
+  "text": "Прискакал гонец герцога Ольгерда: «Его светлость слышал о твоих клинках. Нужно оружие для дружины, срок — восемь дней».",
+  "options": [
+   {
+    "id": "swords",
+    "label": "Пять мечей за 520 монет",
+    "obligation": {
+     "id": "duke_swords_ob",
+     "title": "Мечи для герцога",
+     "requires": [
+      {
+       "good": "swords",
+       "qty": 5
+      }
+     ],
+     "deadline_days": 8,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 520
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 25
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -15
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -10
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "mixed",
+    "label": "Три меча и две кольчуги за 560 монет",
+    "open_when": {
+     "type": "has_modifier",
+     "subject": "hero",
+     "template": "armor_lore"
+    },
+    "obligation": {
+     "id": "duke_mixed_ob",
+     "title": "Мечи и кольчуги для герцога",
+     "requires": [
+      {
+       "good": "swords",
+       "qty": 3
+      },
+      {
+       "good": "mail",
+       "qty": 2
+      }
+     ],
+     "deadline_days": 8,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 560
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 25
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -15
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -10
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "refuse",
+    "label": "Не по силам",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Гонец развернул коня: «Его светлость спросит ещё раз. Может быть»."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "duke_court",
+  "delivery": "now",
+  "title": "Зов герцога",
+  "text": "Герцог Ольгерд зовёт вас главным оружейником дружины: «Замок, кузня на три горна и сотня мечей в год. Граф подождёт».",
+  "options": [
+   {
+    "id": "accept",
+    "label": "Ехать к герцогу",
+    "effects": [
+     {
+      "type": "end_game",
+      "tag": "goal",
+      "title": "Оружейник герцога",
+      "text": "Мечи с вашим клеймом носит вся герцогская дружина. Марфа привыкла к замку, Уголёк — к замковым мышам, а граф до сих пор кусает локти."
+     }
+    ]
+   },
+   {
+    "id": "stay",
+    "label": "Остаться дома",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 10
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "text": "Герцог удивился, но уважил: «Кто от герцога отказывается, тот знает себе цену»."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "guild_offer",
+  "delivery": "now",
+  "title": "Выборные от цеха",
+  "text": "Цех городских кузнецов прислал выборных в праздничных кафтанах: «Мастерская у тебя знатная, подмастерья толковые. Иди к нам старшиной!»",
+  "options": [
+   {
+    "id": "accept",
+    "label": "Стать старшиной цеха",
+    "effects": [
+     {
+      "type": "end_game",
+      "tag": "goal",
+      "title": "Старшина цеха",
+      "text": "Теперь вы решаете, кому ковать и почём. Подмастерья по всему городу учатся по вашей науке, а Ерёмка, говорят, наконец перестал портить заготовки."
+     }
+    ]
+   },
+   {
+    "id": "later",
+    "label": "Пока рано",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Выборные поклонились: «Подумай, мастер. Мы ещё придём»."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "miller_order",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "Мельник Прохор: гвозди",
+  "text": "Мельник Прохор чинит запруду: нужно {qty} связок гвоздей за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "qty": 8,
+   "days": 3,
+   "reward": 46,
+   "fame": 3
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "miller_ob",
+     "title": "Гвозди для мельника",
+     "requires": [
+      {
+       "good": "nails",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      },
+      {
+       "type": "add_modifier",
+       "template": "miller_thanks",
+       "target": "world"
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -3
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_nails",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: гвозди",
+  "text": "{client} просит {qty} связок гвоздей за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Сосед",
+   "qty": 10,
+   "days": 3,
+   "reward": 56,
+   "fame": 3
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_nails_ob",
+     "title": "{client}: гвозди",
+     "requires": [
+      {
+       "good": "nails",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -3
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_shoes",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: подковы",
+  "text": "{client} просит {qty} четвёрок подков за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Сосед",
+   "qty": 2,
+   "days": 2,
+   "reward": 32,
+   "fame": 3
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_shoes_ob",
+     "title": "{client}: подковы",
+     "requires": [
+      {
+       "good": "horseshoes",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -3
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_pots",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: котелки",
+  "text": "{client} просит {qty} котелков за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Соседка",
+   "qty": 2,
+   "days": 3,
+   "reward": 58,
+   "fame": 4
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_pots_ob",
+     "title": "{client}: котелки",
+     "requires": [
+      {
+       "good": "pots",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -3
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_axes",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: топоры",
+  "text": "{client} просит {qty} топоров за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Лесорубы",
+   "qty": 3,
+   "days": 4,
+   "reward": 115,
+   "fame": 6
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_axes_ob",
+     "title": "{client}: топоры",
+     "requires": [
+      {
+       "good": "axes",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -4
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_grille",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: решётка",
+  "text": "{client} просит {qty} узорную решётку за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Батюшка",
+   "qty": 1,
+   "days": 4,
+   "reward": 78,
+   "fame": 8
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_grille_ob",
+     "title": "{client}: решётка",
+     "requires": [
+      {
+       "good": "grilles",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -4
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_sword",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: меч",
+  "text": "{client} желает {qty} меч за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Боярин",
+   "qty": 1,
+   "days": 4,
+   "reward": 110,
+   "fame": 6
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_sword_ob",
+     "title": "{client}: меч",
+     "requires": [
+      {
+       "good": "swords",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -4
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_mail",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: кольчуга",
+  "text": "{client} желает {qty} кольчугу за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Рыцарь",
+   "qty": 1,
+   "days": 5,
+   "reward": 145,
+   "fame": 7
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_mail_ob",
+     "title": "{client}: кольчуга",
+     "requires": [
+      {
+       "good": "mail",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -4
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "heart_crisis_offer",
+  "delivery": "now",
+  "title": "Сердце прихватило",
+  "text": "Демьян схватился за грудь и осел у наковальни. Марфа побелела: «Третий надрыв! Агафья говорит — ещё один, и сердце не встанет». На то, чтобы добраться до знахарки, у вас три дня.",
+  "options": [
+   {
+    "id": "healer",
+    "label": "Послать за Агафьей (20 мон.)",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 20
+     }
+    ],
+    "effects": [
+     {
+      "type": "remove_modifier",
+      "template": "overwork_scar",
+      "target": "hero",
+      "count": 1
+     },
+     {
+      "type": "remove_modifier",
+      "template": "heart_deadline",
+      "target": "hero"
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Агафья пошептала над сердцем и велела полежать. Отпустило."
+     }
+    ]
+   },
+   {
+    "id": "wait",
+    "label": "Отлежусь, дело не ждёт",
+    "effects": [
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Три дня, чтобы дойти до знахарки Агафьи. Не тяните."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fire_blaze_offer",
+  "delivery": "now",
+  "title": "Горит труба!",
+  "text": "Сажа вспыхнула, искры сыплются на солому. Бочки с водой у горна нет. Суток крыша не простоит: или зовите соседей с вёдрами, или прочищайте трубу сами.",
+  "options": [
+   {
+    "id": "neighbors",
+    "label": "Крикнуть соседей с вёдрами (15 мон.)",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 15
+     }
+    ],
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "soot",
+      "set": 30
+     },
+     {
+      "type": "remove_modifier",
+      "template": "fire_deadline",
+      "target": "world"
+     },
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": 10
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Соседи залили трубу всем миром. Пронесло, но вёдра обошлись в копеечку."
+     }
+    ]
+   },
+   {
+    "id": "alone",
+    "label": "Справлюсь сам: прочищу трубу",
+    "effects": [
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Сутки на то, чтобы прочистить трубу. Это два часа работы."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "shame_offer",
+  "delivery": "now",
+  "title": "Савва с долговой книгой",
+  "text": "Савва стоит у ворот и листает книгу: «Долг растёт, а ты молчишь. Даю три дня — потом объявлю на сходе». Соседи уже вытягивают шеи.",
+  "options": [
+   {
+    "id": "goods",
+    "label": "Отдать Савве подковы в зачёт (3 шт.)",
+    "cost": [
+     {
+      "good": "horseshoes",
+      "qty": 3
+     }
+    ],
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 20
+     },
+     {
+      "type": "notify",
+      "text": "Савва ощупал подковы, поморщился и скостил двадцать монет. Дёшево, зато разом."
+     }
+    ]
+   },
+   {
+    "id": "wait",
+    "label": "Попросить три дня",
+    "effects": [
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Три дня на то, чтобы выбраться из долгов. Продавайте товар, берите заказы."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "old_age_offer",
+  "delivery": "now",
+  "title": "Не молодеем",
+  "text": "Ноги ноют, борода белее снега. Кузьма хлопнул по плечу: «Дед, граф-то про тебя и не слыхал. Либо перестраивай кузню в мастерскую, либо доживай тихо». На раздумья — четыре дня.",
+  "options": [
+   {
+    "id": "rebuild",
+    "label": "Взяться за перестройку",
+    "effects": [
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Мастерская стоит 220 монет и шесть часов работы. Четыре дня, не больше."
+     }
+    ]
+   },
+   {
+    "id": "retire",
+    "label": "Доживать тихо",
+    "effects": [
+     {
+      "type": "end_game",
+      "tag": "fail",
+      "title": "Тихая старость",
+      "text": "Годы прошли, как дым из трубы. Демьян так и ковал гвозди в отцовской кузне, пока борода не стала белой. Внуки говорят: дед был хороший кузнец. Только граф о нём так и не узнал."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "count_estate",
+  "delivery": "now",
+  "title": "Хозяйство графской усадьбы",
+  "text": "Пантелей разглядывает новую вывеску: «Мастерская — это дело. Его сиятельство заводит хозяйство в Липовой усадьбе: нужно шесть кос для косарей и четыре котла для кухни. Семь дней, 280 монет».",
+  "options": [
+   {
+    "id": "take",
+    "label": "Возьмусь",
+    "obligation": {
+     "id": "count_estate_ob",
+     "title": "Косы и котлы для усадьбы",
+     "requires": [
+      {
+       "good": "scythes",
+       "qty": 6
+      },
+      {
+       "good": "pots",
+       "qty": 4
+      }
+     ],
+     "deadline_days": 7,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 280
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 20
+      },
+      {
+       "type": "notify",
+       "kind": "seal",
+       "popup": true,
+       "text": "Пантелей пощупал лезвия кос и присвистнул: «Его сиятельство доволен. Дальше — казна, а это дело тонкое: замки да петли»"
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -15
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -10
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "later",
+    "label": "Пока не по силам",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Пантелей пожал плечами: «Косить всё равно придётся. Заеду ещё»"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "count_treasury",
+  "delivery": "now",
+  "title": "Замки для графской казны",
+  "text": "Пантелей говорит шёпотом: «Казначей жалуется, что сундуки открываются от чиха. Нужно четыре стальных замка и двенадцать связок петель и скоб. Семь дней, 340 монет. И — никому ни слова».",
+  "options": [
+   {
+    "id": "take",
+    "label": "Скую, и рот на замке",
+    "obligation": {
+     "id": "count_treasury_ob",
+     "title": "Замки и петли для казны",
+     "requires": [
+      {
+       "good": "locks",
+       "qty": 4
+      },
+      {
+       "good": "hinges",
+       "qty": 12
+      }
+     ],
+     "deadline_days": 7,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 340
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 25
+      },
+      {
+       "type": "add_modifier",
+       "template": "count_patron",
+       "target": "world"
+      },
+      {
+       "type": "notify",
+       "kind": "seal",
+       "popup": true,
+       "text": "Казначей повесил ваши замки и сам не смог открыть. Граф объявил вас кузнецом, которому доверяет казну. Пантелей: «Теперь большой заказ — но только кузнечному двору»"
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -18
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -12
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "later",
+    "label": "Замки мне пока не по уму",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Пантелей покачал головой: «Без тисков замка не собрать. Заеду, как обзаведёшься»"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "count_rush",
+  "delivery": "now",
+  "title": "Срочное поручение",
+  "text": "Гонец от Пантелея, весь в пыли: «У графской кареты отлетели петли на дверцах и сундуке! Нужно восемь связок петель и скоб за два дня. 120 монет».",
+  "options": [
+   {
+    "id": "take",
+    "label": "Успею",
+    "obligation": {
+     "id": "count_rush_ob",
+     "title": "Петли для графской кареты",
+     "requires": [
+      {
+       "good": "hinges",
+       "qty": 8
+      }
+     ],
+     "deadline_days": 2,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 120
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 6
+      },
+      {
+       "type": "notify",
+       "kind": "good",
+       "text": "Карета графа укатила, не скрипнув ни одной дверцей."
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -6
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "noble_failed",
+       "data": {
+        "loss": -4
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "no",
+    "label": "Не успею, честно скажу",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Гонец ускакал к кузнецу в Заречье."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "count_hunt_offer",
+  "delivery": "now",
+  "title": "Графская охота",
+  "text": "У ворот остановилась графская охота: у вороного жеребца отлетела подкова. Ловчий кричит: «Живо, кузнец, граф ждёт!»",
+  "options": [
+   {
+    "id": "shoe",
+    "label": "Подковать как следует",
+    "cost": [
+     {
+      "good": "horseshoes",
+      "qty": 1
+     }
+    ],
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 20
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 8
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Граф посмотрел на подкову, потом на вас — и кивнул. Ловчий бросил кошель."
+     }
+    ]
+   },
+   {
+    "id": "fast",
+    "label": "Сковать подкову на скорую руку",
+    "effects": [
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": 15
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 5
+     },
+     {
+      "type": "notify",
+      "text": "Подкову сковали за полчаса. Граф ускакал, вы сели на порог отдышаться."
+     }
+    ]
+   },
+   {
+    "id": "refuse",
+    "label": "Горн остыл, ваше сиятельство",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": -3
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Граф поморщился и поехал дальше на трёх подковах."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "kuzma_plea",
+  "delivery": "now",
+  "title": "Кузьма сватается",
+  "text": "Кузьма в новой рубахе мнёт шапку: «Демьян, выручай. Сватаюсь к вдове Пелагее, а она говорит: пойду за того, у кого в хозяйстве всё железное справное — петли на воротах, скобы на сундуке. А у меня, сам знаешь… Скуй мне шесть связок петель за четыре дня. Денег мало, зато век не забуду».",
+  "options": [
+   {
+    "id": "help",
+    "label": "Скую, сосед",
+    "obligation": {
+     "id": "kuzma_hinges_ob",
+     "title": "Петли для Кузьмы",
+     "requires": [
+      {
+       "good": "hinges",
+       "qty": 6
+      }
+     ],
+     "deadline_days": 4,
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": 15
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "goodwill",
+       "add": 5
+      },
+      {
+       "type": "add_modifier",
+       "template": "kuzma_wait1",
+       "target": "world"
+      },
+      {
+       "type": "notify",
+       "kind": "good",
+       "text": "Кузьма навесил новые петли — ворота закрываются без скрипа. Пошёл к Пелагее с поклоном. Ждите вестей."
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "kuzma_sad"
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "kuzma_sad"
+      }
+     ]
+    }
+   },
+   {
+    "id": "refuse",
+    "label": "Своих дел по горло",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": -3
+     },
+     {
+      "type": "add_modifier",
+      "template": "kuzma_done",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Кузьма вздохнул и пошёл сватать с кривыми петлями. Что из этого вышло — вся деревня знает: ничего."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "kuzma_test",
+  "delivery": "now",
+  "title": "Подкова на счастье",
+  "text": "Пелагея петли похвалила, да сказала: «Пусть жених сам скуёт подкову на счастье — погляжу, какие у него руки». Кузьма бледный: «Демьян, я ж молотом только по пальцам…»",
+  "options": [
+   {
+    "id": "teach",
+    "label": "Научить Кузьму самому",
+    "obligation": {
+     "id": "kuzma_shoe_ob",
+     "title": "Кузьма куёт подкову",
+     "requires": [
+      {
+       "good": "lucky_shoe",
+       "qty": 1
+      }
+     ],
+     "deadline_days": 3,
+     "on_done": [
+      {
+       "type": "add_modifier",
+       "template": "kuzma_wait2",
+       "target": "world"
+      },
+      {
+       "type": "notify",
+       "kind": "good",
+       "text": "Кузьма отнёс Пелагее кривую, но свою подкову. Пелагея прибила её над дверью. Сватов ждут через два дня!"
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "kuzma_sad"
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "kuzma_sad"
+      }
+     ]
+    }
+   },
+   {
+    "id": "forge_self",
+    "label": "Отдать свою подкову — скажем, что его",
+    "cost": [
+     {
+      "good": "horseshoes",
+      "qty": 1
+     }
+    ],
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "kuzma_lie",
+      "target": "world"
+     },
+     {
+      "type": "add_modifier",
+      "template": "kuzma_wait2",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "text": "Кузьма унёс вашу подкову, завернув в тряпицу. Пелагея ахнула: «Ну и руки!» Сватов ждут через два дня."
+     }
+    ]
+   },
+   {
+    "id": "truth",
+    "label": "Сказать Пелагее правду",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": 2
+     },
+     {
+      "type": "add_modifier",
+      "template": "kuzma_truth",
+      "target": "world"
+     },
+     {
+      "type": "add_modifier",
+      "template": "kuzma_wait2",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Вы пошли к Пелагее сами: «Кузнец из Кузьмы никакой, зато сердце золотое». Пелагея долго смеялась — и согласилась. Сватов ждут через два дня."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "kuzma_wedding",
+  "delivery": "now",
+  "title": "Свадьба Кузьмы",
+  "text": "Кузьма и Пелагея зовут вас посажёным отцом! Вся деревня соберётся. С пустыми руками на свадьбу не ходят… или ходят?",
+  "options": [
+   {
+    "id": "pots",
+    "label": "Подарить два котелка",
+    "cost": [
+     {
+      "good": "pots",
+      "qty": 2
+     }
+    ],
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "kuzma_done",
+      "target": "world"
+     },
+     {
+      "type": "add_modifier",
+      "template": "wedding_joy",
+      "target": "hero"
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": 8
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 4
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Кузьма и Пелагея обвенчались. Гуляли три дня, пели «Во кузнице», а тёща Агриппина сплясала так, что ей хлопал даже батюшка. Ваши котелки молодые поставили на самое видное место."
+     }
+    ]
+   },
+   {
+    "id": "money",
+    "label": "Подарить 25 монет",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 25
+     }
+    ],
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "kuzma_done",
+      "target": "world"
+     },
+     {
+      "type": "add_modifier",
+      "template": "wedding_joy",
+      "target": "hero"
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": 5
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Кузьма и Пелагея обвенчались. Гуляли три дня, пели «Во кузнице», а тёща Агриппина сплясала так, что ей хлопал даже батюшка. Кузьма спрятал ваши монеты за икону «на корову»."
+     }
+    ]
+   },
+   {
+    "id": "dance",
+    "label": "Прийти без подарка, зато плясать до утра",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "kuzma_done",
+      "target": "world"
+     },
+     {
+      "type": "add_modifier",
+      "template": "wedding_joy",
+      "target": "hero"
+     },
+     {
+      "type": "add_modifier",
+      "template": "wedding_hangover",
+      "target": "hero"
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": 2
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Кузьма и Пелагея обвенчались. Гуляли три дня, пели «Во кузнице», а тёща Агриппина сплясала так, что ей хлопал даже батюшка. А вы плясали до петухов — голова теперь гудит."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tikhon_intro",
+  "delivery": "now",
+  "title": "Соперник из Заречья",
+  "text": "В Заречье открыл кузню Тихон — молодой, громкий, сбивает цены. Ваши покупатели потянулись к нему. Савва говорит: на ярмарке староста устраивает состязание кузнецов — кто выкует лучшую работу, тому и почёт.",
+  "options": [
+   {
+    "id": "challenge",
+    "label": "Вызвать Тихона на состязание",
+    "obligation": {
+     "id": "tikhon_contest_ob",
+     "title": "Состязание с Тихоном",
+     "requires": [
+      {
+       "good": "contest_piece",
+       "qty": 1
+      },
+      {
+       "good": "pots",
+       "qty": 2
+      }
+     ],
+     "deadline_days": 6,
+     "on_done": [
+      {
+       "type": "run_event",
+       "event": "tikhon_won"
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "tikhon_lost"
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "tikhon_lost"
+      }
+     ]
+    }
+   },
+   {
+    "id": "talk",
+    "label": "Сходить к Тихону выпить мировую",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 10
+     }
+    ],
+    "effects": [
+     {
+      "type": "run_event",
+      "event": "tikhon_talk"
+     }
+    ]
+   },
+   {
+    "id": "ignore",
+    "label": "Пусть торгует — наш товар сам за себя скажет",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "rival_wait",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Тихон торгует дёшево. Говорят, долго так не протянет. Но пока — терпите."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tikhon_deal",
+  "delivery": "now",
+  "title": "Мировая с Тихоном",
+  "text": "Тихон налил, выпил, утёр усы: «Чего нам делить? Давай так: мне — Заречье, тебе — твоя деревня. А хочешь — бери меня к себе, коли мастерская есть. Один горн хорошо, а два — веселей».",
+  "options": [
+   {
+    "id": "split",
+    "label": "Поделить покупателей",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "rival_done",
+      "target": "world"
+     },
+     {
+      "type": "remove_modifier",
+      "template": "rival_forge",
+      "target": "world"
+     },
+     {
+      "type": "add_modifier",
+      "template": "rival_split",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Ударили по рукам. Заречье теперь Тихоново, но и в вашу деревню он больше не суётся. Спор с Тихоном кончился миром."
+     }
+    ]
+   },
+   {
+    "id": "hire",
+    "label": "Звать Тихона в свою мастерскую",
+    "enabled_when": {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded",
+     "text": "В тесной кузне двоим мастерам не развернуться."
+    },
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "rival_done",
+      "target": "world"
+     },
+     {
+      "type": "remove_modifier",
+      "template": "rival_forge",
+      "target": "world"
+     },
+     {
+      "type": "add_to_hire_pool",
+      "character": "tikhon"
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Тихон заколотил свою кузню: «Под одной крышей ковать веселее». Наймите его, когда будет место. Спор кончился дружбой."
+     }
+    ]
+   },
+   {
+    "id": "part",
+    "label": "Разойтись ни с чем",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "rival_wait",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Допили молча и разошлись. Тихон торгует дальше — терпите, пока не уедет."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tikhon_verdict",
+  "delivery": "now",
+  "title": "Итог состязания",
+  "text": "Староста поднял вашу работу над толпой — и венок ваш! Тихон, красный как рак, протискивается пожать руку.",
+  "options": [
+   {
+    "id": "prize",
+    "label": "Взять приз и проводить Тихона",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 100
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 15
+     },
+     {
+      "type": "add_modifier",
+      "template": "rival_done",
+      "target": "world"
+     },
+     {
+      "type": "remove_modifier",
+      "template": "rival_forge",
+      "target": "world"
+     },
+     {
+      "type": "add_modifier",
+      "template": "rival_beaten",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Сто монет приза и слава на всю округу. Тихон уехал в город, а покупатели вернулись к вам. Спор решён."
+     }
+    ]
+   },
+   {
+    "id": "invite",
+    "label": "Позвать Тихона в свою мастерскую",
+    "enabled_when": {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded",
+     "text": "В тесной кузне двоим мастерам не развернуться."
+    },
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 50
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 8
+     },
+     {
+      "type": "add_modifier",
+      "template": "rival_done",
+      "target": "world"
+     },
+     {
+      "type": "remove_modifier",
+      "template": "rival_forge",
+      "target": "world"
+     },
+     {
+      "type": "add_to_hire_pool",
+      "character": "tikhon"
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Тихон почесал затылок: «У кого проиграл — у того и поучусь». Наймите его, когда будет место. Спор кончился дружбой."
+     }
+    ]
+   },
+   {
+    "id": "hammer",
+    "label": "Обменяться молотами на память",
+    "effects": [
+     {
+      "type": "give_item",
+      "item": "tikhon_hammer",
+      "target": "hero"
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 8
+     },
+     {
+      "type": "add_modifier",
+      "template": "rival_done",
+      "target": "world"
+     },
+     {
+      "type": "remove_modifier",
+      "template": "rival_forge",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Тихон отдал вам свой молот: «Бей им — вспоминай, как меня побил». Уехал в город. Спор решён."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "bridge_offer",
+  "delivery": "now",
+  "title": "Половодье снесло мост",
+  "text": "Ночью Смородинка взломала лёд и унесла мост. Купцы не едут, железо возят в обход — втридорога. Староста Никифор: «Скуёшь скобы и гвозди для нового моста? Восемь связок петель и скоб да двадцать связок гвоздей за пять дней. Мир в долгу не останется».",
+  "options": [
+   {
+    "id": "take",
+    "label": "Скую для мира",
+    "obligation": {
+     "id": "bridge_ob",
+     "title": "Скобы и гвозди для моста",
+     "requires": [
+      {
+       "good": "hinges",
+       "qty": 8
+      },
+      {
+       "good": "nails",
+       "qty": 20
+      }
+     ],
+     "deadline_days": 5,
+     "on_done": [
+      {
+       "type": "add_modifier",
+       "template": "bridge_fixed",
+       "target": "world"
+      },
+      {
+       "type": "remove_modifier",
+       "template": "bridge_out",
+       "target": "world"
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "goodwill",
+       "add": 10
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": 6
+      },
+      {
+       "type": "show_offer",
+       "offer": "bridge_reward"
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -5
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "goodwill",
+       "add": -5
+      },
+      {
+       "type": "add_modifier",
+       "template": "bridge_slow",
+       "target": "world"
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -3
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "goodwill",
+       "add": -5
+      },
+      {
+       "type": "add_modifier",
+       "template": "bridge_slow",
+       "target": "world"
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Самим бы прокормиться",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": -5
+     },
+     {
+      "type": "add_modifier",
+      "template": "bridge_slow",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Староста отвернулся. Графские плотники обещали мост через неделю — до тех пор на рынке всё дороже."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "bridge_reward",
+  "delivery": "now",
+  "title": "Новый мост",
+  "text": "Мост стоит, по нему уже катят обозы. Староста Никифор собрал сход: «Чем благодарить кузнеца, мир?»",
+  "options": [
+   {
+    "id": "money",
+    "label": "Деньгами — кузне нужно",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 90
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Мир собрал девяносто монет. Мост стоит, обозы идут, цены вернулись."
+     }
+    ]
+   },
+   {
+    "id": "name",
+    "label": "Ничего не надо, мост — для всех",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "bridge_name",
+      "target": "world"
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 10
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": 5
+     },
+     {
+      "type": "notify",
+      "kind": "seal",
+      "popup": true,
+      "text": "Сход решил назвать мост Демьяновым. Купцы теперь, переехав его, первым делом заворачивают к вам."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tax_offer",
+  "delivery": "now",
+  "title": "Мытарь графа",
+  "data": {
+   "amount": 15,
+   "nails": 5
+  },
+  "text": "Приехал мытарь с книгой: «Подать с кузни — {amount} монет. Можно и товаром: {nails} связок гвоздей. Не заплатишь в три дня — возьму с лихвой».",
+  "options": [
+   {
+    "id": "pay",
+    "label": "Заплатить монетами",
+    "cost": [
+     {
+      "var": "money",
+      "qty": {
+       "$data": "amount"
+      }
+     }
+    ],
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Мытарь записал в книгу и уехал."
+     }
+    ]
+   },
+   {
+    "id": "goods",
+    "label": "Отдать гвоздями",
+    "cost": [
+     {
+      "good": "nails",
+      "qty": {
+       "$data": "nails"
+      }
+     }
+    ],
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Мытарь пересчитал связки и погрузил на телегу."
+     }
+    ]
+   },
+   {
+    "id": "delay",
+    "label": "Попросить отсрочки",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "tax_debt",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Три дня, чтобы отнести недоимку — тридцать пять монет. Потом мытарь возьмёт пятьдесят."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "raise_offer",
+  "delivery": "now",
+  "title": "Подмастерья просят прибавки",
+  "text": "Подмастерья мнутся у горна, старший говорит за всех: «Хозяин, работы прибавилось, а жалованье прежнее. Прибавь по монете в день».",
+  "options": [
+   {
+    "id": "raise",
+    "label": "Прибавить",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "wage_raise",
+      "target": "all_workers"
+     },
+     {
+      "type": "add_modifier",
+      "template": "workers_glad",
+      "target": "all_workers"
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Подмастерья повеселели и взялись за молоты так, что задрожала крыша."
+     }
+    ]
+   },
+   {
+    "id": "kvass",
+    "label": "Угостить и пообещать потом",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 6
+     }
+    ],
+    "effects": [
+     {
+      "type": "var",
+      "target": "all_workers",
+      "var": "stress",
+      "add": -25
+     },
+     {
+      "type": "notify",
+      "text": "Квас выпили, обещание запомнили. Ещё придут."
+     }
+    ]
+   },
+   {
+    "id": "refuse",
+    "label": "Не прибавлю",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "workers_sulk",
+      "target": "all_workers"
+     },
+     {
+      "type": "add_modifier",
+      "template": "grumpy",
+      "target": "all_workers"
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Подмастерья надулись. Работают вразвалочку и портят назло."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "brawl_offer",
+  "delivery": "now",
+  "title": "Драка у горна",
+  "text": "{participant} сцепился с другим подмастерьем из-за клещей. Оба в саже, у {participant} заплыл глаз.",
+  "options": [
+   {
+    "id": "scold",
+    "label": "Разнять и отчитать",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "bruised",
+      "target": "participant"
+     },
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": 8
+     },
+     {
+      "type": "notify",
+      "text": "Разняли. Сидят по углам и сопят."
+     }
+    ]
+   },
+   {
+    "id": "fine",
+    "label": "Вычесть из жалованья",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "bruised",
+      "target": "participant"
+     },
+     {
+      "type": "add_modifier",
+      "template": "grumpy",
+      "target": "participant"
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 3
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Три монеты штрафа. {participant} затаил обиду."
+     }
+    ]
+   },
+   {
+    "id": "laugh",
+    "label": "Пусть разомнутся",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "bruised",
+      "target": "all_workers"
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": -2
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Размялись так, что фингалы у всех. Соседи слышали ругань на всю улицу."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "inspection_offer",
+  "delivery": "now",
+  "title": "Цеховой смотритель",
+  "text": "Из города приехал цеховой смотритель — проверять, не портит ли мастерская кузнечную честь. Смотрит придирчиво.",
+  "options": [
+   {
+    "id": "show",
+    "label": "Показать лучший котелок",
+    "cost": [
+     {
+      "good": "pots",
+      "qty": 1
+     }
+    ],
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 6
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Смотритель постучал по котелку, послушал звон и записал: «Добротно»."
+     }
+    ]
+   },
+   {
+    "id": "bribe",
+    "label": "Сунуть смотрителю на лапу",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 15
+     }
+    ],
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Смотритель спрятал монеты и уехал, ничего не записав."
+     }
+    ]
+   },
+   {
+    "id": "refuse",
+    "label": "Выставить за ворота",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": -8
+     },
+     {
+      "type": "add_modifier",
+      "template": "bad_name",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "danger",
+      "text": "Смотритель уехал, грозя пальцем. В городе о вас теперь говорят нехорошо."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mill_fire_offer",
+  "delivery": "now",
+  "title": "Пожар на мельнице",
+  "text": "Над мельницей Прохора чёрный дым! Мужики бегут с вёдрами, Прохор кричит, что занялся амбар с зерном.",
+  "options": [
+   {
+    "id": "help",
+    "label": "Бежать тушить самому",
+    "effects": [
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": 25
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": 8
+     },
+     {
+      "type": "add_modifier",
+      "template": "miller_thanks",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Тушили до темноты. Амбар отстояли. Прохор обнял вас, чёрного как Уголёк: «Век не забуду»."
+     }
+    ]
+   },
+   {
+    "id": "send",
+    "label": "Послать подмастерьев",
+    "enabled_when": {
+     "type": "worker_count",
+     "op": ">=",
+     "value": 1,
+     "text": "Посылать некого."
+    },
+    "effects": [
+     {
+      "type": "var",
+      "target": "all_workers",
+      "var": "stress",
+      "add": 30
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": 5
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Подмастерья вернулись мокрые и гордые. Прохор кланяется."
+     }
+    ]
+   },
+   {
+    "id": "stay",
+    "label": "У самого горн горит",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": -6
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Мельницу отстояли без вас. Прохор при встрече смотрит в сторону."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mil_moves_offer",
+  "delivery": "now",
+  "title": "Тёща переезжает",
+  "text": "Тёща Агриппина приехала с сундуком и периной: «Одной в селе тоскливо. Поживу у вас, Марфушке помогу. Насовсем». Марфа смотрит умоляюще.",
+  "options": [
+   {
+    "id": "welcome",
+    "label": "Милости просим",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "mil_household",
+      "target": "world"
+     },
+     {
+      "type": "add_modifier",
+      "template": "mil_cooks",
+      "target": "hero"
+     },
+     {
+      "type": "add_modifier",
+      "template": "mil_favor",
+      "target": "world"
+     },
+     {
+      "type": "add_modifier",
+      "template": "mil_favor",
+      "target": "world"
+     },
+     {
+      "type": "notify",
+      "kind": "info",
+      "popup": true,
+      "text": "Тёща заняла лучшую лавку у печи. Ворчит с утра до ночи — зато щи у неё такие, что усталость как рукой снимает. Только едок лишний."
+     }
+    ]
+   },
+   {
+    "id": "refuse",
+    "label": "Изба тесная, матушка",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "wife_sulk",
+      "target": "hero"
+     },
+     {
+      "type": "add_modifier",
+      "template": "mil_strain",
+      "target": "hero"
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": -2
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Тёща уехала, хлопнув дверью. Марфа неделю не разговаривает."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "birthday_offer",
+  "delivery": "now",
+  "title": "Именины Васятки",
+  "text": "Сегодня Васятке девять! Марфа печёт пирог, а Васятка ходит кругами вокруг кузни и вздыхает.",
+  "options": [
+   {
+    "id": "toy",
+    "label": "Выковать ему конька",
+    "cost": [
+     {
+      "good": "iron",
+      "qty": 1
+     }
+    ],
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "son_forge",
+      "target": "world"
+     },
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": -10
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Железный конёк с гривой! Васятка не выпускает его из рук и спит с ним."
+     }
+    ]
+   },
+   {
+    "id": "book",
+    "label": "Купить у дьячка букварь",
+    "cost": [
+     {
+      "var": "money",
+      "qty": 5
+     }
+    ],
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "son_letters",
+      "target": "world"
+     },
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": -5
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Букварь с картинками. Васятка читает Угольку вслух."
+     }
+    ]
+   },
+   {
+    "id": "forget",
+    "label": "Некогда, работа",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "wife_sulk",
+      "target": "hero"
+     },
+     {
+      "type": "notify",
+      "kind": "warn",
+      "text": "Васятка проплакал весь вечер. Марфа смотрит так, что лучше бы ругалась."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "kittens_offer",
+  "delivery": "now",
+  "title": "Уголёк привёл котят",
+  "text": "Уголёк, оказывается, не кот, а кошка. Под печкой пищат пятеро котят, все чёрные как уголь.",
+  "options": [
+   {
+    "id": "give",
+    "label": "Раздать по соседям",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": 4
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Котят разобрали за день. Теперь в каждой избе свой уголёк — и вам спасибо."
+     }
+    ]
+   },
+   {
+    "id": "keep",
+    "label": "Пусть растут при кузне",
+    "effects": [
+     {
+      "type": "add_modifier",
+      "template": "cat_friend",
+      "target": "world"
+     },
+     {
+      "type": "var",
+      "target": "hero",
+      "var": "stress",
+      "add": -5
+     },
+     {
+      "type": "notify",
+      "text": "Пятеро котят гоняют стружку по кузне. Работать мешают, но сердце радуется."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pilgrims_offer",
+  "delivery": "now",
+  "title": "Богомольцы",
+  "text": "Мимо кузни идут богомольцы на освящение новой часовни. Старшой просит: «Подай гвоздей, мастер, — крышу крыть».",
+  "options": [
+   {
+    "id": "give",
+    "label": "Отдать четыре связки",
+    "cost": [
+     {
+      "good": "nails",
+      "qty": 4
+     }
+    ],
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": 4
+     },
+     {
+      "type": "var",
+      "target": "world",
+      "var": "fame",
+      "add": 2
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Богомольцы обещали поминать кузнеца Демьяна в молитвах."
+     }
+    ]
+   },
+   {
+    "id": "no",
+    "label": "Самому нужны",
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "goodwill",
+      "add": -1
+     },
+     {
+      "type": "notify",
+      "text": "Богомольцы перекрестились и пошли дальше."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "gypsy_offer",
+  "delivery": "now",
+  "title": "Цыгане с табуном",
+  "text": "К кузне пригнали табун цыгане: «Подкуй, хозяин, восемь коней — заплатим честно, серебром!»",
+  "options": [
+   {
+    "id": "shoe",
+    "label": "Подковать (2 четвёрки подков)",
+    "cost": [
+     {
+      "good": "horseshoes",
+      "qty": 2
+     }
+    ],
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 45
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Цыгане расплатились серебром и даже не обманули. Почти."
+     }
+    ]
+   },
+   {
+    "id": "refuse",
+    "label": "Знаю я ваше серебро",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Цыгане ушли, распевая. Ведро с забора пропало."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "merchant_offer",
+  "delivery": "now",
+  "title": "Заморский купец",
+  "text": "В деревню заехал заморский купец в бархатной шапке: «Слыхал, тут кузнец знатный. Куплю хорошую работу — дорого, но сразу».",
+  "options": [
+   {
+    "id": "locks",
+    "label": "Продать два замка за 190",
+    "cost": [
+     {
+      "good": "locks",
+      "qty": 2
+     }
+    ],
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 190
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Купец пощёлкал замками и отсчитал монеты."
+     }
+    ]
+   },
+   {
+    "id": "springs",
+    "label": "Продать две рессоры за 330",
+    "cost": [
+     {
+      "good": "springs",
+      "qty": 2
+     }
+    ],
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 330
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Купец погрузил рессоры на подводу: «Карета герцогини будет ехать как по маслу»."
+     }
+    ]
+   },
+   {
+    "id": "scythes",
+    "label": "Продать четыре косы за 190",
+    "cost": [
+     {
+      "good": "scythes",
+      "qty": 4
+     }
+    ],
+    "effects": [
+     {
+      "type": "var",
+      "target": "world",
+      "var": "money",
+      "add": 190
+     },
+     {
+      "type": "notify",
+      "kind": "good",
+      "text": "Купец увёз косы — говорит, за морем таких не делают."
+     }
+    ]
+   },
+   {
+    "id": "no",
+    "label": "Нечего продать",
+    "effects": [
+     {
+      "type": "notify",
+      "text": "Купец уехал к кузнецу в Заречье."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "board_hinges",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: петли",
+  "text": "{client} просит {qty} связок петель и скоб за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Сосед",
+   "qty": 4,
+   "days": 3,
+   "reward": 70,
+   "fame": 3
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_hinges_ob",
+     "title": "{client}: петли",
+     "requires": [
+      {
+       "good": "hinges",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -3
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_scythes",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: косы",
+  "text": "{client} просит {qty} кос за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Косари",
+   "qty": 3,
+   "days": 4,
+   "reward": 135,
+   "fame": 5
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_scythes_ob",
+     "title": "{client}: косы",
+     "requires": [
+      {
+       "good": "scythes",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -4
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_plowshares",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: лемеха",
+  "text": "{client} просит {qty} лемехов за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Пахари",
+   "qty": 2,
+   "days": 5,
+   "reward": 160,
+   "fame": 6
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_plowshares_ob",
+     "title": "{client}: лемеха",
+     "requires": [
+      {
+       "good": "plowshares",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -5
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_locks",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: замки",
+  "text": "{client} просит {qty} замков за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Купец",
+   "qty": 2,
+   "days": 4,
+   "reward": 170,
+   "fame": 5
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_locks_ob",
+     "title": "{client}: замки",
+     "requires": [
+      {
+       "good": "locks",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -5
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_chains",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: цепи",
+  "text": "{client} просит {qty} саженей цепи за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Паромщик",
+   "qty": 2,
+   "days": 5,
+   "reward": 240,
+   "fame": 7
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_chains_ob",
+     "title": "{client}: цепи",
+     "requires": [
+      {
+       "good": "chains",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -5
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ },
+ {
+  "id": "board_springs",
+  "delivery": "board",
+  "board_days": 2,
+  "title": "{client}: рессоры",
+  "text": "{client} просит {qty} пар рессор за {days} дн. Заплатит {reward} мон.",
+  "data": {
+   "client": "Помещица",
+   "qty": 2,
+   "days": 5,
+   "reward": 300,
+   "fame": 8
+  },
+  "options": [
+   {
+    "id": "take",
+    "label": "Взять заказ",
+    "obligation": {
+     "id": "board_springs_ob",
+     "title": "{client}: рессоры",
+     "requires": [
+      {
+       "good": "springs",
+       "qty": {
+        "$data": "qty"
+       }
+      }
+     ],
+     "deadline_days": {
+      "$data": "days"
+     },
+     "on_done": [
+      {
+       "type": "var",
+       "target": "world",
+       "var": "money",
+       "add": {
+        "$data": "reward"
+       }
+      },
+      {
+       "type": "var",
+       "target": "world",
+       "var": "fame",
+       "add": {
+        "$data": "fame"
+       }
+      }
+     ],
+     "on_fail": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -6
+       }
+      }
+     ],
+     "on_decline": [
+      {
+       "type": "run_event",
+       "event": "village_failed",
+       "data": {
+        "loss": -2
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "skip",
+    "label": "Не брать"
+   }
+  ]
+ }
+]

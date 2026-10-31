@@ -1,0 +1,58 @@
+[
+ {
+  "id": "village_smithy",
+  "name": "Деревенская кузня",
+  "vars": {
+   "max_workers": 1,
+   "equipment_slots": 2,
+   "upkeep": 1
+  },
+  "modifiers": [],
+  "description": "Отцовская кузня на краю деревни. Тесно, зато своё."
+ },
+ {
+  "id": "town_workshop",
+  "name": "Кузнечная мастерская",
+  "vars": {
+   "max_workers": 3,
+   "equipment_slots": 4,
+   "upkeep": 5
+  },
+  "modifiers": [
+   "town_fame",
+   "town_draft"
+  ],
+  "description": "Два горна, высокая труба и вывеска с подковой."
+ },
+ {
+  "id": "river_workshop",
+  "name": "Мастерская у запруды",
+  "vars": {
+   "max_workers": 4,
+   "equipment_slots": 6,
+   "upkeep": 7
+  },
+  "modifiers": [
+   "town_fame",
+   "town_draft",
+   "water_hammer",
+   "has_water_wheel"
+  ],
+  "description": "У мельничной запруды. Водяное колесо бьёт молотом без устали."
+ },
+ {
+  "id": "smith_yard",
+  "name": "Кузнечный двор",
+  "vars": {
+   "max_workers": 4,
+   "equipment_slots": 6,
+   "upkeep": 8
+  },
+  "modifiers": [
+   "town_fame",
+   "yard_sign",
+   "yard_draft"
+  ],
+  "description": "Двор на три горна с навесом, складом и вывеской «Демьян и подмастерья». Сюда ездят из города."
+ }
+]

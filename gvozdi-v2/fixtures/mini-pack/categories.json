@@ -1,0 +1,4 @@
+[
+  { "id": "baking", "name": "Выпечка", "view": "select" },
+  { "id": "care", "name": "Забота", "view": "list" }
+]

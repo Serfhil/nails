@@ -1,0 +1,32 @@
+[
+ {
+  "id": "forge",
+  "name": "Кузница",
+  "view": "select"
+ },
+ {
+  "id": "rest",
+  "name": "Отдых и семья",
+  "view": "list"
+ },
+ {
+  "id": "apprentices",
+  "name": "Подмастерья",
+  "view": "list"
+ },
+ {
+  "id": "workshop",
+  "name": "Мастерская и хозяйство",
+  "view": "list"
+ },
+ {
+  "id": "upgrades",
+  "name": "Снаряд и перестройка",
+  "view": "list"
+ },
+ {
+  "id": "village",
+  "name": "Деревня и дела",
+  "view": "list"
+ }
+]

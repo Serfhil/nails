@@ -1,0 +1,72 @@
+[
+  {
+    "id": "order",
+    "delivery": "board",
+    "board_days": 0,
+    "title": "Заказ",
+    "text": "Нужно {qty} изделий.",
+    "data": {
+      "qty": 3,
+      "reward": 10
+    },
+    "options": [
+      {
+        "id": "take",
+        "label": "Взять",
+        "obligation": {
+          "id": "order_ob",
+          "title": "Заказ на {qty}",
+          "requires": [
+            {
+              "good": "widget",
+              "qty": {
+                "$data": "qty"
+              }
+            }
+          ],
+          "deadline_days": 2,
+          "on_done": [
+            {
+              "type": "var",
+              "target": "world",
+              "var": "money",
+              "add": {
+                "$data": "reward"
+              }
+            }
+          ],
+          "on_fail": [],
+          "on_decline": []
+        }
+      },
+      {
+        "id": "skip",
+        "label": "Не брать"
+      }
+    ]
+  },
+  {
+    "id": "victory",
+    "delivery": "now",
+    "title": "Признание",
+    "text": "Вас зовут в город.",
+    "options": [
+      {
+        "id": "stay",
+        "label": "Остаться"
+      },
+      {
+        "id": "go",
+        "label": "Уехать",
+        "effects": [
+          {
+            "type": "end_game",
+            "title": "В городе",
+            "text": "Новая жизнь.",
+            "tag": "goal"
+          }
+        ]
+      }
+    ]
+  }
+]

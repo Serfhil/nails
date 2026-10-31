@@ -1,0 +1,2923 @@
+[
+ {
+  "id": "forge_nails",
+  "name": "Ковать гвозди",
+  "mode": "both",
+  "hours": 1,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker"
+   }
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "good": "nails",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 1,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 3
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "craft"
+  ],
+  "description": "Простая работа: железо превращается в гвозди, на которых держится вся деревня.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_horseshoes",
+  "name": "Ковать подковы",
+  "mode": "both",
+  "hours": 2,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    }
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 1
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "good": "horseshoes",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 1.2,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 3
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "craft"
+  ],
+  "description": "Подковы для лошадей: работа посложнее гвоздей, зато и ценятся выше.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_pots",
+  "name": "Ковать котелки",
+  "mode": "both",
+  "hours": 3,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    }
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 2
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 3
+   }
+  ],
+  "outputs": [
+   {
+    "good": "pots",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 1.5,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 4
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "craft",
+   "fine"
+  ],
+  "description": "Котелки для хозяек: тонкая работа, на которую уходит много железа и терпения.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_axes",
+  "name": "Ковать топоры",
+  "mode": "both",
+  "hours": 3,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    }
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_grindstone"
+    }
+   ]
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 2
+   },
+   {
+    "good": "coal",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "good": "axes",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 2,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 4
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "craft",
+   "fine"
+  ],
+  "description": "Крепкие топоры для дровосеков и плотников; без хорошего точильного круга не обойтись.",
+  "category": "forge"
+ },
+ {
+  "id": "smelt_steel",
+  "name": "Варить сталь",
+  "mode": "both",
+  "hours": 2,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    }
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_bellows"
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    }
+   ]
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 2
+   },
+   {
+    "good": "coal",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "good": "steel",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 1,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 4
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 2
+   }
+  ],
+  "tags": [
+   "craft"
+  ],
+  "description": "Железо с углём в раздутом горне становится сталью.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_sword",
+  "name": "Ковать меч",
+  "mode": "both",
+  "hours": 5,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "any": [
+      {
+       "type": "has_modifier",
+       "subject": "self",
+       "template": "blade_lore"
+      },
+      {
+       "type": "var",
+       "subject": "self",
+       "var": "weapon_xp",
+       "op": ">=",
+       "value": 5
+      }
+     ]
+    }
+   }
+  },
+  "open_when": {
+   "type": "has_modifier",
+   "subject": "hero",
+   "template": "blade_lore"
+  },
+  "cost": [
+   {
+    "good": "steel",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "good": "swords",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "weapon_xp",
+    "add": 2,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 1,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 5
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "craft",
+   "fine",
+   "blade"
+  ],
+  "description": "Настоящий клинок: работа долгая, и доверить её можно только тому, кто знает толк в оружии.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_mail",
+  "name": "Плести кольчугу",
+  "mode": "both",
+  "hours": 8,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "any": [
+      {
+       "type": "has_modifier",
+       "subject": "self",
+       "template": "armor_lore"
+      },
+      {
+       "type": "var",
+       "subject": "self",
+       "var": "armor_xp",
+       "op": ">=",
+       "value": 5
+      }
+     ]
+    }
+   }
+  },
+  "open_when": {
+   "type": "has_modifier",
+   "subject": "hero",
+   "template": "armor_lore"
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 8
+   }
+  ],
+  "outputs": [
+   {
+    "good": "mail",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "armor_xp",
+    "add": 2,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 3
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 0.5
+   }
+  ],
+  "tags": [
+   "craft",
+   "fine",
+   "mail"
+  ],
+  "description": "Кольчуга из тысячи колечек: работа долгая и кропотливая.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_grille",
+  "name": "Ковать узорную решётку",
+  "mode": "both",
+  "hours": 5,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "any": [
+      {
+       "type": "has_modifier",
+       "subject": "self",
+       "template": "art_lore"
+      },
+      {
+       "type": "var",
+       "subject": "self",
+       "var": "art_xp",
+       "op": ">=",
+       "value": 5
+      }
+     ]
+    }
+   }
+  },
+  "open_when": {
+   "type": "has_modifier",
+   "subject": "hero",
+   "template": "art_lore"
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 4
+   },
+   {
+    "good": "coal",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "good": "grilles",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "art_xp",
+    "add": 2,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 1,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 2
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "craft",
+   "fine",
+   "art"
+  ],
+  "description": "Узорная решётка: тут важна не сила, а чувство красоты.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_rose",
+  "name": "Выковать розу для Марфы",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "obligation",
+   "id": "rose_ob",
+   "state": "active"
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "good": "rose",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": -2
+   }
+  ],
+  "tags": [
+   "craft",
+   "art"
+  ],
+  "text": "Лепесток к лепестку — {actor} и не знал, что железо так умеет.",
+  "description": "Железная роза в подарок Марфе: работа не для денег, а для души.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_star_blade",
+  "name": "Ковать звёздный клинок",
+  "mode": "once",
+  "hours": 8,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "stock",
+   "good": "star_iron",
+   "op": ">=",
+   "value": 1
+  },
+  "enabled_when": {
+   "type": "var",
+   "subject": "actor",
+   "var": "weapon_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 2,
+   "text": "Небесное железо доверяют только оружейнику."
+  },
+  "cost": [
+   {
+    "good": "star_iron",
+    "qty": 1
+   },
+   {
+    "good": "steel",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "good": "star_blade",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "weapon_xp",
+    "add": 3,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 6
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 2
+   }
+  ],
+  "tags": [
+   "craft",
+   "blade"
+  ],
+  "text": "Клинок светится в темноте, как вода под луной.",
+  "description": "Клинок из небесного железа: такую работу за всю жизнь удаётся сделать разве что раз.",
+  "category": "forge"
+ },
+ {
+  "id": "rest_bench",
+  "name": "Посидеть на завалинке",
+  "mode": "once",
+  "hours": 1,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": -10
+   }
+  ],
+  "tags": [
+   "rest"
+  ],
+  "description": "Присесть на завалинке и ни о чём не думать: усталость понемногу отпускает.",
+  "category": "rest"
+ },
+ {
+  "id": "evening_wife",
+  "name": "Вечер с Марфой",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "enabled_when": {
+   "all": [
+    {
+     "type": "hour",
+     "op": ">=",
+     "value": 14,
+     "text": "Марфа зовёт к вечеру, после двух часов пополудни."
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "actor",
+      "template": "evening_done"
+     },
+     "text": "Сегодня уже сидели вместе."
+    }
+   ]
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": -15
+   }
+  ],
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "evening_done",
+    "target": "actor"
+   },
+   {
+    "type": "add_modifier",
+    "template": "marfa_warmth",
+    "target": "actor"
+   }
+  ],
+  "tags": [
+   "rest",
+   "family"
+  ],
+  "text": "{actor} и Марфа пьют сбитень на крыльце и смотрят, как садится солнце.",
+  "description": "Спокойный вечер с женой: самый верный способ отдохнуть душой.",
+  "category": "rest"
+ },
+ {
+  "id": "play_with_son",
+  "name": "Повозиться с Васяткой",
+  "mode": "once",
+  "hours": 1,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "role",
+   "subject": "char:vasyatka",
+   "role": "family"
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": -8
+   }
+  ],
+  "tags": [
+   "rest",
+   "family"
+  ],
+  "text": "Васятка катается на отцовской спине и хохочет на всю улицу.",
+  "description": "Немного повозиться с сыном: и ему радость, и отцу отдых.",
+  "category": "rest"
+ },
+ {
+  "id": "bathhouse",
+  "name": "Сходить в баню",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 3
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": -12
+   }
+  ],
+  "effects": [
+   {
+    "type": "remove_modifier",
+    "template": "cold",
+    "target": "actor"
+   }
+  ],
+  "tags": [
+   "rest"
+  ],
+  "text": "Берёзовый веник выбил из {actor} и сажу, и хворь.",
+  "description": "Баня смывает и сажу, и хворь, и усталость; за пар придётся заплатить мелочью.",
+  "category": "rest"
+ },
+ {
+  "id": "visit_healer",
+  "name": "Сходить к знахарке Агафье",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "has_modifier",
+   "subject": "hero",
+   "template": "overwork_scar"
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 20
+   }
+  ],
+  "effects": [
+   {
+    "type": "remove_modifier",
+    "template": "overwork_scar",
+    "target": "actor",
+    "count": 1
+   }
+  ],
+  "tags": [
+   "rest"
+  ],
+  "text": "Агафья поила травами, шептала над сердцем и велела не надрываться.",
+  "description": "Знахарка умеет снять с сердца то, что накопила непосильная работа.",
+  "category": "rest"
+ },
+ {
+  "id": "clean_chimney",
+  "name": "Прочистить трубу",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker"
+   }
+  },
+  "enabled_when": {
+   "type": "var",
+   "subject": "world",
+   "var": "soot",
+   "op": ">=",
+   "value": 10,
+   "text": "Труба и так чистая."
+  },
+  "per_hour": [
+   {
+    "target": "world",
+    "var": "soot",
+    "add": -50
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 4
+   }
+  ],
+  "tags": [
+   "chore"
+  ],
+  "text": "{actor} вылез из трубы чёрный, как Уголёк.",
+  "description": "Труба забивается сажей; прочистить её надо, пока кузня не задымила.",
+  "category": "workshop"
+ },
+ {
+  "id": "hire",
+  "name": "Нанять подмастерья",
+  "mode": "once",
+  "hours": 1,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   },
+   "candidate": {
+    "who": "pool"
+   }
+  },
+  "cost": [
+   {
+    "var": "money",
+    "from": "candidate",
+    "qty_from": "hire_cost"
+   }
+  ],
+  "effects": [
+   {
+    "type": "hire",
+    "target": "candidate"
+   }
+  ],
+  "description": "Взять в кузню подмастерья из тех, кто ищет работу; он потребует плату вперёд.",
+  "category": "apprentices"
+ },
+ {
+  "id": "dismiss",
+  "name": "Рассчитать подмастерья",
+  "mode": "once",
+  "hours": 1,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   },
+   "partner": {
+    "who": "worker"
+   }
+  },
+  "effects": [
+   {
+    "type": "remove",
+    "what": "character",
+    "target": "partner"
+   }
+  ],
+  "text": "{partner} забрал узелок, поклонился и ушёл. Обратно не позовёшь.",
+  "description": "Расстаться с подмастерьем; вернуть его потом не получится.",
+  "category": "apprentices"
+ },
+ {
+  "id": "teach_smith",
+  "name": "Учить кузнечному делу",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "worker"
+   },
+   "partner": {
+    "who": "hero_or_worker"
+   }
+  },
+  "enabled_when": {
+   "type": "var_cmp",
+   "a": "partner",
+   "b": "actor",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">",
+   "text": "Учитель должен быть искуснее ученика."
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 3,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 1
+   },
+   {
+    "target": "partner",
+    "var": "stress",
+    "add": 2
+   }
+  ],
+  "tags": [
+   "study"
+  ],
+  "description": "Мастер показывает подмастерью приёмы кузнечного дела; учитель должен знать больше ученика.",
+  "category": "apprentices"
+ },
+ {
+  "id": "teach_blade",
+  "name": "Учить клинкам",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "worker"
+   },
+   "partner": {
+    "who": "hero_or_worker"
+   }
+  },
+  "open_when": {
+   "type": "has_modifier",
+   "subject": "hero",
+   "template": "blade_lore"
+  },
+  "enabled_when": {
+   "type": "var_cmp",
+   "a": "partner",
+   "b": "actor",
+   "var": "weapon_xp",
+   "field": "level",
+   "op": ">",
+   "text": "Учитель должен знать клинки лучше ученика."
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "weapon_xp",
+    "add": 3,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 1
+   },
+   {
+    "target": "partner",
+    "var": "stress",
+    "add": 2
+   }
+  ],
+  "tags": [
+   "study"
+  ],
+  "description": "Передать подмастерью секреты клинков; учитель должен разбираться в них лучше ученика.",
+  "category": "apprentices"
+ },
+ {
+  "id": "worker_rest",
+  "name": "Отпустить передохнуть",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "worker"
+   }
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": -12
+   }
+  ],
+  "tags": [
+   "rest"
+  ],
+  "text": "{actor} дремлет в теньке у колодца.",
+  "description": "Дать подмастерью передохнуть: уставший работник и кует хуже.",
+  "category": "apprentices"
+ },
+ {
+  "id": "buy_bellows",
+  "name": "Поставить кузнечные мехи",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 1
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 50
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "bellows",
+    "target": "workshop"
+   }
+  ],
+  "text": "Мехи вздохнули — и горн загудел, как печь в бане. На таком жару и сталь сварится.",
+  "description": "Мехи раздувают горн жарче, а на жарком горне можно варить сталь.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_double_bellows",
+  "name": "Поставить двойные мехи",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_bellows"
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    }
+   ]
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 90
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "double_bellows",
+    "target": "workshop"
+   }
+  ],
+  "text": "Старые мехи отдали Кузьме раздувать самовар. Новые ревут так, что Уголёк ушёл жить на сеновал.",
+  "description": "Двойные мехи дают горну ещё больше жара, чем обычные.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_grindstone",
+  "name": "Поставить точильный круг",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 2
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 45
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "grindstone",
+    "target": "workshop"
+   }
+  ],
+  "text": "Точильный круг завизжал. Мастеру с таким кругом по силам и топоры.",
+  "description": "Точильный круг нужен, чтобы выходили острые инструменты вроде топоров.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_barrel",
+  "name": "Поставить бочку с водой",
+  "mode": "once",
+  "hours": 1,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 12
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "water_barrel",
+    "target": "workshop"
+   }
+  ],
+  "text": "Бочка встала у горна. Уголёк сразу залез на крышку.",
+  "description": "Бочка с водой у горна: и остудить, и от беды уберечь.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_strongbox",
+  "name": "Купить сундук с замком",
+  "mode": "once",
+  "hours": 1,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 35
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "strongbox",
+    "target": "workshop"
+   }
+  ],
+  "text": "Сундук тяжёлый, замок хитрый. Теперь деньги спят спокойно.",
+  "description": "Сундук с замком, чтобы копилка не привлекала чужих рук.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_horn_anvil",
+  "name": "Поставить наковальню с рогом",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 2
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 40
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "horn_anvil",
+    "target": "workshop"
+   }
+  ],
+  "text": "Новая наковальня звенит, как колокол. Старую отдали Кузьме под гнёт для капусты.",
+  "description": "Наковальня с рогом: на ней и работается ловчее.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_hood",
+  "name": "Сложить вытяжной колпак",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "event_count",
+   "event": "soot_warn",
+   "op": ">=",
+   "value": 1
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 30
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "hood",
+    "target": "workshop"
+   }
+  ],
+  "text": "Над горном заблестел медный колпак. Сажа теперь летит к галкам.",
+  "description": "Вытяжной колпак над горном: чтобы сажа не оседала в кузне.",
+  "category": "upgrades"
+ },
+ {
+  "id": "upgrade_workshop",
+  "name": "Перестроить кузню в мастерскую",
+  "mode": "once",
+  "hours": 6,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "workshop_type",
+     "subject": "workshop",
+     "workshop": "village_smithy"
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    }
+   ]
+  },
+  "enabled_when": {
+   "type": "worker_count",
+   "op": ">=",
+   "value": 1,
+   "text": "Одному мастерскую не поднять — нужен хотя бы один подмастерье."
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 220
+   }
+  ],
+  "effects": [
+   {
+    "type": "replace_workshop",
+    "target": "workshop",
+    "workshop": "town_workshop"
+   },
+   {
+    "type": "add_modifier",
+    "template": "smithy_upgraded",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "text": "Над дверью новая вывеска: «Кузнечная мастерская Демьяна». Места хватит ещё на двоих подмастерьев.",
+    "kind": "seal",
+    "popup": true
+   }
+  ],
+  "description": "Перестроить тесную кузню в настоящую мастерскую, где хватит места подмастерьям.",
+  "category": "upgrades"
+ },
+ {
+  "id": "upgrade_river",
+  "name": "Перебраться к мельничной запруде",
+  "mode": "once",
+  "hours": 8,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "any": [
+      {
+       "type": "workshop_type",
+       "subject": "workshop",
+       "workshop": "town_workshop"
+      },
+      {
+       "type": "workshop_type",
+       "subject": "workshop",
+       "workshop": "smith_yard"
+      }
+     ]
+    },
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "miller_thanks",
+     "min_count": 3
+    }
+   ]
+  },
+  "enabled_when": {
+   "type": "worker_count",
+   "op": ">=",
+   "value": 2,
+   "text": "Переезд — дело артельное: нужны хотя бы двое подмастерьев."
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 400
+   }
+  ],
+  "effects": [
+   {
+    "type": "replace_workshop",
+    "target": "workshop",
+    "workshop": "river_workshop"
+   },
+   {
+    "type": "add_modifier",
+    "template": "river_built",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "text": "Мельник Прохор перерезал ленточку. Водяное колесо закрутилось, и молот забил сам.",
+    "kind": "seal",
+    "popup": true
+   }
+  ],
+  "description": "Перенести мастерскую к мельничной запруде, где молот работает от воды.",
+  "category": "upgrades"
+ },
+ {
+  "id": "forge_strip",
+  "name": "Тянуть полосовое железо",
+  "mode": "both",
+  "hours": 1,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    }
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 1
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 2
+   },
+   {
+    "good": "coal",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "good": "strip_iron",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 1,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 3
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1.5
+   }
+  ],
+  "tags": [
+   "craft"
+  ],
+  "description": "Крицу с углём вытягивают в ровную полосу — из неё куют петли, косы и замки.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_hinges",
+  "name": "Ковать петли и скобы",
+  "mode": "both",
+  "hours": 1,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 1
+    }
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 1
+  },
+  "cost": [
+   {
+    "good": "strip_iron",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "good": "hinges",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 1.1,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 3
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "craft"
+  ],
+  "description": "Дверные петли, скобы, засовы: без них ни ворот, ни сундука, ни моста.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_scythes",
+  "name": "Ковать косы",
+  "mode": "both",
+  "hours": 3,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    }
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 2
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_grindstone"
+    }
+   ]
+  },
+  "cost": [
+   {
+    "good": "strip_iron",
+    "qty": 2
+   },
+   {
+    "good": "coal",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "good": "scythes",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 1.6,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 4
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "craft",
+   "fine"
+  ],
+  "description": "Тонкая звонкая коса: косари платят щедро, но тупую вернут.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_plowshares",
+  "name": "Ковать лемеха",
+  "mode": "both",
+  "hours": 4,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    }
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_big_hearth"
+    }
+   ]
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 4
+   },
+   {
+    "good": "strip_iron",
+    "qty": 1
+   },
+   {
+    "good": "coal",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "good": "plowshares",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 2.2,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 6
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 2
+   }
+  ],
+  "tags": [
+   "craft",
+   "heavy"
+  ],
+  "description": "Тяжёлый лемех для плуга: греть его можно только в большом горне.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_locks",
+  "name": "Ковать замки",
+  "mode": "both",
+  "hours": 4,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    }
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_vise"
+    }
+   ]
+  },
+  "cost": [
+   {
+    "good": "strip_iron",
+    "qty": 1
+   },
+   {
+    "good": "steel",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "good": "locks",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 2,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 4
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "craft",
+   "fine"
+  ],
+  "description": "Хитрый замок со стальной пружиной: собирать его можно только в тисках.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_chains",
+  "name": "Ковать цепи",
+  "mode": "both",
+  "hours": 6,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    }
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_water_wheel"
+    }
+   ]
+  },
+  "cost": [
+   {
+    "good": "strip_iron",
+    "qty": 4
+   }
+  ],
+  "outputs": [
+   {
+    "good": "chains",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 2,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 4
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "craft",
+   "heavy"
+  ],
+  "description": "Звено к звену: длинную цепь куют там, где молот бьёт без устали.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_springs",
+  "name": "Ковать рессоры",
+  "mode": "both",
+  "hours": 5,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker",
+    "where": {
+     "type": "var",
+     "subject": "self",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 4
+    }
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 4
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_spring_press"
+    }
+   ]
+  },
+  "cost": [
+   {
+    "good": "steel",
+    "qty": 2
+   },
+   {
+    "good": "strip_iron",
+    "qty": 1
+   }
+  ],
+  "outputs": [
+   {
+    "good": "springs",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 2.5,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 5
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1.5
+   }
+  ],
+  "tags": [
+   "craft",
+   "fine"
+  ],
+  "description": "Стальные рессоры для барских карет — работа для великого мастера.",
+  "category": "forge"
+ },
+ {
+  "id": "smelt_bog_ore",
+  "name": "Плавить болотную руду",
+  "mode": "both",
+  "hours": 2,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker"
+   }
+  },
+  "open_when": {
+   "type": "has_modifier",
+   "subject": "world",
+   "template": "bog_known"
+  },
+  "cost": [
+   {
+    "good": "bog_ore",
+    "qty": 3
+   }
+  ],
+  "outputs": [
+   {
+    "good": "iron",
+    "qty": 2
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 3
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 2
+   }
+  ],
+  "tags": [
+   "craft"
+  ],
+  "description": "Из болотной руды выходит плохонькое, зато своё железо — без рынка и без денег.",
+  "category": "forge"
+ },
+ {
+  "id": "forge_contest",
+  "name": "Ковать работу на состязание",
+  "mode": "once",
+  "hours": 6,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "obligation",
+   "id": "tikhon_contest_ob",
+   "state": "active"
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 3
+   },
+   {
+    "good": "strip_iron",
+    "qty": 2
+   },
+   {
+    "good": "coal",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "good": "contest_piece",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "smith_xp",
+    "add": 2,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 5
+   },
+   {
+    "target": "world",
+    "var": "soot",
+    "add": 1.5
+   }
+  ],
+  "tags": [
+   "craft",
+   "fine"
+  ],
+  "text": "{actor} работал молча, не отвлекаясь даже на Уголька.",
+  "description": "Лучшая работа, на какую вы способны: её повезут на ярмарку против Тихоновой.",
+  "category": "forge"
+ },
+ {
+  "id": "buy_vise",
+  "name": "Поставить слесарные тиски",
+  "mode": "once",
+  "hours": 1,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 2
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 40
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "vise",
+    "target": "workshop"
+   }
+  ],
+  "text": "Тиски прикрутили к верстаку. Васятка тут же зажал в них пряник.",
+  "description": "Тиски нужны для замков и мелкой точной работы.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_quench",
+  "name": "Поставить закалочную ванну",
+  "mode": "once",
+  "hours": 1,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 2
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 35
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "quench_trough",
+    "target": "workshop"
+   }
+  ],
+  "text": "Масло в корыте зашипело — тонкая работа теперь не ведёт.",
+  "description": "Ванна с маслом для закалки: меньше брака в тонкой работе.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_twin_anvil",
+  "name": "Поставить двурогую наковальню",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_item",
+     "subject": "world",
+     "item": "horn_anvil"
+    }
+   ]
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 85
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "twin_anvil",
+    "target": "workshop"
+   }
+  ],
+  "text": "Двурогую наковальню везли на трёх подводах. Старая ушла в сарай.",
+  "description": "Большая наковальня вместо наковальни с рогом: быстрее и ровнее.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_foot_grindstone",
+  "name": "Поставить ножное точило",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "workshop",
+     "template": "has_grindstone"
+    }
+   ]
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 70
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "foot_grindstone",
+    "target": "workshop"
+   }
+  ],
+  "text": "Ножное точило запело тоненько, как комар. Лезвия — хоть бриться.",
+  "description": "Точило с ножным приводом вместо старого круга: острее и чище.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_brick_chimney",
+  "name": "Сложить кирпичную трубу",
+  "mode": "once",
+  "hours": 4,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded"
+    },
+    {
+     "type": "event_count",
+     "event": "soot_warn",
+     "op": ">=",
+     "value": 1
+    }
+   ]
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 60
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "brick_chimney",
+    "target": "workshop"
+   }
+  ],
+  "text": "Печник Ферапонт сложил трубу выше колокольни. Сажа теперь не задерживается.",
+  "description": "Высокая кирпичная труба вместо колпака: сажи почти не бывает.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_big_hearth",
+  "name": "Сложить большой горн",
+  "mode": "once",
+  "hours": 4,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded"
+    }
+   ]
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 110
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "big_hearth",
+    "target": "workshop"
+   }
+  ],
+  "text": "Большой горн раскалился так, что в кузне стало как в бане. Чадит, зато лемех влезает целиком.",
+  "description": "Второй, большой горн для тяжёлых поковок вроде лемехов; чадит сильнее.",
+  "category": "upgrades"
+ },
+ {
+  "id": "buy_spring_press",
+  "name": "Поставить рессорный станок",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 4
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 130
+   }
+  ],
+  "effects": [
+   {
+    "type": "give_item",
+    "item": "spring_press",
+    "target": "workshop"
+   }
+  ],
+  "text": "Заморский станок собирали два дня по картинкам. Теперь можно гнуть рессоры.",
+  "description": "Станок для рессор — самой дорогой работы кузнеца.",
+  "category": "upgrades"
+ },
+ {
+  "id": "upgrade_yard",
+  "name": "Построить кузнечный двор",
+  "mode": "once",
+  "hours": 8,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "all": [
+    {
+     "type": "workshop_type",
+     "subject": "workshop",
+     "workshop": "town_workshop"
+    },
+    {
+     "type": "var",
+     "subject": "hero",
+     "var": "smith_xp",
+     "field": "level",
+     "op": ">=",
+     "value": 3
+    },
+    {
+     "type": "obligation",
+     "id": "count_estate_ob",
+     "state": "done"
+    }
+   ]
+  },
+  "enabled_when": {
+   "type": "worker_count",
+   "op": ">=",
+   "value": 2,
+   "text": "Двор поднимают артелью: нужны хотя бы двое подмастерьев."
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 450
+   }
+  ],
+  "effects": [
+   {
+    "type": "replace_workshop",
+    "target": "workshop",
+    "workshop": "smith_yard"
+   },
+   {
+    "type": "add_modifier",
+    "template": "yard_built",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "kind": "seal",
+    "popup": true,
+    "text": "Над воротами — вывеска «Кузнечный двор Демьяна». Три горна, навес, склад и место ещё для одного подмастерья. Пантелей обещал заглянуть."
+   }
+  ],
+  "description": "Перестроить мастерскую в большой кузнечный двор: больше снаряда, работников и покупателей.",
+  "category": "upgrades"
+ },
+ {
+  "id": "tavern",
+  "name": "Посидеть в кабаке у Луки",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "enabled_when": {
+   "all": [
+    {
+     "type": "hour",
+     "op": ">=",
+     "value": 12,
+     "text": "Кабак открывается после полудня."
+    },
+    {
+     "not": {
+      "type": "has_modifier",
+      "subject": "actor",
+      "template": "tavern_done"
+     },
+     "text": "Сегодня уже сидели."
+    }
+   ]
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 4
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": -16
+   }
+  ],
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "hungover",
+    "target": "actor"
+   },
+   {
+    "type": "add_modifier",
+    "template": "tavern_done",
+    "target": "actor"
+   }
+  ],
+  "tags": [
+   "rest"
+  ],
+  "text": "Лука налил, Кузьма спел, а {actor} забыл про горн.",
+  "description": "Быстро снимает усталость, но наутро голова тяжёлая и работа идёт медленнее.",
+  "category": "rest"
+ },
+ {
+  "id": "fishing",
+  "name": "Порыбачить на запруде",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "day",
+   "op": ">=",
+   "value": 3
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": -8
+   }
+  ],
+  "tags": [
+   "rest"
+  ],
+  "text": "Клевало плохо, зато думалось хорошо.",
+  "description": "Тихо посидеть с удочкой у мельничной запруды.",
+  "category": "rest"
+ },
+ {
+  "id": "church",
+  "name": "Сходить к обедне",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "enabled_when": {
+   "not": {
+    "type": "has_modifier",
+    "subject": "actor",
+    "template": "church_peace"
+   },
+   "text": "Сегодня уже были в церкви."
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": -5
+   }
+  ],
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "church_peace",
+    "target": "actor"
+   },
+   {
+    "type": "var",
+    "target": "world",
+    "var": "goodwill",
+    "add": 1
+   }
+  ],
+  "tags": [
+   "rest"
+  ],
+  "text": "Отец Варфоломей кивнул {actor} с амвона.",
+  "description": "Постоять в церкви: на душе тише весь день, и соседи видят.",
+  "category": "rest"
+ },
+ {
+  "id": "fair_with_marfa",
+  "name": "Свозить Марфу на ярмарку",
+  "mode": "once",
+  "hours": 6,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "day",
+   "op": ">=",
+   "value": 5
+  },
+  "enabled_when": {
+   "not": {
+    "type": "has_modifier",
+    "subject": "actor",
+    "template": "fair_trip_done"
+   },
+   "text": "Недавно ездили — Марфа ещё платок не сносила."
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 12
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": -6
+   }
+  ],
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "marfa_happy",
+    "target": "actor"
+   },
+   {
+    "type": "add_modifier",
+    "template": "fair_trip_done",
+    "target": "actor"
+   },
+   {
+    "type": "add_modifier",
+    "template": "marfa_warmth",
+    "target": "actor"
+   },
+   {
+    "type": "var",
+    "target": "world",
+    "var": "goodwill",
+    "add": 2
+   }
+  ],
+  "tags": [
+   "rest",
+   "family"
+  ],
+  "text": "Марфа выбрала платок с маками и всю дорогу пела.",
+  "description": "Целый день на ярмарке с женой: дорого и долго, зато надолго в доме лад.",
+  "category": "rest"
+ },
+ {
+  "id": "heal_marfa",
+  "name": "Позвать Агафью к Марфе",
+  "mode": "once",
+  "hours": 2,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "has_modifier",
+   "subject": "hero",
+   "template": "marfa_sick_strain"
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 12
+   }
+  ],
+  "effects": [
+   {
+    "type": "remove_modifier",
+    "template": "marfa_sick_strain",
+    "target": "actor"
+   },
+   {
+    "type": "remove_modifier",
+    "template": "sick_house",
+    "target": "world"
+   },
+   {
+    "type": "add_modifier",
+    "template": "marfa_grateful",
+    "target": "actor"
+   }
+  ],
+  "tags": [
+   "rest",
+   "family"
+  ],
+  "text": "Агафья напоила Марфу малиной с липовым цветом. К вечеру жар спал.",
+  "description": "Знахарка поставит Марфу на ноги быстрее, чем она поднимется сама.",
+  "category": "rest"
+ },
+ {
+  "id": "teach_fine",
+  "name": "Учить ровной руке",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "worker"
+   },
+   "partner": {
+    "who": "hero_or_worker"
+   }
+  },
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 2
+  },
+  "enabled_when": {
+   "type": "var_cmp",
+   "a": "partner",
+   "b": "actor",
+   "var": "defect",
+   "op": "<",
+   "text": "Учитель должен портить меньше ученика."
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "defect",
+    "add": -0.006
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 1
+   },
+   {
+    "target": "partner",
+    "var": "stress",
+    "add": 2
+   }
+  ],
+  "tags": [
+   "study"
+  ],
+  "description": "Показать подмастерью, как бить ровно: брака у него станет меньше насовсем.",
+  "category": "apprentices"
+ },
+ {
+  "id": "teach_mail",
+  "name": "Учить кольчуге",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "worker"
+   },
+   "partner": {
+    "who": "hero_or_worker"
+   }
+  },
+  "open_when": {
+   "type": "has_modifier",
+   "subject": "hero",
+   "template": "armor_lore"
+  },
+  "enabled_when": {
+   "type": "var_cmp",
+   "a": "partner",
+   "b": "actor",
+   "var": "armor_xp",
+   "field": "level",
+   "op": ">",
+   "text": "Учитель должен плести кольчугу лучше ученика."
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "armor_xp",
+    "add": 3,
+    "scale_by": "learn_speed"
+   },
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 1
+   },
+   {
+    "target": "partner",
+    "var": "stress",
+    "add": 2
+   }
+  ],
+  "tags": [
+   "study"
+  ],
+  "description": "Передать подмастерью кольчужное плетение.",
+  "category": "apprentices"
+ },
+ {
+  "id": "treat_workers",
+  "name": "Угостить подмастерьев квасом",
+  "mode": "once",
+  "hours": 1,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "enabled_when": {
+   "type": "worker_count",
+   "op": ">=",
+   "value": 1,
+   "text": "Угощать некого."
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 3
+   }
+  ],
+  "effects": [
+   {
+    "type": "var",
+    "target": "all_workers",
+    "var": "stress",
+    "add": -20
+   }
+  ],
+  "tags": [
+   "rest"
+  ],
+  "text": "Холодный квас из погреба — подмастерья ожили.",
+  "description": "Кружка холодного кваса снимает усталость со всех подмастерьев разом.",
+  "category": "apprentices"
+ },
+ {
+  "id": "chop_wood",
+  "name": "Нарубить дров",
+  "mode": "once",
+  "hours": 3,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker"
+   }
+  },
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 3
+   }
+  ],
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "firewood",
+    "target": "world"
+   }
+  ],
+  "tags": [
+   "chore"
+  ],
+  "text": "{actor} сложил поленницу до самой крыши.",
+  "description": "Свои дрова — меньше расход на дом на несколько дней.",
+  "category": "workshop"
+ },
+ {
+  "id": "dig_bog_ore",
+  "name": "Копать болотную руду",
+  "mode": "both",
+  "hours": 3,
+  "speed_scaled": true,
+  "roles": {
+   "actor": {
+    "who": "hero_or_worker"
+   }
+  },
+  "open_when": {
+   "type": "has_modifier",
+   "subject": "world",
+   "template": "bog_known"
+  },
+  "outputs": [
+   {
+    "good": "bog_ore",
+    "qty": 3
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 4
+   }
+  ],
+  "tags": [
+   "chore"
+  ],
+  "description": "Тяжёлая грязная работа на болоте за Смородинкой, зато руда даром.",
+  "category": "village"
+ },
+ {
+  "id": "teach_kuzma",
+  "name": "Учить Кузьму ковать подкову",
+  "mode": "once",
+  "hours": 4,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "obligation",
+   "id": "kuzma_shoe_ob",
+   "state": "active"
+  },
+  "cost": [
+   {
+    "good": "iron",
+    "qty": 2
+   }
+  ],
+  "outputs": [
+   {
+    "good": "lucky_shoe",
+    "qty": 1
+   }
+  ],
+  "per_hour": [
+   {
+    "target": "actor",
+    "var": "stress",
+    "add": 4
+   }
+  ],
+  "effects": [
+   {
+    "type": "add_modifier",
+    "template": "kuzma_taught",
+    "target": "world"
+   }
+  ],
+  "tags": [
+   "study"
+  ],
+  "text": "Кузьма трижды попал себе по пальцу, но подкову выковал сам. Кривенькую, зато свою.",
+  "description": "Поставить Кузьму к горну и не отходить, пока не выкует подкову для невесты.",
+  "category": "village"
+ },
+ {
+  "id": "pay_tax_debt",
+  "name": "Отнести недоимку мытарю",
+  "mode": "once",
+  "hours": 1,
+  "roles": {
+   "actor": {
+    "who": "hero"
+   }
+  },
+  "open_when": {
+   "type": "has_modifier",
+   "subject": "world",
+   "template": "tax_debt"
+  },
+  "cost": [
+   {
+    "var": "money",
+    "qty": 35
+   }
+  ],
+  "effects": [
+   {
+    "type": "remove_modifier",
+    "template": "tax_debt",
+    "target": "world"
+   },
+   {
+    "type": "notify",
+    "text": "Мытарь сосчитал монеты и вычеркнул вас из списка."
+   }
+  ],
+  "description": "Заплатить подать с лихвой, пока мытарь не пришёл сам.",
+  "category": "village"
+ }
+]

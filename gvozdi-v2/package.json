@@ -1,0 +1,31 @@
+{
+  "name": "gvozdi-v2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "tsx --test \"engine/test/**/*.test.ts\" \"validator/test/**/*.test.ts\" \"ui/test/**/*.test.ts\" \"simulator/test/**/*.test.ts\"",
+    "test:engine": "tsx --test \"engine/test/**/*.test.ts\"",
+    "test:validator": "tsx --test \"validator/test/**/*.test.ts\"",
+    "test:ui": "tsx --test \"ui/test/**/*.test.ts\"",
+    "test:sim": "tsx --test \"simulator/test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "validate": "tsx validator/src/cli.ts",
+    "make-broken": "tsx validator/scripts/make-broken.ts",
+    "build": "tsx ui/build.ts packs/nails_for_count dist/index.html",
+    "build:fixture": "tsx ui/build.ts fixtures/mini-pack dist/mini-pack.html",
+    "build:site": "tsx ui/build.ts --site packs dist --main nails_for_count",
+    "docs:sync": "tsx scripts/sync-docs.ts",
+    "docs:check": "tsx scripts/sync-docs.ts --check",
+    "sim": "tsx simulator/src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

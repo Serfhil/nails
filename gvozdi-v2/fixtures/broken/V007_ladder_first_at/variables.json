@@ -1,0 +1,151 @@
+[
+  {
+    "id": "speed",
+    "name": "Скорость",
+    "owner": "character",
+    "start": 1,
+    "min": 0
+  },
+  {
+    "id": "defect",
+    "name": "Брак",
+    "owner": "character",
+    "start": 0,
+    "min": 0,
+    "max": 1,
+    "good": "down"
+  },
+  {
+    "id": "learn_speed",
+    "name": "Обучаемость",
+    "owner": "character",
+    "start": 1,
+    "min": 0
+  },
+  {
+    "id": "sell_price",
+    "name": "Цена продажи",
+    "owner": "character",
+    "start": 1,
+    "min": 0
+  },
+  {
+    "id": "buy_price",
+    "name": "Цена покупки",
+    "owner": "character",
+    "start": 1,
+    "min": 0,
+    "good": "down"
+  },
+  {
+    "id": "commission",
+    "name": "Доля торговца",
+    "owner": "character",
+    "start": 0.1,
+    "min": 0,
+    "max": 1,
+    "good": "down"
+  },
+  {
+    "id": "wage",
+    "name": "Жалованье",
+    "owner": "character",
+    "start": 0,
+    "min": 0,
+    "format": "money",
+    "good": "down"
+  },
+  {
+    "id": "hire_cost",
+    "name": "Цена найма",
+    "owner": "character",
+    "start": 0,
+    "min": 0,
+    "format": "money"
+  },
+  {
+    "id": "household_expense",
+    "name": "Расход дома",
+    "owner": "world",
+    "start": 1,
+    "min": 0,
+    "format": "money",
+    "good": "down"
+  },
+  {
+    "id": "world_sell_price",
+    "name": "Спрос",
+    "owner": "world",
+    "start": 1,
+    "min": 0
+  },
+  {
+    "id": "world_buy_price",
+    "name": "Цены рынка",
+    "owner": "world",
+    "start": 1,
+    "min": 0,
+    "good": "down"
+  },
+  {
+    "id": "max_workers",
+    "name": "Мест",
+    "owner": "workshop",
+    "start": 0,
+    "min": 0
+  },
+  {
+    "id": "equipment_slots",
+    "name": "Слотов",
+    "owner": "workshop",
+    "start": 0,
+    "min": 0
+  },
+  {
+    "id": "upkeep",
+    "name": "Содержание",
+    "owner": "workshop",
+    "start": 0,
+    "min": 0,
+    "format": "money",
+    "good": "down"
+  },
+  {
+    "id": "craft_xp",
+    "name": "Ремесло",
+    "owner": "character",
+    "start": 0,
+    "min": 0,
+    "ladder": [
+      {
+        "at": 1,
+        "id": "novice",
+        "name": "Новичок",
+        "modifiers": []
+      },
+      {
+        "at": 10,
+        "id": "adept",
+        "name": "Умелец",
+        "modifiers": [
+          "skilled"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "polish_xp",
+    "name": "Полировка",
+    "owner": "character",
+    "start": 0,
+    "min": 0,
+    "visible": {
+      "type": "var",
+      "subject": "self",
+      "var": "craft_xp",
+      "field": "level",
+      "op": ">=",
+      "value": 1
+    }
+  }
+]

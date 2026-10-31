@@ -1,0 +1,16 @@
+[
+  { "id": "peel", "name": "Старая лопата", "kind": "tool", "slot": "hand", "price": 5,
+    "modifiers": ["peel_speed"], "description": "Хлебная лопата, ещё дедова." },
+  { "id": "good_peel", "name": "Новая лопата", "kind": "tool", "slot": "hand", "price": 30,
+    "modifiers": ["good_peel_speed"],
+    "open_when": { "type": "var", "subject": "hero", "var": "bake_xp", "field": "level", "op": ">=", "value": 1 },
+    "description": "Гладкая, лёгкая, по руке." },
+  { "id": "oven", "name": "Большая печь", "kind": "equipment", "line": "oven", "grade": 1, "price": 50,
+    "modifiers": ["has_oven", "oven_warmth"], "description": "В ней можно печь торты." },
+  { "id": "brick_oven", "name": "Кирпичная печь", "kind": "equipment", "line": "oven", "grade": 2, "price": 90,
+    "modifiers": ["has_oven", "oven_warmth", "brick_heat"], "description": "Держит жар до утра." },
+  { "id": "mixer", "name": "Тестомес", "kind": "equipment", "line": "mixer", "grade": 1, "price": 40,
+    "modifiers": ["mixer_room"], "description": "Месит сам, только ручку крути." },
+  { "id": "shelf", "name": "Витрина", "kind": "equipment", "line": "shelf", "grade": 1, "price": 30,
+    "modifiers": ["shelf_display"], "description": "Хлеб на виду — и берут охотнее." }
+]

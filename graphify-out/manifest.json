@@ -1,0 +1,3566 @@
+{
+  "gvozdi-v2/engine/src/actions.ts": {
+    "mtime": 1793081035.8519895,
+    "seen": 1793082302.0368662,
+    "ast_hash": "c1bbae59b4e3e9a24c65e50f3f14223f",
+    "semantic_hash": "c1bbae59b4e3e9a24c65e50f3f14223f"
+  },
+  "gvozdi-v2/engine/src/calc.ts": {
+    "mtime": 1793078837.6031823,
+    "seen": 1793082302.0368729,
+    "ast_hash": "cb02cffbc6b8af4100a45d6dad2454d4",
+    "semantic_hash": "cb02cffbc6b8af4100a45d6dad2454d4"
+  },
+  "gvozdi-v2/engine/src/conditions.ts": {
+    "mtime": 1793081059.034965,
+    "seen": 1793082302.0368757,
+    "ast_hash": "cd9ad9159d04d29c1979446a266739c0",
+    "semantic_hash": "cd9ad9159d04d29c1979446a266739c0"
+  },
+  "gvozdi-v2/engine/src/costs.ts": {
+    "mtime": 1793078837.6015818,
+    "seen": 1793082302.0368776,
+    "ast_hash": "ca7a98895936ced75a8a4125e045daa8",
+    "semantic_hash": "ca7a98895936ced75a8a4125e045daa8"
+  },
+  "gvozdi-v2/engine/src/effects.ts": {
+    "mtime": 1793080998.5531423,
+    "seen": 1793082302.0368793,
+    "ast_hash": "8144d95e71ae4b6d592ce8adf68030d1",
+    "semantic_hash": "8144d95e71ae4b6d592ce8adf68030d1"
+  },
+  "gvozdi-v2/engine/src/engine.ts": {
+    "mtime": 1793078837.5431957,
+    "seen": 1793082302.0368807,
+    "ast_hash": "553dfbe5a664ee51bf08b11acc934991",
+    "semantic_hash": "553dfbe5a664ee51bf08b11acc934991"
+  },
+  "gvozdi-v2/engine/src/equipment.ts": {
+    "mtime": 1793080983.2525482,
+    "seen": 1793082302.0368822,
+    "ast_hash": "062346705144be39cbd4969b513eb1da",
+    "semantic_hash": "062346705144be39cbd4969b513eb1da"
+  },
+  "gvozdi-v2/engine/src/events.ts": {
+    "mtime": 1793048628.954921,
+    "seen": 1793082302.0368834,
+    "ast_hash": "022013e473612b963c68ecec9fc1435a",
+    "semantic_hash": "022013e473612b963c68ecec9fc1435a"
+  },
+  "gvozdi-v2/engine/src/game.ts": {
+    "mtime": 1793081035.85299,
+    "seen": 1793082302.036885,
+    "ast_hash": "bf61b4d681ddf130a1ba2a622331af1f",
+    "semantic_hash": "bf61b4d681ddf130a1ba2a622331af1f"
+  },
+  "gvozdi-v2/engine/src/index.ts": {
+    "mtime": 1793138643.4551418,
+    "seen": 1793435658.6755004,
+    "ast_hash": "ccddb3ae4609902fa7f7c973eec4239b",
+    "semantic_hash": "ccddb3ae4609902fa7f7c973eec4239b"
+  },
+  "gvozdi-v2/engine/src/market.ts": {
+    "mtime": 1793081059.033965,
+    "seen": 1793082302.0368876,
+    "ast_hash": "bde8df29868182a29f706ab24a737753",
+    "semantic_hash": "bde8df29868182a29f706ab24a737753"
+  },
+  "gvozdi-v2/engine/src/modifiers.ts": {
+    "mtime": 1793078837.6015818,
+    "seen": 1793082302.036889,
+    "ast_hash": "734d0259fdb0acf45596c9036d2b36cc",
+    "semantic_hash": "734d0259fdb0acf45596c9036d2b36cc"
+  },
+  "gvozdi-v2/engine/src/offers.ts": {
+    "mtime": 1793048752.7045457,
+    "seen": 1793082302.0368905,
+    "ast_hash": "7658ab5d76a1a7e88402625a06419caf",
+    "semantic_hash": "7658ab5d76a1a7e88402625a06419caf"
+  },
+  "gvozdi-v2/engine/src/pack.ts": {
+    "mtime": 1793138632.383088,
+    "seen": 1793435658.6755083,
+    "ast_hash": "32a69cce1deafa3037664be2ca590e5a",
+    "semantic_hash": "32a69cce1deafa3037664be2ca590e5a"
+  },
+  "gvozdi-v2/engine/src/rng.ts": {
+    "mtime": 1793048319.3607144,
+    "seen": 1793082302.0368931,
+    "ast_hash": "99e04d11b8fa0d314ad61b3017734a64",
+    "semantic_hash": "99e04d11b8fa0d314ad61b3017734a64"
+  },
+  "gvozdi-v2/engine/src/state.ts": {
+    "mtime": 1793048361.890773,
+    "seen": 1793082302.0368948,
+    "ast_hash": "30cfe5da02109f860d24f7f7b98046c3",
+    "semantic_hash": "30cfe5da02109f860d24f7f7b98046c3"
+  },
+  "gvozdi-v2/engine/src/time.ts": {
+    "mtime": 1793078837.6036952,
+    "seen": 1793082302.0368962,
+    "ast_hash": "63cc2ab3d1ff79e2611b5ede2b64e67c",
+    "semantic_hash": "63cc2ab3d1ff79e2611b5ede2b64e67c"
+  },
+  "gvozdi-v2/engine/src/types.ts": {
+    "mtime": 1793434812.3347602,
+    "seen": 1793435658.6755154,
+    "ast_hash": "e0e1de08c5bfb0371dc7955a70206522",
+    "semantic_hash": "e0e1de08c5bfb0371dc7955a70206522"
+  },
+  "gvozdi-v2/engine/src/vars.ts": {
+    "mtime": 1793080967.1705396,
+    "seen": 1793082302.036899,
+    "ast_hash": "a7090c38f5e92952df06c935d4141f07",
+    "semantic_hash": "a7090c38f5e92952df06c935d4141f07"
+  },
+  "gvozdi-v2/engine/src/view.ts": {
+    "mtime": 1793434813.1339042,
+    "seen": 1793435658.6755188,
+    "ast_hash": "6963fe6ca3310da09c57547eeff52ceb",
+    "semantic_hash": "6963fe6ca3310da09c57547eeff52ceb"
+  },
+  "gvozdi-v2/engine/src/workforce.ts": {
+    "mtime": 1793081012.8650212,
+    "seen": 1793082302.0369017,
+    "ast_hash": "675088e92aaf78696681a6d616c6f031",
+    "semantic_hash": "675088e92aaf78696681a6d616c6f031"
+  },
+  "gvozdi-v2/engine/test/contract21.test.ts": {
+    "mtime": 1793112261.2846227,
+    "seen": 1793435658.6755242,
+    "ast_hash": "064e3efac352316391b5ccd408a7673c",
+    "semantic_hash": "064e3efac352316391b5ccd408a7673c"
+  },
+  "gvozdi-v2/engine/test/core.test.ts": {
+    "mtime": 1793049133.8329577,
+    "seen": 1793082302.0369053,
+    "ast_hash": "f8d15622789857380328ab734b57bc19",
+    "semantic_hash": "f8d15622789857380328ab734b57bc19"
+  },
+  "gvozdi-v2/engine/test/helpers.ts": {
+    "mtime": 1793138643.456142,
+    "seen": 1793435658.6755283,
+    "ast_hash": "e7ffbb40396eacdc37571599819c0b5a",
+    "semantic_hash": "e7ffbb40396eacdc37571599819c0b5a"
+  },
+  "gvozdi-v2/engine/test/numbers.test.ts": {
+    "mtime": 1793078895.9925084,
+    "seen": 1793082302.0369077,
+    "ast_hash": "4eb61749884a0038c0d78cbf61f9e10d",
+    "semantic_hash": "4eb61749884a0038c0d78cbf61f9e10d"
+  },
+  "gvozdi-v2/engine/test/purity.test.ts": {
+    "mtime": 1793049521.3630652,
+    "seen": 1793082302.036909,
+    "ast_hash": "3bd44ffae0065d6b61f6ba318cc165e8",
+    "semantic_hash": "3bd44ffae0065d6b61f6ba318cc165e8"
+  },
+  "gvozdi-v2/engine/test/rules-a.test.ts": {
+    "mtime": 1793049262.344371,
+    "seen": 1793082302.0369105,
+    "ast_hash": "a702e551eb89ec45c8dc78f0c52ddc26",
+    "semantic_hash": "a702e551eb89ec45c8dc78f0c52ddc26"
+  },
+  "gvozdi-v2/engine/test/rules-b.test.ts": {
+    "mtime": 1793049324.3728714,
+    "seen": 1793082302.0369122,
+    "ast_hash": "ceed32aa04924a55b48c64030c04f88e",
+    "semantic_hash": "ceed32aa04924a55b48c64030c04f88e"
+  },
+  "gvozdi-v2/engine/test/rules-c.test.ts": {
+    "mtime": 1793049404.4621718,
+    "seen": 1793082302.0369132,
+    "ast_hash": "feab5b63ff8d3685f330c5bd5734f480",
+    "semantic_hash": "feab5b63ff8d3685f330c5bd5734f480"
+  },
+  "gvozdi-v2/engine/test/rules-d.test.ts": {
+    "mtime": 1793049540.4603348,
+    "seen": 1793082302.0369146,
+    "ast_hash": "a8e8d4bf05e8ceaad31f583d7ef5bc4a",
+    "semantic_hash": "a8e8d4bf05e8ceaad31f583d7ef5bc4a"
+  },
+  "gvozdi-v2/engine/test/visibility.test.ts": {
+    "mtime": 1793081164.906362,
+    "seen": 1793082302.036916,
+    "ast_hash": "f23798d2432ff5201e79dda46bedd85d",
+    "semantic_hash": "f23798d2432ff5201e79dda46bedd85d"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/actions.json": {
+    "mtime": 1793434853.7175224,
+    "seen": 1793435658.675594,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/characters.json": {
+    "mtime": 1793434853.7175224,
+    "seen": 1793435658.6755955,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/events.json": {
+    "mtime": 1793434853.7175224,
+    "seen": 1793435658.6755974,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/goods.json": {
+    "mtime": 1793434853.716668,
+    "seen": 1793435658.6755993,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/items.json": {
+    "mtime": 1793434853.716668,
+    "seen": 1793435658.675601,
+    "ast_hash": "8245b92daa771e9ccaa139bffbd022bc",
+    "semantic_hash": "8245b92daa771e9ccaa139bffbd022bc"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/modifiers.json": {
+    "mtime": 1793434853.715666,
+    "seen": 1793435658.6756022,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/offers.json": {
+    "mtime": 1793434853.7185204,
+    "seen": 1793435658.6756039,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/pack.json": {
+    "mtime": 1793434853.7146664,
+    "seen": 1793435658.675606,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/texts.json": {
+    "mtime": 1793434853.7185204,
+    "seen": 1793435658.6756072,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/variables.json": {
+    "mtime": 1793434853.715666,
+    "seen": 1793435658.6756089,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_grade/workshops.json": {
+    "mtime": 1793434853.7175224,
+    "seen": 1793435658.6756105,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/actions.json": {
+    "mtime": 1793434853.7136662,
+    "seen": 1793435658.675612,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/characters.json": {
+    "mtime": 1793434853.712665,
+    "seen": 1793435658.6756136,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/events.json": {
+    "mtime": 1793434853.7136662,
+    "seen": 1793435658.675615,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/goods.json": {
+    "mtime": 1793434853.711667,
+    "seen": 1793435658.6756165,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/items.json": {
+    "mtime": 1793434853.712665,
+    "seen": 1793435658.675618,
+    "ast_hash": "453707cf202551d03cc1af30c3841455",
+    "semantic_hash": "453707cf202551d03cc1af30c3841455"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/modifiers.json": {
+    "mtime": 1793434853.711667,
+    "seen": 1793435658.6756196,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/offers.json": {
+    "mtime": 1793434853.7136662,
+    "seen": 1793435658.6756213,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/pack.json": {
+    "mtime": 1793434853.710665,
+    "seen": 1793435658.6756287,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/texts.json": {
+    "mtime": 1793434853.7146664,
+    "seen": 1793435658.6756306,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/variables.json": {
+    "mtime": 1793434853.711667,
+    "seen": 1793435658.6756325,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V001_equipment_no_line/workshops.json": {
+    "mtime": 1793434853.712665,
+    "seen": 1793435658.675634,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/actions.json": {
+    "mtime": 1793434853.7086668,
+    "seen": 1793435658.6756353,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/characters.json": {
+    "mtime": 1793434853.7086668,
+    "seen": 1793435658.6756375,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/events.json": {
+    "mtime": 1793434853.7096658,
+    "seen": 1793435658.6756392,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/goods.json": {
+    "mtime": 1793434853.710665,
+    "seen": 1793435658.6756406,
+    "ast_hash": "9bfdf37940fa37b1439cf1397b1577e0",
+    "semantic_hash": "9bfdf37940fa37b1439cf1397b1577e0"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/items.json": {
+    "mtime": 1793434853.7076662,
+    "seen": 1793435658.675642,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/modifiers.json": {
+    "mtime": 1793434853.7076662,
+    "seen": 1793435658.675644,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/offers.json": {
+    "mtime": 1793434853.7096658,
+    "seen": 1793435658.6756456,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/pack.json": {
+    "mtime": 1793434853.7066686,
+    "seen": 1793435658.6756475,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/texts.json": {
+    "mtime": 1793434853.7096658,
+    "seen": 1793435658.675649,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/variables.json": {
+    "mtime": 1793434853.7066686,
+    "seen": 1793435658.6756504,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V001_json_syntax/workshops.json": {
+    "mtime": 1793434853.7086668,
+    "seen": 1793435658.6756518,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/actions.json": {
+    "mtime": 1793434853.7350872,
+    "seen": 1793435658.6757007,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/characters.json": {
+    "mtime": 1793434853.7341568,
+    "seen": 1793435658.6757023,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/events.json": {
+    "mtime": 1793434853.7350872,
+    "seen": 1793435658.6757038,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/goods.json": {
+    "mtime": 1793434853.7331574,
+    "seen": 1793435658.6757054,
+    "ast_hash": "c53785c8838147ce8219f8553d5d4912",
+    "semantic_hash": "c53785c8838147ce8219f8553d5d4912"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/items.json": {
+    "mtime": 1793434853.7341568,
+    "seen": 1793435658.6757069,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/modifiers.json": {
+    "mtime": 1793434853.7331574,
+    "seen": 1793435658.675708,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/offers.json": {
+    "mtime": 1793434853.7350872,
+    "seen": 1793435658.6757097,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/pack.json": {
+    "mtime": 1793434853.731155,
+    "seen": 1793435658.675711,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/texts.json": {
+    "mtime": 1793434853.7360854,
+    "seen": 1793435658.6757126,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/variables.json": {
+    "mtime": 1793434853.7321544,
+    "seen": 1793435658.675714,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_id/workshops.json": {
+    "mtime": 1793434853.7341568,
+    "seen": 1793435658.6757157,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/actions.json": {
+    "mtime": 1793434853.7470548,
+    "seen": 1793435658.6757324,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/characters.json": {
+    "mtime": 1793434853.7463088,
+    "seen": 1793435658.675734,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/events.json": {
+    "mtime": 1793434853.7475603,
+    "seen": 1793435658.6757357,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/goods.json": {
+    "mtime": 1793434853.74531,
+    "seen": 1793435658.6757371,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/items.json": {
+    "mtime": 1793434853.74531,
+    "seen": 1793435658.6757388,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/modifiers.json": {
+    "mtime": 1793434853.74531,
+    "seen": 1793435658.6757402,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/offers.json": {
+    "mtime": 1793434853.747622,
+    "seen": 1793435658.6757417,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/pack.json": {
+    "mtime": 1793434853.744309,
+    "seen": 1793435658.6757429,
+    "ast_hash": "c4987b78cec07f3d539997beb132ecc0",
+    "semantic_hash": "c4987b78cec07f3d539997beb132ecc0"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/texts.json": {
+    "mtime": 1793434853.747622,
+    "seen": 1793435658.6757448,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/variables.json": {
+    "mtime": 1793434853.744309,
+    "seen": 1793435658.6757462,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V003_equipment_in_shop/workshops.json": {
+    "mtime": 1793434853.7463088,
+    "seen": 1793435658.6757479,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/actions.json": {
+    "mtime": 1793434853.7423103,
+    "seen": 1793435658.6757493,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/characters.json": {
+    "mtime": 1793434853.7423103,
+    "seen": 1793435658.6757507,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/events.json": {
+    "mtime": 1793434853.7433107,
+    "seen": 1793435658.6757522,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/goods.json": {
+    "mtime": 1793434853.7413082,
+    "seen": 1793435658.6757538,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/items.json": {
+    "mtime": 1793434853.7423103,
+    "seen": 1793435658.6757553,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/modifiers.json": {
+    "mtime": 1793434853.7413082,
+    "seen": 1793435658.6757565,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/offers.json": {
+    "mtime": 1793434853.7433107,
+    "seen": 1793435658.6757581,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/pack.json": {
+    "mtime": 1793434853.7403104,
+    "seen": 1793435658.6757596,
+    "ast_hash": "cca5abcb1b076eae4c87c3dc3b19c3e8",
+    "semantic_hash": "cca5abcb1b076eae4c87c3dc3b19c3e8"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/texts.json": {
+    "mtime": 1793434853.7433107,
+    "seen": 1793435658.6757612,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/variables.json": {
+    "mtime": 1793434853.7413082,
+    "seen": 1793435658.6757627,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V003_slot_no_name/workshops.json": {
+    "mtime": 1793434853.7423103,
+    "seen": 1793435658.6757643,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/actions.json": {
+    "mtime": 1793434853.7393105,
+    "seen": 1793435658.6757822,
+    "ast_hash": "93863a11b2a73930613ec1ebdbd17fe4",
+    "semantic_hash": "93863a11b2a73930613ec1ebdbd17fe4"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/characters.json": {
+    "mtime": 1793434853.7383087,
+    "seen": 1793435658.6757836,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/events.json": {
+    "mtime": 1793434853.7393105,
+    "seen": 1793435658.6757853,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/goods.json": {
+    "mtime": 1793434853.7373114,
+    "seen": 1793435658.6757867,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/items.json": {
+    "mtime": 1793434853.7383087,
+    "seen": 1793435658.675788,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/modifiers.json": {
+    "mtime": 1793434853.7373114,
+    "seen": 1793435658.6757896,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/offers.json": {
+    "mtime": 1793434853.7393105,
+    "seen": 1793435658.675791,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/pack.json": {
+    "mtime": 1793434853.7360854,
+    "seen": 1793435658.6757925,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/texts.json": {
+    "mtime": 1793434853.7403104,
+    "seen": 1793435658.675794,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/variables.json": {
+    "mtime": 1793434853.7373114,
+    "seen": 1793435658.6757953,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_ref/workshops.json": {
+    "mtime": 1793434853.7383087,
+    "seen": 1793435658.6757967,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/actions.json": {
+    "mtime": 1793434853.7515676,
+    "seen": 1793435658.675798,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/characters.json": {
+    "mtime": 1793434853.750568,
+    "seen": 1793435658.6757998,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/events.json": {
+    "mtime": 1793434853.7515676,
+    "seen": 1793435658.6758013,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/goods.json": {
+    "mtime": 1793434853.750568,
+    "seen": 1793435658.675803,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/items.json": {
+    "mtime": 1793434853.750568,
+    "seen": 1793435658.6758041,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/modifiers.json": {
+    "mtime": 1793434853.7495682,
+    "seen": 1793435658.6758058,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/offers.json": {
+    "mtime": 1793434853.7515676,
+    "seen": 1793435658.675807,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/pack.json": {
+    "mtime": 1793434853.7485683,
+    "seen": 1793435658.6758084,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/texts.json": {
+    "mtime": 1793434853.752568,
+    "seen": 1793435658.6758099,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/variables.json": {
+    "mtime": 1793434853.7495682,
+    "seen": 1793435658.6758113,
+    "ast_hash": "57e7af1b9aa7f2c9979366589800c82f",
+    "semantic_hash": "57e7af1b9aa7f2c9979366589800c82f"
+  },
+  "gvozdi-v2/fixtures/broken/V004_reserved_missing/workshops.json": {
+    "mtime": 1793434853.750568,
+    "seen": 1793435658.6758127,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/actions.json": {
+    "mtime": 1793434853.7555685,
+    "seen": 1793435658.6758142,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/characters.json": {
+    "mtime": 1793434853.7545702,
+    "seen": 1793435658.6758153,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/events.json": {
+    "mtime": 1793434853.7555685,
+    "seen": 1793435658.675817,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/goods.json": {
+    "mtime": 1793434853.7535682,
+    "seen": 1793435658.6758184,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/items.json": {
+    "mtime": 1793434853.7545702,
+    "seen": 1793435658.6758204,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/modifiers.json": {
+    "mtime": 1793434853.7535682,
+    "seen": 1793435658.6758215,
+    "ast_hash": "0905e60ad94543bf1902a9a00edc9276",
+    "semantic_hash": "0905e60ad94543bf1902a9a00edc9276"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/offers.json": {
+    "mtime": 1793434853.7555685,
+    "seen": 1793435658.6758232,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/pack.json": {
+    "mtime": 1793434853.752568,
+    "seen": 1793435658.6758244,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/texts.json": {
+    "mtime": 1793434853.7565677,
+    "seen": 1793435658.675826,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/variables.json": {
+    "mtime": 1793434853.752568,
+    "seen": 1793435658.6758277,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V005_modifier_no_op/workshops.json": {
+    "mtime": 1793434853.7545702,
+    "seen": 1793435658.675829,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/actions.json": {
+    "mtime": 1793434853.7632515,
+    "seen": 1793435658.6758306,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/characters.json": {
+    "mtime": 1793434853.7625685,
+    "seen": 1793435658.6758318,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/events.json": {
+    "mtime": 1793434853.7632515,
+    "seen": 1793435658.6758332,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/goods.json": {
+    "mtime": 1793434853.7615678,
+    "seen": 1793435658.675835,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/items.json": {
+    "mtime": 1793434853.7615678,
+    "seen": 1793435658.6758363,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/modifiers.json": {
+    "mtime": 1793434853.7615678,
+    "seen": 1793435658.6758378,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/offers.json": {
+    "mtime": 1793434853.7632515,
+    "seen": 1793435658.6758392,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/pack.json": {
+    "mtime": 1793434853.7605684,
+    "seen": 1793435658.6758409,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/texts.json": {
+    "mtime": 1793434853.7642238,
+    "seen": 1793435658.675842,
+    "ast_hash": "36047267285930f4410b7f193d504583",
+    "semantic_hash": "36047267285930f4410b7f193d504583"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/variables.json": {
+    "mtime": 1793434853.7605684,
+    "seen": 1793435658.6758435,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V006_no_replace_warning/workshops.json": {
+    "mtime": 1793434853.7625685,
+    "seen": 1793435658.6758451,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/actions.json": {
+    "mtime": 1793434853.7595685,
+    "seen": 1793435658.6758463,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/characters.json": {
+    "mtime": 1793434853.7585685,
+    "seen": 1793435658.675848,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/events.json": {
+    "mtime": 1793434853.7595685,
+    "seen": 1793435658.6758494,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/goods.json": {
+    "mtime": 1793434853.7575684,
+    "seen": 1793435658.675851,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/items.json": {
+    "mtime": 1793434853.7585685,
+    "seen": 1793435658.6758523,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/modifiers.json": {
+    "mtime": 1793434853.7575684,
+    "seen": 1793435658.6758537,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/offers.json": {
+    "mtime": 1793434853.7595685,
+    "seen": 1793435658.6758552,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/pack.json": {
+    "mtime": 1793434853.7565677,
+    "seen": 1793435658.6758566,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/texts.json": {
+    "mtime": 1793434853.7605684,
+    "seen": 1793435658.6758583,
+    "ast_hash": "937d7144f5053f5228298fbd6bd26a4a",
+    "semantic_hash": "937d7144f5053f5228298fbd6bd26a4a"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/variables.json": {
+    "mtime": 1793434853.7575684,
+    "seen": 1793435658.6758595,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V006_text_missing_key/workshops.json": {
+    "mtime": 1793434853.7585685,
+    "seen": 1793435658.6758606,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/actions.json": {
+    "mtime": 1793434853.766899,
+    "seen": 1793435658.6758623,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/characters.json": {
+    "mtime": 1793434853.766899,
+    "seen": 1793435658.6758637,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/events.json": {
+    "mtime": 1793434853.766899,
+    "seen": 1793435658.6758654,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/goods.json": {
+    "mtime": 1793434853.7659078,
+    "seen": 1793435658.6758666,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/items.json": {
+    "mtime": 1793434853.7659078,
+    "seen": 1793435658.6758683,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/modifiers.json": {
+    "mtime": 1793434853.7652233,
+    "seen": 1793435658.6758697,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/offers.json": {
+    "mtime": 1793434853.7679007,
+    "seen": 1793435658.675871,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/pack.json": {
+    "mtime": 1793434853.7642238,
+    "seen": 1793435658.6758726,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/texts.json": {
+    "mtime": 1793434853.7679007,
+    "seen": 1793435658.6758738,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/variables.json": {
+    "mtime": 1793434853.7652233,
+    "seen": 1793435658.6758752,
+    "ast_hash": "6df644c40e74d79ce5cef126e226874f",
+    "semantic_hash": "6df644c40e74d79ce5cef126e226874f"
+  },
+  "gvozdi-v2/fixtures/broken/V007_ladder_first_at/workshops.json": {
+    "mtime": 1793434853.7659078,
+    "seen": 1793435658.6758766,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/actions.json": {
+    "mtime": 1793434853.7708972,
+    "seen": 1793435658.6758778,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/characters.json": {
+    "mtime": 1793434853.7708972,
+    "seen": 1793435658.6758795,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/events.json": {
+    "mtime": 1793434853.7708972,
+    "seen": 1793435658.6758807,
+    "ast_hash": "ed4ff0fae75b378e2d84bf1044040f55",
+    "semantic_hash": "ed4ff0fae75b378e2d84bf1044040f55"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/goods.json": {
+    "mtime": 1793434853.769897,
+    "seen": 1793435658.6758823,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/items.json": {
+    "mtime": 1793434853.769897,
+    "seen": 1793435658.6758835,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/modifiers.json": {
+    "mtime": 1793434853.769897,
+    "seen": 1793435658.675885,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/offers.json": {
+    "mtime": 1793434853.771899,
+    "seen": 1793435658.6758866,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/pack.json": {
+    "mtime": 1793434853.7689009,
+    "seen": 1793435658.675888,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/texts.json": {
+    "mtime": 1793434853.771899,
+    "seen": 1793435658.6758895,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/variables.json": {
+    "mtime": 1793434853.7689009,
+    "seen": 1793435658.675891,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V008_event_cycle/workshops.json": {
+    "mtime": 1793434853.769897,
+    "seen": 1793435658.6758926,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/actions.json": {
+    "mtime": 1793434853.7748992,
+    "seen": 1793435658.6758938,
+    "ast_hash": "0717cbfc1c99c00a8eeccd65e7bbd58f",
+    "semantic_hash": "0717cbfc1c99c00a8eeccd65e7bbd58f"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/characters.json": {
+    "mtime": 1793434853.7748992,
+    "seen": 1793435658.6758952,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/events.json": {
+    "mtime": 1793434853.7748992,
+    "seen": 1793435658.675897,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/goods.json": {
+    "mtime": 1793434853.7738984,
+    "seen": 1793435658.675898,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/items.json": {
+    "mtime": 1793434853.7738984,
+    "seen": 1793435658.6758997,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/modifiers.json": {
+    "mtime": 1793434853.7738984,
+    "seen": 1793435658.6759012,
+    "ast_hash": "8cc5c38cbb04221b7e6f6f6131aed5c2",
+    "semantic_hash": "8cc5c38cbb04221b7e6f6f6131aed5c2"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/offers.json": {
+    "mtime": 1793434853.775897,
+    "seen": 1793435658.6759024,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/pack.json": {
+    "mtime": 1793434853.7728984,
+    "seen": 1793435658.675904,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/texts.json": {
+    "mtime": 1793434853.7765183,
+    "seen": 1793435658.6759052,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/variables.json": {
+    "mtime": 1793434853.7728984,
+    "seen": 1793435658.675907,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V009_permanent_negative/workshops.json": {
+    "mtime": 1793434853.7738984,
+    "seen": 1793435658.6759083,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/actions.json": {
+    "mtime": 1793434853.779315,
+    "seen": 1793435658.67591,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/characters.json": {
+    "mtime": 1793434853.7793062,
+    "seen": 1793435658.6759114,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/events.json": {
+    "mtime": 1793434853.779315,
+    "seen": 1793435658.6759126,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/goods.json": {
+    "mtime": 1793434853.7774923,
+    "seen": 1793435658.675914,
+    "ast_hash": "9b3827ca9d77693248300cf16ba6fb1e",
+    "semantic_hash": "9b3827ca9d77693248300cf16ba6fb1e"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/items.json": {
+    "mtime": 1793434853.778494,
+    "seen": 1793435658.6759155,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/modifiers.json": {
+    "mtime": 1793434853.7774923,
+    "seen": 1793435658.6759171,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/offers.json": {
+    "mtime": 1793434853.779315,
+    "seen": 1793435658.6759183,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/pack.json": {
+    "mtime": 1793434853.7765183,
+    "seen": 1793435658.6759198,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/texts.json": {
+    "mtime": 1793434853.780313,
+    "seen": 1793435658.6759212,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/variables.json": {
+    "mtime": 1793434853.7774923,
+    "seen": 1793435658.6759226,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V010_unreachable_good/workshops.json": {
+    "mtime": 1793434853.778494,
+    "seen": 1793435658.675924,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/actions.json": {
+    "mtime": 1793434853.7833133,
+    "seen": 1793435658.6759255,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/characters.json": {
+    "mtime": 1793434853.782312,
+    "seen": 1793435658.675927,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/events.json": {
+    "mtime": 1793434853.7833133,
+    "seen": 1793435658.6759286,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/goods.json": {
+    "mtime": 1793434853.781312,
+    "seen": 1793435658.67593,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/items.json": {
+    "mtime": 1793434853.782312,
+    "seen": 1793435658.6759315,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/modifiers.json": {
+    "mtime": 1793434853.781312,
+    "seen": 1793435658.6759326,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/offers.json": {
+    "mtime": 1793434853.7843146,
+    "seen": 1793435658.6759343,
+    "ast_hash": "1645f22c28bd4dad3efb414fe941f887",
+    "semantic_hash": "1645f22c28bd4dad3efb414fe941f887"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/pack.json": {
+    "mtime": 1793434853.780313,
+    "seen": 1793435658.6759357,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/texts.json": {
+    "mtime": 1793434853.7843146,
+    "seen": 1793435658.675937,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/variables.json": {
+    "mtime": 1793434853.781312,
+    "seen": 1793435658.6759384,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V011_board_days_zero/workshops.json": {
+    "mtime": 1793434853.782312,
+    "seen": 1793435658.6759398,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/actions.json": {
+    "mtime": 1793434853.7869408,
+    "seen": 1793435658.6759415,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/characters.json": {
+    "mtime": 1793434853.7869408,
+    "seen": 1793435658.6759427,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/events.json": {
+    "mtime": 1793434853.7869408,
+    "seen": 1793435658.675944,
+    "ast_hash": "c85e57a39400de149611abfb45e1bbfc",
+    "semantic_hash": "c85e57a39400de149611abfb45e1bbfc"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/goods.json": {
+    "mtime": 1793434853.7853148,
+    "seen": 1793435658.6759455,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/items.json": {
+    "mtime": 1793434853.7863128,
+    "seen": 1793435658.6759467,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/modifiers.json": {
+    "mtime": 1793434853.7853148,
+    "seen": 1793435658.6759484,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/offers.json": {
+    "mtime": 1793434853.787923,
+    "seen": 1793435658.6759496,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/pack.json": {
+    "mtime": 1793434853.7843146,
+    "seen": 1793435658.675951,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/texts.json": {
+    "mtime": 1793434853.787923,
+    "seen": 1793435658.6759524,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/variables.json": {
+    "mtime": 1793434853.7853148,
+    "seen": 1793435658.6759536,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V012_end_game_no_tag/workshops.json": {
+    "mtime": 1793434853.7863128,
+    "seen": 1793435658.6759553,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/actions.json": {
+    "mtime": 1793434853.7909212,
+    "seen": 1793435658.6759565,
+    "ast_hash": "70223873551268ca14ba8b2660ecae8c",
+    "semantic_hash": "70223873551268ca14ba8b2660ecae8c"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/characters.json": {
+    "mtime": 1793434853.7899206,
+    "seen": 1793435658.675958,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/events.json": {
+    "mtime": 1793434853.7909212,
+    "seen": 1793435658.6759593,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/goods.json": {
+    "mtime": 1793434853.7899206,
+    "seen": 1793435658.6759605,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/items.json": {
+    "mtime": 1793434853.7899206,
+    "seen": 1793435658.6759622,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/modifiers.json": {
+    "mtime": 1793434853.788922,
+    "seen": 1793435658.6759634,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/offers.json": {
+    "mtime": 1793434853.7909212,
+    "seen": 1793435658.6759646,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/pack.json": {
+    "mtime": 1793434853.788922,
+    "seen": 1793435658.6759663,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/texts.json": {
+    "mtime": 1793434853.7919202,
+    "seen": 1793435658.6759675,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/variables.json": {
+    "mtime": 1793434853.788922,
+    "seen": 1793435658.6759691,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V013_hours_zero/workshops.json": {
+    "mtime": 1793434853.7899206,
+    "seen": 1793435658.6759703,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/actions.json": {
+    "mtime": 1793434853.7949212,
+    "seen": 1793435658.675972,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/characters.json": {
+    "mtime": 1793434853.7949212,
+    "seen": 1793435658.6759737,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/events.json": {
+    "mtime": 1793434853.7949212,
+    "seen": 1793435658.675975,
+    "ast_hash": "d767fc029e2c57fc19dcda0ebafad6ff",
+    "semantic_hash": "d767fc029e2c57fc19dcda0ebafad6ff"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/goods.json": {
+    "mtime": 1793434853.793923,
+    "seen": 1793435658.6759765,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/items.json": {
+    "mtime": 1793434853.793923,
+    "seen": 1793435658.675978,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/modifiers.json": {
+    "mtime": 1793434853.79292,
+    "seen": 1793435658.6759794,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/offers.json": {
+    "mtime": 1793434853.7959216,
+    "seen": 1793435658.6759808,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/pack.json": {
+    "mtime": 1793434853.7919202,
+    "seen": 1793435658.675982,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/texts.json": {
+    "mtime": 1793434853.7959216,
+    "seen": 1793435658.6759837,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/variables.json": {
+    "mtime": 1793434853.79292,
+    "seen": 1793435658.6759849,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V014_start_not_game_start/workshops.json": {
+    "mtime": 1793434853.793923,
+    "seen": 1793435658.6759865,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/actions.json": {
+    "mtime": 1793434853.7989218,
+    "seen": 1793435658.6759882,
+    "ast_hash": "06405ffcece371e44696a484ea4bd292",
+    "semantic_hash": "06405ffcece371e44696a484ea4bd292"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/characters.json": {
+    "mtime": 1793434853.7989218,
+    "seen": 1793435658.6759894,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/events.json": {
+    "mtime": 1793434853.7999232,
+    "seen": 1793435658.675991,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/goods.json": {
+    "mtime": 1793434853.797921,
+    "seen": 1793435658.6759923,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/items.json": {
+    "mtime": 1793434853.797921,
+    "seen": 1793435658.6759937,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/modifiers.json": {
+    "mtime": 1793434853.7969224,
+    "seen": 1793435658.6759949,
+    "ast_hash": "0577200882bb46e832cd8f8380988278",
+    "semantic_hash": "0577200882bb46e832cd8f8380988278"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/offers.json": {
+    "mtime": 1793434853.7999232,
+    "seen": 1793435658.6759963,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/pack.json": {
+    "mtime": 1793434853.7969224,
+    "seen": 1793435658.6759977,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/texts.json": {
+    "mtime": 1793434853.7999232,
+    "seen": 1793435658.675999,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/variables.json": {
+    "mtime": 1793434853.7969224,
+    "seen": 1793435658.6760006,
+    "ast_hash": "47cac49f21fe0d0fd208cbc96bc25f74",
+    "semantic_hash": "47cac49f21fe0d0fd208cbc96bc25f74"
+  },
+  "gvozdi-v2/fixtures/broken/W001_floor_pct/workshops.json": {
+    "mtime": 1793434853.797921,
+    "seen": 1793435658.6760018,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/actions.json": {
+    "mtime": 1793434853.8029215,
+    "seen": 1793435658.6760204,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/characters.json": {
+    "mtime": 1793434853.8029215,
+    "seen": 1793435658.676022,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/events.json": {
+    "mtime": 1793434853.8029215,
+    "seen": 1793435658.6760232,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/goods.json": {
+    "mtime": 1793434853.8019214,
+    "seen": 1793435658.6760247,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/items.json": {
+    "mtime": 1793434853.8019214,
+    "seen": 1793435658.676026,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/modifiers.json": {
+    "mtime": 1793434853.8019214,
+    "seen": 1793435658.6760273,
+    "ast_hash": "ded05e174b057e592cd76ef19c350816",
+    "semantic_hash": "ded05e174b057e592cd76ef19c350816"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/offers.json": {
+    "mtime": 1793434853.8039217,
+    "seen": 1793435658.6760292,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/pack.json": {
+    "mtime": 1793434853.8009236,
+    "seen": 1793435658.6760306,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/texts.json": {
+    "mtime": 1793434853.8039217,
+    "seen": 1793435658.676032,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/variables.json": {
+    "mtime": 1793434853.8009236,
+    "seen": 1793435658.6760333,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/W002_unused_modifier/workshops.json": {
+    "mtime": 1793434853.8019214,
+    "seen": 1793435658.676035,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/actions.json": {
+    "mtime": 1793434853.8326302,
+    "seen": 1793435658.6760364,
+    "ast_hash": "22f741e5d60bb0e1ae45ea5974715d7c",
+    "semantic_hash": "22f741e5d60bb0e1ae45ea5974715d7c"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/characters.json": {
+    "mtime": 1793434853.8316278,
+    "seen": 1793435658.6760378,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/events.json": {
+    "mtime": 1793434853.8326302,
+    "seen": 1793435658.6760395,
+    "ast_hash": "680b8c77498b2410e6ae0d9767b5878a",
+    "semantic_hash": "680b8c77498b2410e6ae0d9767b5878a"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/goods.json": {
+    "mtime": 1793434853.8316278,
+    "seen": 1793435658.6760406,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/items.json": {
+    "mtime": 1793434853.8316278,
+    "seen": 1793435658.676042,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/modifiers.json": {
+    "mtime": 1793434853.8306289,
+    "seen": 1793435658.6760435,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/offers.json": {
+    "mtime": 1793434853.8336277,
+    "seen": 1793435658.6760447,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/pack.json": {
+    "mtime": 1793434853.8306289,
+    "seen": 1793435658.6760464,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/texts.json": {
+    "mtime": 1793434853.8336277,
+    "seen": 1793435658.6760478,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/variables.json": {
+    "mtime": 1793434853.8306289,
+    "seen": 1793435658.6760492,
+    "ast_hash": "d43484d94f9b055aacdef96f1aa83f51",
+    "semantic_hash": "d43484d94f9b055aacdef96f1aa83f51"
+  },
+  "gvozdi-v2/fixtures/broken/W003_no_foreshadow/workshops.json": {
+    "mtime": 1793434853.8316278,
+    "seen": 1793435658.6760507,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/actions.json": {
+    "mtime": 1793434853.8366282,
+    "seen": 1793435658.6760523,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/characters.json": {
+    "mtime": 1793434853.8366282,
+    "seen": 1793435658.6760535,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/events.json": {
+    "mtime": 1793434853.8366282,
+    "seen": 1793435658.676055,
+    "ast_hash": "9e91aad8dc8d015e9fcb8b8a4b09b464",
+    "semantic_hash": "9e91aad8dc8d015e9fcb8b8a4b09b464"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/goods.json": {
+    "mtime": 1793434853.8356276,
+    "seen": 1793435658.6760566,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/items.json": {
+    "mtime": 1793434853.8356276,
+    "seen": 1793435658.676058,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/modifiers.json": {
+    "mtime": 1793434853.8346288,
+    "seen": 1793435658.6760595,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/offers.json": {
+    "mtime": 1793434853.8376281,
+    "seen": 1793435658.676061,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/pack.json": {
+    "mtime": 1793434853.8346288,
+    "seen": 1793435658.6760623,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/texts.json": {
+    "mtime": 1793434853.8376281,
+    "seen": 1793435658.6760638,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/variables.json": {
+    "mtime": 1793434853.8346288,
+    "seen": 1793435658.676065,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/W004_data_partial/workshops.json": {
+    "mtime": 1793434853.8356276,
+    "seen": 1793435658.6760666,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/actions.json": {
+    "mtime": 1793434853.840628,
+    "seen": 1793435658.6760678,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/characters.json": {
+    "mtime": 1793434853.8396268,
+    "seen": 1793435658.676069,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/events.json": {
+    "mtime": 1793434853.840628,
+    "seen": 1793435658.6760707,
+    "ast_hash": "80210d08b60e112ea65c451d959ab673",
+    "semantic_hash": "80210d08b60e112ea65c451d959ab673"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/goods.json": {
+    "mtime": 1793434853.8396268,
+    "seen": 1793435658.676072,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/items.json": {
+    "mtime": 1793434853.8396268,
+    "seen": 1793435658.6760733,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/modifiers.json": {
+    "mtime": 1793434853.838627,
+    "seen": 1793435658.6760747,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/offers.json": {
+    "mtime": 1793434853.8416293,
+    "seen": 1793435658.6760762,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/pack.json": {
+    "mtime": 1793434853.838627,
+    "seen": 1793435658.6760776,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/texts.json": {
+    "mtime": 1793434853.8416293,
+    "seen": 1793435658.676079,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/variables.json": {
+    "mtime": 1793434853.838627,
+    "seen": 1793435658.6760805,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/W005_stops_time_no_repeat/workshops.json": {
+    "mtime": 1793434853.8396268,
+    "seen": 1793435658.6760817,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/actions.json": {
+    "mtime": 1793434853.8446276,
+    "seen": 1793435658.6760828,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/characters.json": {
+    "mtime": 1793434853.8446276,
+    "seen": 1793435658.6760843,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/events.json": {
+    "mtime": 1793434853.8446276,
+    "seen": 1793435658.6760855,
+    "ast_hash": "55f2d33bd8817403cafbbdbdbfcc5330",
+    "semantic_hash": "55f2d33bd8817403cafbbdbdbfcc5330"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/goods.json": {
+    "mtime": 1793434853.8436282,
+    "seen": 1793435658.6760871,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/items.json": {
+    "mtime": 1793434853.8436282,
+    "seen": 1793435658.6760883,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/modifiers.json": {
+    "mtime": 1793434853.8426285,
+    "seen": 1793435658.6760895,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/offers.json": {
+    "mtime": 1793434853.8446276,
+    "seen": 1793435658.6760912,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/pack.json": {
+    "mtime": 1793434853.8426285,
+    "seen": 1793435658.6760924,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/texts.json": {
+    "mtime": 1793434853.8456273,
+    "seen": 1793435658.676094,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/variables.json": {
+    "mtime": 1793434853.8426285,
+    "seen": 1793435658.6760952,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/W006_condition_no_repeat/workshops.json": {
+    "mtime": 1793434853.8436282,
+    "seen": 1793435658.6760967,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/actions.json": {
+    "mtime": 1793434853.8486278,
+    "seen": 1793435658.676098,
+    "ast_hash": "8df7c7de4ea7aa3c768bc5d46fcb2315",
+    "semantic_hash": "8df7c7de4ea7aa3c768bc5d46fcb2315"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/characters.json": {
+    "mtime": 1793434853.847628,
+    "seen": 1793435658.6760993,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/events.json": {
+    "mtime": 1793434853.8486278,
+    "seen": 1793435658.676101,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/goods.json": {
+    "mtime": 1793434853.847628,
+    "seen": 1793435658.6761024,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/items.json": {
+    "mtime": 1793434853.847628,
+    "seen": 1793435658.6761036,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/modifiers.json": {
+    "mtime": 1793434853.8466277,
+    "seen": 1793435658.6761053,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/offers.json": {
+    "mtime": 1793434853.8486278,
+    "seen": 1793435658.6761065,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/pack.json": {
+    "mtime": 1793434853.8456273,
+    "seen": 1793435658.6761081,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/texts.json": {
+    "mtime": 1793434853.8496296,
+    "seen": 1793435658.6761093,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/variables.json": {
+    "mtime": 1793434853.8466277,
+    "seen": 1793435658.6761105,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/W007_idle_assignment/workshops.json": {
+    "mtime": 1793434853.847628,
+    "seen": 1793435658.676112,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/actions.json": {
+    "mtime": 1793434853.852628,
+    "seen": 1793435658.6761134,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/characters.json": {
+    "mtime": 1793434853.852628,
+    "seen": 1793435658.676115,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/events.json": {
+    "mtime": 1793434853.852628,
+    "seen": 1793435658.6761165,
+    "ast_hash": "5ca023ba6c16f98a842e692626aa520c",
+    "semantic_hash": "5ca023ba6c16f98a842e692626aa520c"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/goods.json": {
+    "mtime": 1793434853.8516283,
+    "seen": 1793435658.676118,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/items.json": {
+    "mtime": 1793434853.8516283,
+    "seen": 1793435658.6761193,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/modifiers.json": {
+    "mtime": 1793434853.8506293,
+    "seen": 1793435658.676121,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/offers.json": {
+    "mtime": 1793434853.852628,
+    "seen": 1793435658.6761224,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/pack.json": {
+    "mtime": 1793434853.8506293,
+    "seen": 1793435658.6761239,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/texts.json": {
+    "mtime": 1793434853.8536272,
+    "seen": 1793435658.6761253,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/variables.json": {
+    "mtime": 1793434853.8506293,
+    "seen": 1793435658.6761267,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/W008_cost_hours_threshold/workshops.json": {
+    "mtime": 1793434853.8516283,
+    "seen": 1793435658.676128,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/actions.json": {
+    "mtime": 1793434853.8566284,
+    "seen": 1793435658.6761293,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/characters.json": {
+    "mtime": 1793434853.8566284,
+    "seen": 1793435658.6761308,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/events.json": {
+    "mtime": 1793434853.8566284,
+    "seen": 1793435658.6761322,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/goods.json": {
+    "mtime": 1793434853.8556297,
+    "seen": 1793435658.6761336,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/items.json": {
+    "mtime": 1793434853.8556297,
+    "seen": 1793435658.676135,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/modifiers.json": {
+    "mtime": 1793434853.8556297,
+    "seen": 1793435658.6761367,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/offers.json": {
+    "mtime": 1793434853.8576298,
+    "seen": 1793435658.6761384,
+    "ast_hash": "2193d36e19abbbfc7ec0a9c59a9226d2",
+    "semantic_hash": "2193d36e19abbbfc7ec0a9c59a9226d2"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/pack.json": {
+    "mtime": 1793434853.8546305,
+    "seen": 1793435658.6761398,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/texts.json": {
+    "mtime": 1793434853.8576298,
+    "seen": 1793435658.6761413,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/variables.json": {
+    "mtime": 1793434853.8546305,
+    "seen": 1793435658.6761427,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/W009_no_goal/workshops.json": {
+    "mtime": 1793434853.8556297,
+    "seen": 1793435658.6761441,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/actions.json": {
+    "mtime": 1793434853.8606298,
+    "seen": 1793435658.6761453,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/characters.json": {
+    "mtime": 1793434853.8606298,
+    "seen": 1793435658.676147,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/events.json": {
+    "mtime": 1793434853.8606298,
+    "seen": 1793435658.6761484,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/goods.json": {
+    "mtime": 1793434853.8596287,
+    "seen": 1793435658.67615,
+    "ast_hash": "07e9205f8d81e959b69b32fb1ac43a81",
+    "semantic_hash": "07e9205f8d81e959b69b32fb1ac43a81"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/items.json": {
+    "mtime": 1793434853.8596287,
+    "seen": 1793435658.6761513,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/modifiers.json": {
+    "mtime": 1793434853.8586295,
+    "seen": 1793435658.676153,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/offers.json": {
+    "mtime": 1793434853.8616278,
+    "seen": 1793435658.6761541,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/pack.json": {
+    "mtime": 1793434853.8586295,
+    "seen": 1793435658.6761556,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/texts.json": {
+    "mtime": 1793434853.8616278,
+    "seen": 1793435658.6761572,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/variables.json": {
+    "mtime": 1793434853.8586295,
+    "seen": 1793435658.6761587,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/W010_unknown_field/workshops.json": {
+    "mtime": 1793434853.8596287,
+    "seen": 1793435658.6761603,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/_base/actions.json": {
+    "mtime": 1793434853.7051013,
+    "seen": 1793435658.6761615,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/_base/characters.json": {
+    "mtime": 1793434853.7041006,
+    "seen": 1793435658.676163,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/_base/events.json": {
+    "mtime": 1793434853.7051013,
+    "seen": 1793435658.6761646,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/_base/goods.json": {
+    "mtime": 1793434853.7031014,
+    "seen": 1793435658.6761658,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/_base/items.json": {
+    "mtime": 1793434853.7041006,
+    "seen": 1793435658.6761675,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/_base/modifiers.json": {
+    "mtime": 1793434853.7031014,
+    "seen": 1793435658.676169,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/_base/offers.json": {
+    "mtime": 1793434853.7051013,
+    "seen": 1793435658.6761703,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/_base/pack.json": {
+    "mtime": 1793434853.7021034,
+    "seen": 1793435658.6761718,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/_base/texts.json": {
+    "mtime": 1793434853.7061021,
+    "seen": 1793435658.6761732,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/_base/variables.json": {
+    "mtime": 1793434853.7031014,
+    "seen": 1793435658.676175,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/_base/workshops.json": {
+    "mtime": 1793434853.7041006,
+    "seen": 1793435658.6761773,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/mini-pack/actions.json": {
+    "mtime": 1793138643.4571416,
+    "seen": 1793435658.6761785,
+    "ast_hash": "7eba00b916c845a16a34e6b5b2716f4f",
+    "semantic_hash": "7eba00b916c845a16a34e6b5b2716f4f"
+  },
+  "gvozdi-v2/fixtures/mini-pack/characters.json": {
+    "mtime": 1793081084.0089748,
+    "seen": 1793082302.037375,
+    "ast_hash": "5d48e5bdb509dfc47218880be0d35bd2",
+    "semantic_hash": "5d48e5bdb509dfc47218880be0d35bd2"
+  },
+  "gvozdi-v2/fixtures/mini-pack/events.json": {
+    "mtime": 1793047996.543439,
+    "seen": 1793082302.0373764,
+    "ast_hash": "81384a2df015a59695e56ed0527f3689",
+    "semantic_hash": "81384a2df015a59695e56ed0527f3689"
+  },
+  "gvozdi-v2/fixtures/mini-pack/goods.json": {
+    "mtime": 1793047690.6477728,
+    "seen": 1793082302.0373778,
+    "ast_hash": "dbff8778a752d09e29c52e4c91aa6685",
+    "semantic_hash": "dbff8778a752d09e29c52e4c91aa6685"
+  },
+  "gvozdi-v2/fixtures/mini-pack/items.json": {
+    "mtime": 1793081084.005178,
+    "seen": 1793082302.037379,
+    "ast_hash": "216dcab31715cef715a74150235fd467",
+    "semantic_hash": "216dcab31715cef715a74150235fd467"
+  },
+  "gvozdi-v2/fixtures/mini-pack/modifiers.json": {
+    "mtime": 1793081084.0057828,
+    "seen": 1793082302.0373805,
+    "ast_hash": "27f87f001e59376d57b5f1e54b406bfb",
+    "semantic_hash": "27f87f001e59376d57b5f1e54b406bfb"
+  },
+  "gvozdi-v2/fixtures/mini-pack/offers.json": {
+    "mtime": 1793047997.3559215,
+    "seen": 1793082302.0373816,
+    "ast_hash": "e0f16bd4d71aa581f52e7c4d64050628",
+    "semantic_hash": "e0f16bd4d71aa581f52e7c4d64050628"
+  },
+  "gvozdi-v2/fixtures/mini-pack/pack.json": {
+    "mtime": 1793434813.9342747,
+    "seen": 1793435658.6761928,
+    "ast_hash": "8d4b1b4c4582201f089e6e61746b8741",
+    "semantic_hash": "8d4b1b4c4582201f089e6e61746b8741"
+  },
+  "gvozdi-v2/fixtures/mini-pack/texts.json": {
+    "mtime": 1793081084.0100543,
+    "seen": 1793082302.0373843,
+    "ast_hash": "b5140261a948dd0646648d1226d58be6",
+    "semantic_hash": "b5140261a948dd0646648d1226d58be6"
+  },
+  "gvozdi-v2/fixtures/mini-pack/variables.json": {
+    "mtime": 1793081084.0078912,
+    "seen": 1793082302.0373857,
+    "ast_hash": "0a8fff362c6da0a64a0aac339a585d4b",
+    "semantic_hash": "0a8fff362c6da0a64a0aac339a585d4b"
+  },
+  "gvozdi-v2/fixtures/mini-pack/workshops.json": {
+    "mtime": 1793047690.6660042,
+    "seen": 1793082302.037387,
+    "ast_hash": "a88e160fe5557f0d213f5d2473a0f3f7",
+    "semantic_hash": "a88e160fe5557f0d213f5d2473a0f3f7"
+  },
+  "gvozdi-v2/package.json": {
+    "mtime": 1793434776.1811028,
+    "seen": 1793435658.6761992,
+    "ast_hash": "26e7f3b0fba157f33a006cdbc5ffa854",
+    "semantic_hash": "26e7f3b0fba157f33a006cdbc5ffa854"
+  },
+  "gvozdi-v2/packs/nails_for_count/actions.json": {
+    "mtime": 1793254326.270972,
+    "seen": 1793435658.6762006,
+    "ast_hash": "0ce6c11f3691ea6dafa93e68c729ac62",
+    "semantic_hash": "0ce6c11f3691ea6dafa93e68c729ac62"
+  },
+  "gvozdi-v2/packs/nails_for_count/characters.json": {
+    "mtime": 1793254266.308101,
+    "seen": 1793435658.6762035,
+    "ast_hash": "791ed80be44123ee4c7e1fa3b55f9d16",
+    "semantic_hash": "791ed80be44123ee4c7e1fa3b55f9d16"
+  },
+  "gvozdi-v2/packs/nails_for_count/events.json": {
+    "mtime": 1793254395.388324,
+    "seen": 1793435658.6762052,
+    "ast_hash": "9a8a317f322cc0d784c08758826e4d2a",
+    "semantic_hash": "9a8a317f322cc0d784c08758826e4d2a"
+  },
+  "gvozdi-v2/packs/nails_for_count/goods.json": {
+    "mtime": 1793254253.929684,
+    "seen": 1793435658.6762064,
+    "ast_hash": "dfce0d1b3abc742173c50c09972529cf",
+    "semantic_hash": "dfce0d1b3abc742173c50c09972529cf"
+  },
+  "gvozdi-v2/packs/nails_for_count/items.json": {
+    "mtime": 1793254253.9306853,
+    "seen": 1793435658.6762078,
+    "ast_hash": "4b105b7184ae840d093a9ef9cf690d46",
+    "semantic_hash": "4b105b7184ae840d093a9ef9cf690d46"
+  },
+  "gvozdi-v2/packs/nails_for_count/modifiers.json": {
+    "mtime": 1793254231.933084,
+    "seen": 1793435658.6762094,
+    "ast_hash": "d9bcf76da73e7d5ad90a2965522c70e5",
+    "semantic_hash": "d9bcf76da73e7d5ad90a2965522c70e5"
+  },
+  "gvozdi-v2/packs/nails_for_count/offers.json": {
+    "mtime": 1793254521.250552,
+    "seen": 1793435658.6762106,
+    "ast_hash": "cc2ec511629b05e0e3872cd3f66e3dfa",
+    "semantic_hash": "cc2ec511629b05e0e3872cd3f66e3dfa"
+  },
+  "gvozdi-v2/packs/nails_for_count/pack.json": {
+    "mtime": 1793434934.9449492,
+    "seen": 1793435658.6762123,
+    "ast_hash": "a752bd5e642851814f55358e464fd732",
+    "semantic_hash": "a752bd5e642851814f55358e464fd732"
+  },
+  "gvozdi-v2/packs/nails_for_count/texts.json": {
+    "mtime": 1793081407.275442,
+    "seen": 1793082302.0374002,
+    "ast_hash": "2cd1a00330cc0bf8fb87cfdbd2419d72",
+    "semantic_hash": "2cd1a00330cc0bf8fb87cfdbd2419d72"
+  },
+  "gvozdi-v2/packs/nails_for_count/variables.json": {
+    "mtime": 1793254231.9320836,
+    "seen": 1793435658.6762168,
+    "ast_hash": "f1c6e51de875f124fc3e140178a2a84b",
+    "semantic_hash": "f1c6e51de875f124fc3e140178a2a84b"
+  },
+  "gvozdi-v2/packs/nails_for_count/workshops.json": {
+    "mtime": 1793254253.932686,
+    "seen": 1793435658.6762183,
+    "ast_hash": "0575387a0ce3ee5b1a051d3bc58d1070",
+    "semantic_hash": "0575387a0ce3ee5b1a051d3bc58d1070"
+  },
+  "gvozdi-v2/tsconfig.json": {
+    "mtime": 1793255490.975066,
+    "seen": 1793435658.6762366,
+    "ast_hash": "094b251b92362388fc3c671a4eeb84a6",
+    "semantic_hash": "094b251b92362388fc3c671a4eeb84a6"
+  },
+  "gvozdi-v2/ui/build.ts": {
+    "mtime": 1793435053.898944,
+    "seen": 1793435658.676238,
+    "ast_hash": "686eb28f40207c2309f292d88f652200",
+    "semantic_hash": "686eb28f40207c2309f292d88f652200"
+  },
+  "gvozdi-v2/ui/src/app.ts": {
+    "mtime": 1793434995.1478364,
+    "seen": 1793435658.6762397,
+    "ast_hash": "a1db3143906870c219db75c807ac6018",
+    "semantic_hash": "a1db3143906870c219db75c807ac6018"
+  },
+  "gvozdi-v2/ui/src/contract.ts": {
+    "mtime": 1793434965.1420212,
+    "seen": 1793435658.676241,
+    "ast_hash": "0e19e806df7c7092f6ef12bf4c63331b",
+    "semantic_hash": "0e19e806df7c7092f6ef12bf4c63331b"
+  },
+  "gvozdi-v2/ui/src/dom.ts": {
+    "mtime": 1793434995.1488008,
+    "seen": 1793435658.6762424,
+    "ast_hash": "0423ed6d000da0a902ee4e7b9ccafcb9",
+    "semantic_hash": "0423ed6d000da0a902ee4e7b9ccafcb9"
+  },
+  "gvozdi-v2/ui/src/main.ts": {
+    "mtime": 1793434995.1478364,
+    "seen": 1793435658.6762438,
+    "ast_hash": "04082d5287c35eac993e19d607a5dd6e",
+    "semantic_hash": "04082d5287c35eac993e19d607a5dd6e"
+  },
+  "gvozdi-v2/ui/src/model.ts": {
+    "mtime": 1793434979.6045842,
+    "seen": 1793435658.6762452,
+    "ast_hash": "afbc3752242210d5018d140b29d8a03d",
+    "semantic_hash": "afbc3752242210d5018d140b29d8a03d"
+  },
+  "gvozdi-v2/ui/src/render.ts": {
+    "mtime": 1793435013.7352636,
+    "seen": 1793435658.676248,
+    "ast_hash": "b5ad539f7a5c089448d52f99a36b487d",
+    "semantic_hash": "b5ad539f7a5c089448d52f99a36b487d"
+  },
+  "gvozdi-v2/ui/src/storage.ts": {
+    "mtime": 1793047690.5152774,
+    "seen": 1793082302.0374146,
+    "ast_hash": "cbe932350eeea3326c1f0f249d17c135",
+    "semantic_hash": "cbe932350eeea3326c1f0f249d17c135"
+  },
+  "gvozdi-v2/ui/src/strings.ts": {
+    "mtime": 1793434995.1488008,
+    "seen": 1793435658.6762514,
+    "ast_hash": "59e4f706b8b5e3d3affbbed6284b9a4c",
+    "semantic_hash": "59e4f706b8b5e3d3affbbed6284b9a4c"
+  },
+  "gvozdi-v2/ui/src/stub.ts": {
+    "mtime": 1793434965.169039,
+    "seen": 1793435658.6762526,
+    "ast_hash": "575376133d1a14018c92d2e9caaf89dd",
+    "semantic_hash": "575376133d1a14018c92d2e9caaf89dd"
+  },
+  "gvozdi-v2/ui/test/app.test.ts": {
+    "mtime": 1793435066.3648121,
+    "seen": 1793435658.6762555,
+    "ast_hash": "88d270e77eb46f48195da7aea09be2f3",
+    "semantic_hash": "88d270e77eb46f48195da7aea09be2f3"
+  },
+  "gvozdi-v2/ui/test/build.test.ts": {
+    "mtime": 1793435108.10613,
+    "seen": 1793435658.6762571,
+    "ast_hash": "ac72da41ec626a23429dd996f29e1119",
+    "semantic_hash": "ac72da41ec626a23429dd996f29e1119"
+  },
+  "gvozdi-v2/ui/test/dom.test.ts": {
+    "mtime": 1793096039.1261878,
+    "seen": 1793435658.67626,
+    "ast_hash": "c01cca674c67678aefde37d2da125010",
+    "semantic_hash": "c01cca674c67678aefde37d2da125010"
+  },
+  "gvozdi-v2/ui/test/engine.test.ts": {
+    "mtime": 1793253911.719093,
+    "seen": 1793435658.6762617,
+    "ast_hash": "78a65f9d85c5ec82841340a3d63c4cfe",
+    "semantic_hash": "78a65f9d85c5ec82841340a3d63c4cfe"
+  },
+  "gvozdi-v2/ui/test/helpers.ts": {
+    "mtime": 1793048383.4562402,
+    "seen": 1793082302.0374238,
+    "ast_hash": "31a12e54cf801c276bb6b7acf3a4bae1",
+    "semantic_hash": "31a12e54cf801c276bb6b7acf3a4bae1"
+  },
+  "gvozdi-v2/ui/test/panels.test.ts": {
+    "mtime": 1793254143.402897,
+    "seen": 1793435658.6762648,
+    "ast_hash": "0999fff8a5fe2caaf7b53203e17b2ae5",
+    "semantic_hash": "0999fff8a5fe2caaf7b53203e17b2ae5"
+  },
+  "gvozdi-v2/ui/test/purity.test.ts": {
+    "mtime": 1793110224.045654,
+    "seen": 1793435658.6762662,
+    "ast_hash": "ff55288a68872ab3278d75756b0966ae",
+    "semantic_hash": "ff55288a68872ab3278d75756b0966ae"
+  },
+  "gvozdi-v2/validator/scripts/make-broken.ts": {
+    "mtime": 1793434847.5103385,
+    "seen": 1793435658.6762688,
+    "ast_hash": "93dae1044334bbcdc47f2f7028699b5b",
+    "semantic_hash": "93dae1044334bbcdc47f2f7028699b5b"
+  },
+  "gvozdi-v2/validator/src/checks.ts": {
+    "mtime": 1793138641.4236639,
+    "seen": 1793435658.6762702,
+    "ast_hash": "700fc6523346de40ecb8bf6163be1ea1",
+    "semantic_hash": "700fc6523346de40ecb8bf6163be1ea1"
+  },
+  "gvozdi-v2/validator/src/cli.ts": {
+    "mtime": 1793048388.638995,
+    "seen": 1793082302.0374305,
+    "ast_hash": "a032aadc5f20ed09da009b88a70fb3f4",
+    "semantic_hash": "a032aadc5f20ed09da009b88a70fb3f4"
+  },
+  "gvozdi-v2/validator/src/data.ts": {
+    "mtime": 1793048406.7752173,
+    "seen": 1793082302.0374317,
+    "ast_hash": "d7062f6e0179dc3c04d8c6f82e798a80",
+    "semantic_hash": "d7062f6e0179dc3c04d8c6f82e798a80"
+  },
+  "gvozdi-v2/validator/src/index-pack.ts": {
+    "mtime": 1793138641.3522303,
+    "seen": 1793435658.6762753,
+    "ast_hash": "8609a0eb199d42e024d0dccaba217896",
+    "semantic_hash": "8609a0eb199d42e024d0dccaba217896"
+  },
+  "gvozdi-v2/validator/src/index.ts": {
+    "mtime": 1793048581.3207636,
+    "seen": 1793082302.0374343,
+    "ast_hash": "74f887d54175beb586c7bb11809aa10b",
+    "semantic_hash": "74f887d54175beb586c7bb11809aa10b"
+  },
+  "gvozdi-v2/validator/src/reach-checks.ts": {
+    "mtime": 1793048727.4687028,
+    "seen": 1793082302.037436,
+    "ast_hash": "81793caec861f66134d91676210085a0",
+    "semantic_hash": "81793caec861f66134d91676210085a0"
+  },
+  "gvozdi-v2/validator/src/reach.ts": {
+    "mtime": 1793048623.3638942,
+    "seen": 1793082302.0374372,
+    "ast_hash": "c23dcc7bbb8b7eeaf004cd0253b35022",
+    "semantic_hash": "c23dcc7bbb8b7eeaf004cd0253b35022"
+  },
+  "gvozdi-v2/validator/src/schema.ts": {
+    "mtime": 1793434836.0837553,
+    "seen": 1793435658.6762817,
+    "ast_hash": "efb470ec99ce3963551dbe191d99256b",
+    "semantic_hash": "efb470ec99ce3963551dbe191d99256b"
+  },
+  "gvozdi-v2/validator/src/types.ts": {
+    "mtime": 1793138641.312497,
+    "seen": 1793435658.6762831,
+    "ast_hash": "a431d673ce81dfd3a588ad8ca9b7b82d",
+    "semantic_hash": "a431d673ce81dfd3a588ad8ca9b7b82d"
+  },
+  "gvozdi-v2/validator/src/util.ts": {
+    "mtime": 1793047861.205387,
+    "seen": 1793082302.0374422,
+    "ast_hash": "d5d358aea2c2b916ede1dd9467963252",
+    "semantic_hash": "d5d358aea2c2b916ede1dd9467963252"
+  },
+  "gvozdi-v2/validator/src/validate.ts": {
+    "mtime": 1793081002.0109122,
+    "seen": 1793082302.0374436,
+    "ast_hash": "77796b08e7dfa2ec42079d2c64ae0cbe",
+    "semantic_hash": "77796b08e7dfa2ec42079d2c64ae0cbe"
+  },
+  "gvozdi-v2/validator/test/validator.test.ts": {
+    "mtime": 1793434848.3140597,
+    "seen": 1793435658.6762884,
+    "ast_hash": "a6e2661abda249279f3c9378b6f3c71c",
+    "semantic_hash": "a6e2661abda249279f3c9378b6f3c71c"
+  },
+  "gvozdi-v2/validator/tsconfig.json": {
+    "mtime": 1793048394.8136349,
+    "seen": 1793082302.0374463,
+    "ast_hash": "77e80bfd72c1fa058146aea8d03b1129",
+    "semantic_hash": "77e80bfd72c1fa058146aea8d03b1129"
+  },
+  "claude.md": {
+    "mtime": 1793091938.202924,
+    "seen": 1793435658.676293,
+    "ast_hash": "ea34d21d96cd8b3edd78f145670611dd",
+    "semantic_hash": "ea34d21d96cd8b3edd78f145670611dd"
+  },
+  "gvozdi-v2/CONTRACT_ISSUES.md": {
+    "mtime": 1793255521.658173,
+    "seen": 1793435658.6762962,
+    "ast_hash": "69461152e13907d07e791a85073dcf18",
+    "semantic_hash": "69461152e13907d07e791a85073dcf18"
+  },
+  "gvozdi-v2/claude.md": {
+    "mtime": 1793434832.3829863,
+    "seen": 1793435658.676299,
+    "ast_hash": "4dc72c22d55628a26edb5e508602fc5a",
+    "semantic_hash": "4dc72c22d55628a26edb5e508602fc5a"
+  },
+  "gvozdi-v2/content.md": {
+    "mtime": 1793434764.4068644,
+    "seen": 1793435658.6763003,
+    "ast_hash": "2cce0f31482c675a47ab5bf7813250c1",
+    "semantic_hash": "2cce0f31482c675a47ab5bf7813250c1"
+  },
+  "gvozdi-v2/core.md": {
+    "mtime": 1793434725.9978504,
+    "seen": 1793435658.6763017,
+    "ast_hash": "27742ec62ec1e766ffeac4bab36a3e5a",
+    "semantic_hash": "27742ec62ec1e766ffeac4bab36a3e5a"
+  },
+  "gvozdi-v2/decisions-log.md": {
+    "mtime": 1793080871.990933,
+    "seen": 1793082302.037457,
+    "ast_hash": "fe7e19f40400bb01b3146fe4d8745b1e",
+    "semantic_hash": "fe7e19f40400bb01b3146fe4d8745b1e"
+  },
+  "gvozdi-v2/docs/engine/README.md": {
+    "mtime": 1793081261.4644086,
+    "seen": 1793082302.0374584,
+    "ast_hash": "6a5cb174ddd34e20dc13294d911d31da",
+    "semantic_hash": "6a5cb174ddd34e20dc13294d911d31da"
+  },
+  "gvozdi-v2/docs/engine/actions-and-costs.md": {
+    "mtime": 1793112266.9020712,
+    "seen": 1793435658.6763031,
+    "ast_hash": "f906bd8383edd6e3e67f1b028d016ecb",
+    "semantic_hash": "f906bd8383edd6e3e67f1b028d016ecb"
+  },
+  "gvozdi-v2/docs/engine/conditions.md": {
+    "mtime": 1793049731.523684,
+    "seen": 1793082302.0374613,
+    "ast_hash": "9150b09bdb286fe14fb0973eeb4b8f8f",
+    "semantic_hash": "9150b09bdb286fe14fb0973eeb4b8f8f"
+  },
+  "gvozdi-v2/docs/engine/effects.md": {
+    "mtime": 1793081261.467409,
+    "seen": 1793082302.0374625,
+    "ast_hash": "bf026d4a58ff77b66efb2ecb64c19acf",
+    "semantic_hash": "bf026d4a58ff77b66efb2ecb64c19acf"
+  },
+  "gvozdi-v2/docs/engine/events-and-signals.md": {
+    "mtime": 1793049733.9526772,
+    "seen": 1793082302.037464,
+    "ast_hash": "03442b6ac923c8ac8c3b8d416b2f6c6d",
+    "semantic_hash": "03442b6ac923c8ac8c3b8d416b2f6c6d"
+  },
+  "gvozdi-v2/docs/engine/hiring-and-workshops.md": {
+    "mtime": 1793081261.4644086,
+    "seen": 1793082302.0374653,
+    "ast_hash": "f20d3874cbe8a911739caddc7ea66b4f",
+    "semantic_hash": "f20d3874cbe8a911739caddc7ea66b4f"
+  },
+  "gvozdi-v2/docs/engine/incapacitation.md": {
+    "mtime": 1793049737.183485,
+    "seen": 1793082302.0374665,
+    "ast_hash": "7a1d1ed0e19babf359edd67207752ec0",
+    "semantic_hash": "7a1d1ed0e19babf359edd67207752ec0"
+  },
+  "gvozdi-v2/docs/engine/market-and-trade.md": {
+    "mtime": 1793081261.467409,
+    "seen": 1793082302.037468,
+    "ast_hash": "bb8f24145f5ef3578ed000684da3fd06",
+    "semantic_hash": "bb8f24145f5ef3578ed000684da3fd06"
+  },
+  "gvozdi-v2/docs/engine/modifiers.md": {
+    "mtime": 1793049730.7305853,
+    "seen": 1793082302.0374691,
+    "ast_hash": "4c0851a64378f0e63c9ec1d68923bf29",
+    "semantic_hash": "4c0851a64378f0e63c9ec1d68923bf29"
+  },
+  "gvozdi-v2/docs/engine/offers-and-obligations.md": {
+    "mtime": 1793049734.7806044,
+    "seen": 1793082302.0374708,
+    "ast_hash": "2e01af3ebde70d16991a44fec82a9f40",
+    "semantic_hash": "2e01af3ebde70d16991a44fec82a9f40"
+  },
+  "gvozdi-v2/docs/engine/save.md": {
+    "mtime": 1793049739.5878127,
+    "seen": 1793082302.037472,
+    "ast_hash": "497a43f17db3d923614320ffb7a83c10",
+    "semantic_hash": "497a43f17db3d923614320ffb7a83c10"
+  },
+  "gvozdi-v2/docs/engine/time-and-commands.md": {
+    "mtime": 1793081261.4664097,
+    "seen": 1793082302.0374734,
+    "ast_hash": "e5178ac5381962c2a32b2dd461105cf0",
+    "semantic_hash": "e5178ac5381962c2a32b2dd461105cf0"
+  },
+  "gvozdi-v2/docs/engine/variables-and-ladders.md": {
+    "mtime": 1793081261.4684095,
+    "seen": 1793082302.0374749,
+    "ast_hash": "e891ad50e44f95b593791804058417e7",
+    "semantic_hash": "e891ad50e44f95b593791804058417e7"
+  },
+  "gvozdi-v2/docs/engine/view-and-debug.md": {
+    "mtime": 1793434823.3131733,
+    "seen": 1793435658.6763062,
+    "ast_hash": "07375deeaf40192ae7ad8f95eb40afd7",
+    "semantic_hash": "07375deeaf40192ae7ad8f95eb40afd7"
+  },
+  "gvozdi-v2/docs/engine/visibility.md": {
+    "mtime": 1793049737.988685,
+    "seen": 1793082302.0374777,
+    "ast_hash": "b4db39d14fbfcccb18120ba73d7039c1",
+    "semantic_hash": "b4db39d14fbfcccb18120ba73d7039c1"
+  },
+  "gvozdi-v2/docs/ui/README.md": {
+    "mtime": 1793435289.9498532,
+    "seen": 1793435658.676309,
+    "ast_hash": "bc8a8af414ccc53200125410fa6a5a05",
+    "semantic_hash": "bc8a8af414ccc53200125410fa6a5a05"
+  },
+  "gvozdi-v2/docs/ui/app.md": {
+    "mtime": 1793435289.9498532,
+    "seen": 1793435658.6763105,
+    "ast_hash": "2e02ff1f3d5c85be6db174ed6f16405b",
+    "semantic_hash": "2e02ff1f3d5c85be6db174ed6f16405b"
+  },
+  "gvozdi-v2/docs/ui/build.md": {
+    "mtime": 1793435289.0164685,
+    "seen": 1793435658.676312,
+    "ast_hash": "106f1d7cfb4fe5daf52cf0f9feb3f119",
+    "semantic_hash": "106f1d7cfb4fe5daf52cf0f9feb3f119"
+  },
+  "gvozdi-v2/docs/ui/contract.md": {
+    "mtime": 1793435296.7474477,
+    "seen": 1793435658.6763136,
+    "ast_hash": "6ef106e7d3a1698cc3d17d1f2e823578",
+    "semantic_hash": "6ef106e7d3a1698cc3d17d1f2e823578"
+  },
+  "gvozdi-v2/docs/ui/dom.md": {
+    "mtime": 1793435289.950853,
+    "seen": 1793435658.6763148,
+    "ast_hash": "542cfdef8af872d4f3aaf318ef58c326",
+    "semantic_hash": "542cfdef8af872d4f3aaf318ef58c326"
+  },
+  "gvozdi-v2/docs/ui/model.md": {
+    "mtime": 1793435289.950853,
+    "seen": 1793435658.6763165,
+    "ast_hash": "a016cf1c6222e60c975538377643b3c9",
+    "semantic_hash": "a016cf1c6222e60c975538377643b3c9"
+  },
+  "gvozdi-v2/docs/ui/render.md": {
+    "mtime": 1793435289.9578538,
+    "seen": 1793435658.6763191,
+    "ast_hash": "8dc1e337189b289bda1d0ce20165d784",
+    "semantic_hash": "8dc1e337189b289bda1d0ce20165d784"
+  },
+  "gvozdi-v2/docs/ui/storage.md": {
+    "mtime": 1793435296.7643602,
+    "seen": 1793435658.6763208,
+    "ast_hash": "510a0ebbfb0f41d3006c5da2070f3279",
+    "semantic_hash": "510a0ebbfb0f41d3006c5da2070f3279"
+  },
+  "gvozdi-v2/docs/ui/strings.md": {
+    "mtime": 1793435289.9638534,
+    "seen": 1793435658.6763222,
+    "ast_hash": "621a574973322650ca15852c4bc2c69f",
+    "semantic_hash": "621a574973322650ca15852c4bc2c69f"
+  },
+  "gvozdi-v2/docs/ui/stub.md": {
+    "mtime": 1793081539.605044,
+    "seen": 1793082302.0374908,
+    "ast_hash": "5e1d5699031546c4c990d01055910279",
+    "semantic_hash": "5e1d5699031546c4c990d01055910279"
+  },
+  "gvozdi-v2/docs/ui/styles.md": {
+    "mtime": 1793435289.9628527,
+    "seen": 1793435658.6763282,
+    "ast_hash": "ae9c29afdeb7602185ecb8ecf37bc0a2",
+    "semantic_hash": "ae9c29afdeb7602185ecb8ecf37bc0a2"
+  },
+  "gvozdi-v2/docs/validator/README.md": {
+    "mtime": 1793434876.595463,
+    "seen": 1793435658.6763294,
+    "ast_hash": "b5551f329757155df5babb30829d122f",
+    "semantic_hash": "b5551f329757155df5babb30829d122f"
+  },
+  "gvozdi-v2/fixtures/mini-pack/READY.md": {
+    "mtime": 1793081092.9609478,
+    "seen": 1793082302.037495,
+    "ast_hash": "ca570bd03f5878d39a6af88961658c52",
+    "semantic_hash": "ca570bd03f5878d39a6af88961658c52"
+  },
+  "gvozdi-v2/reports/content.md": {
+    "mtime": 1793434946.0127993,
+    "seen": 1793435658.676331,
+    "ast_hash": "69852b7726b8e6aafb3c983d605ce319",
+    "semantic_hash": "69852b7726b8e6aafb3c983d605ce319"
+  },
+  "gvozdi-v2/reports/core.md": {
+    "mtime": 1793434863.256042,
+    "seen": 1793435658.6763322,
+    "ast_hash": "6ba332e5f79154397771be1b98b2e3bf",
+    "semantic_hash": "6ba332e5f79154397771be1b98b2e3bf"
+  },
+  "gvozdi-v2/reports/orchestrator.md": {
+    "mtime": 1793091976.0892687,
+    "seen": 1793435658.676334,
+    "ast_hash": "0d4b78a34b3ac06201ef47f773a1d07a",
+    "semantic_hash": "0d4b78a34b3ac06201ef47f773a1d07a"
+  },
+  "gvozdi-v2/reports/validator.md": {
+    "mtime": 1793434888.3443272,
+    "seen": 1793435658.6763365,
+    "ast_hash": "e3ed60a245b93009732cb4d37e7a756d",
+    "semantic_hash": "e3ed60a245b93009732cb4d37e7a756d"
+  },
+  "gvozdi-v2/reports/view.md": {
+    "mtime": 1793435333.5177283,
+    "seen": 1793435658.6763382,
+    "ast_hash": "1cb7e55068431641a872fa1c9bdd662c",
+    "semantic_hash": "1cb7e55068431641a872fa1c9bdd662c"
+  },
+  "gvozdi-v2/simulator.md": {
+    "mtime": 1793253723.8703213,
+    "seen": 1793435658.6763394,
+    "ast_hash": "cf481f2ff92578501902a9efbe617561",
+    "semantic_hash": "cf481f2ff92578501902a9efbe617561"
+  },
+  "gvozdi-v2/validator.md": {
+    "mtime": 1793434740.562417,
+    "seen": 1793435658.676341,
+    "ast_hash": "1f73f8e131623d1d4c8d329bc9572538",
+    "semantic_hash": "1f73f8e131623d1d4c8d329bc9572538"
+  },
+  "gvozdi-v2/view.md": {
+    "mtime": 1793434753.1514933,
+    "seen": 1793435658.6763422,
+    "ast_hash": "928f1066d0b27ee4ceac42a45bddd0d2",
+    "semantic_hash": "928f1066d0b27ee4ceac42a45bddd0d2"
+  },
+  ".github/workflows/pages.yml": {
+    "mtime": 1793434817.4573267,
+    "seen": 1793435658.67547,
+    "ast_hash": "8811d01f34b5f2c5042f335e8408f46d",
+    "semantic_hash": "8811d01f34b5f2c5042f335e8408f46d"
+  },
+  "gvozdi-v2/engine/test/categories.test.ts": {
+    "mtime": 1793138656.0609872,
+    "seen": 1793435658.6755226,
+    "ast_hash": "19743eda5b56885ac89049a9c6b695cc",
+    "semantic_hash": "19743eda5b56885ac89049a9c6b695cc"
+  },
+  "gvozdi-v2/engine/test/pack-meta.test.ts": {
+    "mtime": 1793434831.3381915,
+    "seen": 1793435658.6755311,
+    "ast_hash": "daf4f08fd5f919c6c762911c45929730",
+    "semantic_hash": "daf4f08fd5f919c6c762911c45929730"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/actions.json": {
+    "mtime": 1793434853.7221565,
+    "seen": 1793435658.675543,
+    "ast_hash": "08d62bfb35aa1b537d55f2cfa496329b",
+    "semantic_hash": "08d62bfb35aa1b537d55f2cfa496329b"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/characters.json": {
+    "mtime": 1793434853.7212007,
+    "seen": 1793435658.6755445,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/events.json": {
+    "mtime": 1793434853.7221565,
+    "seen": 1793435658.675546,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/goods.json": {
+    "mtime": 1793434853.7205207,
+    "seen": 1793435658.6755474,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/items.json": {
+    "mtime": 1793434853.7205207,
+    "seen": 1793435658.675549,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/modifiers.json": {
+    "mtime": 1793434853.7195203,
+    "seen": 1793435658.6755505,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/offers.json": {
+    "mtime": 1793434853.7221565,
+    "seen": 1793435658.675552,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/pack.json": {
+    "mtime": 1793434853.7195203,
+    "seen": 1793435658.6755533,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/texts.json": {
+    "mtime": 1793434853.723154,
+    "seen": 1793435658.6755548,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/variables.json": {
+    "mtime": 1793434853.7195203,
+    "seen": 1793435658.6755564,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V001_action_description_type/workshops.json": {
+    "mtime": 1793434853.7212007,
+    "seen": 1793435658.6755579,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/actions.json": {
+    "mtime": 1793434853.8109226,
+    "seen": 1793435658.6755595,
+    "ast_hash": "735d2bbb1654c64017b9ec9cbda8d2a8",
+    "semantic_hash": "735d2bbb1654c64017b9ec9cbda8d2a8"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/categories.json": {
+    "mtime": 1793434853.8124394,
+    "seen": 1793435658.6755607,
+    "ast_hash": "e918e6a7f85fdc93e506a2eb28888744",
+    "semantic_hash": "e918e6a7f85fdc93e506a2eb28888744"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/characters.json": {
+    "mtime": 1793434853.8109226,
+    "seen": 1793435658.675562,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/events.json": {
+    "mtime": 1793434853.8109226,
+    "seen": 1793435658.6755636,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/goods.json": {
+    "mtime": 1793434853.8099215,
+    "seen": 1793435658.6755648,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/items.json": {
+    "mtime": 1793434853.8099215,
+    "seen": 1793435658.6755662,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/modifiers.json": {
+    "mtime": 1793434853.8099215,
+    "seen": 1793435658.6755676,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/offers.json": {
+    "mtime": 1793434853.8119228,
+    "seen": 1793435658.6755688,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/pack.json": {
+    "mtime": 1793434853.8089218,
+    "seen": 1793435658.6755702,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/texts.json": {
+    "mtime": 1793434853.8124394,
+    "seen": 1793435658.6755717,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/variables.json": {
+    "mtime": 1793434853.8089218,
+    "seen": 1793435658.6755733,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_no_name/workshops.json": {
+    "mtime": 1793434853.8109226,
+    "seen": 1793435658.6755748,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/actions.json": {
+    "mtime": 1793434853.8069239,
+    "seen": 1793435658.6755767,
+    "ast_hash": "735d2bbb1654c64017b9ec9cbda8d2a8",
+    "semantic_hash": "735d2bbb1654c64017b9ec9cbda8d2a8"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/categories.json": {
+    "mtime": 1793434853.8079233,
+    "seen": 1793435658.675578,
+    "ast_hash": "05b2aa681216f4537490667c603d4ef2",
+    "semantic_hash": "05b2aa681216f4537490667c603d4ef2"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/characters.json": {
+    "mtime": 1793434853.8069239,
+    "seen": 1793435658.6755795,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/events.json": {
+    "mtime": 1793434853.8069239,
+    "seen": 1793435658.6755812,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/goods.json": {
+    "mtime": 1793434853.8059213,
+    "seen": 1793435658.6755824,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/items.json": {
+    "mtime": 1793434853.8059213,
+    "seen": 1793435658.675584,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/modifiers.json": {
+    "mtime": 1793434853.8059213,
+    "seen": 1793435658.6755853,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/offers.json": {
+    "mtime": 1793434853.8079233,
+    "seen": 1793435658.6755867,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/pack.json": {
+    "mtime": 1793434853.8049214,
+    "seen": 1793435658.6755881,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/texts.json": {
+    "mtime": 1793434853.8079233,
+    "seen": 1793435658.6755896,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/variables.json": {
+    "mtime": 1793434853.8049214,
+    "seen": 1793435658.675591,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V001_category_view/workshops.json": {
+    "mtime": 1793434853.8059213,
+    "seen": 1793435658.6755922,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/actions.json": {
+    "mtime": 1793434853.7301545,
+    "seen": 1793435658.6756535,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/characters.json": {
+    "mtime": 1793434853.7291543,
+    "seen": 1793435658.675655,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/events.json": {
+    "mtime": 1793434853.7301545,
+    "seen": 1793435658.675656,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/goods.json": {
+    "mtime": 1793434853.7291543,
+    "seen": 1793435658.6756577,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/items.json": {
+    "mtime": 1793434853.7291543,
+    "seen": 1793435658.675659,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/modifiers.json": {
+    "mtime": 1793434853.7281563,
+    "seen": 1793435658.6756604,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/offers.json": {
+    "mtime": 1793434853.7301545,
+    "seen": 1793435658.6756618,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/pack.json": {
+    "mtime": 1793434853.7281563,
+    "seen": 1793435658.675663,
+    "ast_hash": "ba65bb0214c3b410e14f46e134bafa71",
+    "semantic_hash": "ba65bb0214c3b410e14f46e134bafa71"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/texts.json": {
+    "mtime": 1793434853.731155,
+    "seen": 1793435658.6756644,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/variables.json": {
+    "mtime": 1793434853.7281563,
+    "seen": 1793435658.6756659,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_description_type/workshops.json": {
+    "mtime": 1793434853.7291543,
+    "seen": 1793435658.6756673,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/actions.json": {
+    "mtime": 1793434853.726154,
+    "seen": 1793435658.6756685,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/characters.json": {
+    "mtime": 1793434853.7251565,
+    "seen": 1793435658.67567,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/events.json": {
+    "mtime": 1793434853.726154,
+    "seen": 1793435658.6756713,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/goods.json": {
+    "mtime": 1793434853.7241557,
+    "seen": 1793435658.6756725,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/items.json": {
+    "mtime": 1793434853.7251565,
+    "seen": 1793435658.675674,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/modifiers.json": {
+    "mtime": 1793434853.7241557,
+    "seen": 1793435658.6756752,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/offers.json": {
+    "mtime": 1793434853.726154,
+    "seen": 1793435658.6756766,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/pack.json": {
+    "mtime": 1793434853.723154,
+    "seen": 1793435658.6756783,
+    "ast_hash": "62af4d2a2bb4ab29c0888362acbe4b7c",
+    "semantic_hash": "62af4d2a2bb4ab29c0888362acbe4b7c"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/texts.json": {
+    "mtime": 1793434853.7271562,
+    "seen": 1793435658.6756794,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/variables.json": {
+    "mtime": 1793434853.7241557,
+    "seen": 1793435658.675681,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V001_pack_empty_version/workshops.json": {
+    "mtime": 1793434853.7251565,
+    "seen": 1793435658.6756823,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/actions.json": {
+    "mtime": 1793434853.8154387,
+    "seen": 1793435658.6756835,
+    "ast_hash": "735d2bbb1654c64017b9ec9cbda8d2a8",
+    "semantic_hash": "735d2bbb1654c64017b9ec9cbda8d2a8"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/categories.json": {
+    "mtime": 1793434853.8174386,
+    "seen": 1793435658.6756852,
+    "ast_hash": "4ae20829a420eb4d373120eddd4a5c64",
+    "semantic_hash": "4ae20829a420eb4d373120eddd4a5c64"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/characters.json": {
+    "mtime": 1793434853.8154387,
+    "seen": 1793435658.6756864,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/events.json": {
+    "mtime": 1793434853.8164394,
+    "seen": 1793435658.675688,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/goods.json": {
+    "mtime": 1793434853.8144383,
+    "seen": 1793435658.6756892,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/items.json": {
+    "mtime": 1793434853.8144383,
+    "seen": 1793435658.6756904,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/modifiers.json": {
+    "mtime": 1793434853.8144383,
+    "seen": 1793435658.6756918,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/offers.json": {
+    "mtime": 1793434853.8164394,
+    "seen": 1793435658.6756935,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/pack.json": {
+    "mtime": 1793434853.813439,
+    "seen": 1793435658.675695,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/texts.json": {
+    "mtime": 1793434853.8164394,
+    "seen": 1793435658.6756961,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/variables.json": {
+    "mtime": 1793434853.813439,
+    "seen": 1793435658.6756976,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V002_duplicate_category/workshops.json": {
+    "mtime": 1793434853.8144383,
+    "seen": 1793435658.675699,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/actions.json": {
+    "mtime": 1793434853.8246298,
+    "seen": 1793435658.6757169,
+    "ast_hash": "735d2bbb1654c64017b9ec9cbda8d2a8",
+    "semantic_hash": "735d2bbb1654c64017b9ec9cbda8d2a8"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/characters.json": {
+    "mtime": 1793434853.8236272,
+    "seen": 1793435658.675718,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/events.json": {
+    "mtime": 1793434853.8246298,
+    "seen": 1793435658.6757197,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/goods.json": {
+    "mtime": 1793434853.8226287,
+    "seen": 1793435658.675721,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/items.json": {
+    "mtime": 1793434853.8236272,
+    "seen": 1793435658.6757226,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/modifiers.json": {
+    "mtime": 1793434853.8226287,
+    "seen": 1793435658.6757238,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/offers.json": {
+    "mtime": 1793434853.8246298,
+    "seen": 1793435658.6757252,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/pack.json": {
+    "mtime": 1793434853.8216674,
+    "seen": 1793435658.6757267,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/texts.json": {
+    "mtime": 1793434853.825628,
+    "seen": 1793435658.675728,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/variables.json": {
+    "mtime": 1793434853.8226287,
+    "seen": 1793435658.6757295,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V003_category_no_file/workshops.json": {
+    "mtime": 1793434853.8236272,
+    "seen": 1793435658.675731,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/actions.json": {
+    "mtime": 1793434853.819438,
+    "seen": 1793435658.6757655,
+    "ast_hash": "6dc2a3b9770daede2745fff51217e164",
+    "semantic_hash": "6dc2a3b9770daede2745fff51217e164"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/categories.json": {
+    "mtime": 1793434853.8216674,
+    "seen": 1793435658.6757667,
+    "ast_hash": "e9480abe7d048f960eae917091d95975",
+    "semantic_hash": "e9480abe7d048f960eae917091d95975"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/characters.json": {
+    "mtime": 1793434853.819438,
+    "seen": 1793435658.6757684,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/events.json": {
+    "mtime": 1793434853.8204372,
+    "seen": 1793435658.6757696,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/goods.json": {
+    "mtime": 1793434853.8184373,
+    "seen": 1793435658.675771,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/items.json": {
+    "mtime": 1793434853.8184373,
+    "seen": 1793435658.6757724,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/modifiers.json": {
+    "mtime": 1793434853.8184373,
+    "seen": 1793435658.6757736,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/offers.json": {
+    "mtime": 1793434853.8204372,
+    "seen": 1793435658.6757753,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/pack.json": {
+    "mtime": 1793434853.8174386,
+    "seen": 1793435658.6757765,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/texts.json": {
+    "mtime": 1793434853.821115,
+    "seen": 1793435658.6757777,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/variables.json": {
+    "mtime": 1793434853.8184373,
+    "seen": 1793435658.675779,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/V003_unknown_category/workshops.json": {
+    "mtime": 1793434853.819438,
+    "seen": 1793435658.6757805,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/actions.json": {
+    "mtime": 1793434853.8286285,
+    "seen": 1793435658.6760032,
+    "ast_hash": "3033f52791c0ae61c80c0b3584da2914",
+    "semantic_hash": "3033f52791c0ae61c80c0b3584da2914"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/categories.json": {
+    "mtime": 1793434853.8296278,
+    "seen": 1793435658.6760046,
+    "ast_hash": "5f905652abe50f582f692160e2209b7f",
+    "semantic_hash": "5f905652abe50f582f692160e2209b7f"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/characters.json": {
+    "mtime": 1793434853.8276298,
+    "seen": 1793435658.6760063,
+    "ast_hash": "6c9b2ec2e002a7c8716ba1328b1047eb",
+    "semantic_hash": "6c9b2ec2e002a7c8716ba1328b1047eb"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/events.json": {
+    "mtime": 1793434853.8286285,
+    "seen": 1793435658.6760077,
+    "ast_hash": "90c5cbb2b6ad9106195833ed7ed27220",
+    "semantic_hash": "90c5cbb2b6ad9106195833ed7ed27220"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/goods.json": {
+    "mtime": 1793434853.8266273,
+    "seen": 1793435658.6760092,
+    "ast_hash": "a446fc78f7ccd0b5ea890410712c9bc2",
+    "semantic_hash": "a446fc78f7ccd0b5ea890410712c9bc2"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/items.json": {
+    "mtime": 1793434853.8276298,
+    "seen": 1793435658.6760106,
+    "ast_hash": "26b307342b153ae8ea67583255d9c5ba",
+    "semantic_hash": "26b307342b153ae8ea67583255d9c5ba"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/modifiers.json": {
+    "mtime": 1793434853.8266273,
+    "seen": 1793435658.676012,
+    "ast_hash": "6e97509344d6271d7e3bb16bdc6653de",
+    "semantic_hash": "6e97509344d6271d7e3bb16bdc6653de"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/offers.json": {
+    "mtime": 1793434853.8286285,
+    "seen": 1793435658.6760132,
+    "ast_hash": "3448c2638e794581f47c944c66969762",
+    "semantic_hash": "3448c2638e794581f47c944c66969762"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/pack.json": {
+    "mtime": 1793434853.825628,
+    "seen": 1793435658.676015,
+    "ast_hash": "c470e6a89f468480295fd0ad5a4283e0",
+    "semantic_hash": "c470e6a89f468480295fd0ad5a4283e0"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/texts.json": {
+    "mtime": 1793434853.8296278,
+    "seen": 1793435658.6760163,
+    "ast_hash": "8ee3eea6385c46fcdc6714441c1afd57",
+    "semantic_hash": "8ee3eea6385c46fcdc6714441c1afd57"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/variables.json": {
+    "mtime": 1793434853.8266273,
+    "seen": 1793435658.6760178,
+    "ast_hash": "acddf11ff55ec37784075e185f59525d",
+    "semantic_hash": "acddf11ff55ec37784075e185f59525d"
+  },
+  "gvozdi-v2/fixtures/broken/W002_empty_category/workshops.json": {
+    "mtime": 1793434853.8276298,
+    "seen": 1793435658.676019,
+    "ast_hash": "73e4cb5948d249e5a6b24f3a1286a595",
+    "semantic_hash": "73e4cb5948d249e5a6b24f3a1286a595"
+  },
+  "gvozdi-v2/fixtures/mini-pack/categories.json": {
+    "mtime": 1793138643.456142,
+    "seen": 1793435658.67618,
+    "ast_hash": "18454ca8e3de1708236be5387313bf64",
+    "semantic_hash": "18454ca8e3de1708236be5387313bf64"
+  },
+  "gvozdi-v2/packs/nails_for_count/categories.json": {
+    "mtime": 1793254326.2541807,
+    "seen": 1793435658.676202,
+    "ast_hash": "0c3f467a9b7f077d46ab8aea4cfe670f",
+    "semantic_hash": "0c3f467a9b7f077d46ab8aea4cfe670f"
+  },
+  "gvozdi-v2/packs/nails_for_count/strategy_hints.json": {
+    "mtime": 1793254569.2194836,
+    "seen": 1793435658.6762135,
+    "ast_hash": "e71ca45e4c4b3efed537f9512cdd1a1c",
+    "semantic_hash": "e71ca45e4c4b3efed537f9512cdd1a1c"
+  },
+  "gvozdi-v2/scripts/sync-docs.ts": {
+    "mtime": 1793091846.7060707,
+    "seen": 1793435658.6762197,
+    "ast_hash": "116bee694a626f737f6d2c878ca77e03",
+    "semantic_hash": "116bee694a626f737f6d2c878ca77e03"
+  },
+  "gvozdi-v2/simulator/src/cli.ts": {
+    "mtime": 1793254638.5876043,
+    "seen": 1793435658.6762211,
+    "ast_hash": "343721a82f32349fd83882a080c86c05",
+    "semantic_hash": "343721a82f32349fd83882a080c86c05"
+  },
+  "gvozdi-v2/simulator/src/coverage.ts": {
+    "mtime": 1793254081.0213118,
+    "seen": 1793435658.6762226,
+    "ast_hash": "20d1877c87948e74455bb761b5d1ea63",
+    "semantic_hash": "20d1877c87948e74455bb761b5d1ea63"
+  },
+  "gvozdi-v2/simulator/src/hints.ts": {
+    "mtime": 1793255334.192894,
+    "seen": 1793435658.6762238,
+    "ast_hash": "35fe55965b86cf1448f339b7b5ca9f7f",
+    "semantic_hash": "35fe55965b86cf1448f339b7b5ca9f7f"
+  },
+  "gvozdi-v2/simulator/src/index.ts": {
+    "mtime": 1793254638.5876043,
+    "seen": 1793435658.6762252,
+    "ast_hash": "b9ca4ca11fabe5f396c379cea5ec57d8",
+    "semantic_hash": "b9ca4ca11fabe5f396c379cea5ec57d8"
+  },
+  "gvozdi-v2/simulator/src/report.ts": {
+    "mtime": 1793254128.5202322,
+    "seen": 1793435658.6762266,
+    "ast_hash": "b7b01749daf3b30f5098e5fd74c2be34",
+    "semantic_hash": "b7b01749daf3b30f5098e5fd74c2be34"
+  },
+  "gvozdi-v2/simulator/src/rng.ts": {
+    "mtime": 1793253994.8855307,
+    "seen": 1793435658.676228,
+    "ast_hash": "8562fd233d0980f69b9763fe978b25fc",
+    "semantic_hash": "8562fd233d0980f69b9763fe978b25fc"
+  },
+  "gvozdi-v2/simulator/src/run.ts": {
+    "mtime": 1793254348.5876224,
+    "seen": 1793435658.6762295,
+    "ast_hash": "8b8f381ca3308f60c4a3532b52c36853",
+    "semantic_hash": "8b8f381ca3308f60c4a3532b52c36853"
+  },
+  "gvozdi-v2/simulator/src/strategies.ts": {
+    "mtime": 1793255334.193408,
+    "seen": 1793435658.676231,
+    "ast_hash": "8a6a862578bba39c9f98e9d90638acce",
+    "semantic_hash": "8a6a862578bba39c9f98e9d90638acce"
+  },
+  "gvozdi-v2/simulator/src/worker.ts": {
+    "mtime": 1793254379.5425458,
+    "seen": 1793435658.676232,
+    "ast_hash": "d040db2e19d8768167dfc669dd348b44",
+    "semantic_hash": "d040db2e19d8768167dfc669dd348b44"
+  },
+  "gvozdi-v2/simulator/test/sim.test.ts": {
+    "mtime": 1793254918.8532524,
+    "seen": 1793435658.6762338,
+    "ast_hash": "86f8db61c3e5b978bad3f89c67ed51a4",
+    "semantic_hash": "86f8db61c3e5b978bad3f89c67ed51a4"
+  },
+  "gvozdi-v2/simulator/tsconfig.json": {
+    "mtime": 1793254156.120475,
+    "seen": 1793435658.676235,
+    "ast_hash": "ff77b3790bb15c8f8135b13782eeaf34",
+    "semantic_hash": "ff77b3790bb15c8f8135b13782eeaf34"
+  },
+  "gvozdi-v2/ui/src/packs.ts": {
+    "mtime": 1793434972.380429,
+    "seen": 1793435658.676247,
+    "ast_hash": "15790417bd2853ef9c0e7f81e24f9ca4",
+    "semantic_hash": "15790417bd2853ef9c0e7f81e24f9ca4"
+  },
+  "gvozdi-v2/ui/styleguide.ts": {
+    "mtime": 1793435194.6805599,
+    "seen": 1793435658.6762543,
+    "ast_hash": "95f3074da1f6fafdddb10e53a0a61748",
+    "semantic_hash": "95f3074da1f6fafdddb10e53a0a61748"
+  },
+  "gvozdi-v2/ui/test/categories.test.ts": {
+    "mtime": 1793138762.4153712,
+    "seen": 1793435658.6762588,
+    "ast_hash": "0e0e59fc3517ffc98c1bdd2b03c12833",
+    "semantic_hash": "0e0e59fc3517ffc98c1bdd2b03c12833"
+  },
+  "gvozdi-v2/ui/test/settings.test.ts": {
+    "mtime": 1793435129.696337,
+    "seen": 1793435658.6762676,
+    "ast_hash": "8caed2e72f7f70405a3f24e52d0bc456",
+    "semantic_hash": "8caed2e72f7f70405a3f24e52d0bc456"
+  },
+  "README.md": {
+    "mtime": 1793434818.265099,
+    "seen": 1793435658.676291,
+    "ast_hash": "6f6a48a82236db1ac0c4d43d8f9a19e4",
+    "semantic_hash": "6f6a48a82236db1ac0c4d43d8f9a19e4"
+  },
+  "graph-questions.md": {
+    "mtime": 1793082544.1113405,
+    "seen": 1793435658.6762946,
+    "ast_hash": "07a672977436ca54400a2d419aa3637b",
+    "semantic_hash": "07a672977436ca54400a2d419aa3637b"
+  },
+  "gvozdi-v2/TASKS.md": {
+    "mtime": 1793435333.472712,
+    "seen": 1793435658.6762974,
+    "ast_hash": "0d038e70822008e27b8c00c6d32aacdf",
+    "semantic_hash": "0d038e70822008e27b8c00c6d32aacdf"
+  },
+  "gvozdi-v2/docs/engine/categories.md": {
+    "mtime": 1793138656.0805366,
+    "seen": 1793435658.6763046,
+    "ast_hash": "a0c5ec81d340f607db610422705a2c9c",
+    "semantic_hash": "a0c5ec81d340f607db610422705a2c9c"
+  },
+  "gvozdi-v2/docs/simulator/README.md": {
+    "mtime": 1793255416.673978,
+    "seen": 1793435658.6763074,
+    "ast_hash": "1ad17c3d92319121d991fee30fdf347b",
+    "semantic_hash": "1ad17c3d92319121d991fee30fdf347b"
+  },
+  "gvozdi-v2/docs/ui/packs.md": {
+    "mtime": 1793435288.1820636,
+    "seen": 1793435658.676318,
+    "ast_hash": "a485471a7aea9e70cedc1972a7c33cb1",
+    "semantic_hash": "a485471a7aea9e70cedc1972a7c33cb1"
+  },
+  "gvozdi-v2/docs/ui/styleguide.md": {
+    "mtime": 1793435289.9638534,
+    "seen": 1793435658.6763237,
+    "ast_hash": "183b1ff9d0f71efc70cc17eee4fab882",
+    "semantic_hash": "183b1ff9d0f71efc70cc17eee4fab882"
+  },
+  "gvozdi-v2/docs/ui/styleguide/frontend-design.md": {
+    "mtime": 1793134871.2476122,
+    "seen": 1793435658.676325,
+    "ast_hash": "1d23a2f9a2b448f4cd08e7e6fe019662",
+    "semantic_hash": "1d23a2f9a2b448f4cd08e7e6fe019662"
+  },
+  "gvozdi-v2/docs/ui/styleguide/index.html": {
+    "mtime": 1793435298.1011107,
+    "seen": 1793435658.676327,
+    "ast_hash": "1076776068613b2d74e93d20a5287cd6",
+    "semantic_hash": "1076776068613b2d74e93d20a5287cd6"
+  },
+  "gvozdi-v2/reports/simulator.md": {
+    "mtime": 1793255461.5000114,
+    "seen": 1793435658.676335,
+    "ast_hash": "3528050dd10060467a867297c7ecfe76",
+    "semantic_hash": "3528050dd10060467a867297c7ecfe76"
+  }
+}

@@ -1,0 +1,6 @@
+[
+  { "id": "home_kitchen", "name": "Домашняя кухня",
+    "vars": { "max_workers": 1, "equipment_slots": 2, "upkeep": 1 }, "modifiers": [] },
+  { "id": "bakery", "name": "Городская пекарня",
+    "vars": { "max_workers": 3, "equipment_slots": 3, "upkeep": 4 }, "modifiers": ["bakery_fame"] }
+]

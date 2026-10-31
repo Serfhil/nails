@@ -1,0 +1,7 @@
+_archive/
+node_modules/
+gvozdi-v2/node_modules/
+gvozdi-v2/dist/
+
+# Личная песочница владельца (designvariants/CLAUDE.md)
+gvozdi-v2/docs/ui/styleguide/designvariants/

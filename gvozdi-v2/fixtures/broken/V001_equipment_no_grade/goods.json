@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ore",
+    "name": "Руда",
+    "unit": "ед.",
+    "price": 1,
+    "buy": true,
+    "sell_default": false
+  },
+  {
+    "id": "widget",
+    "name": "Изделие",
+    "unit": "шт.",
+    "price": 3,
+    "buy": false,
+    "sell_default": true
+  }
+]

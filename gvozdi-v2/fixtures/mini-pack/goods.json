@@ -1,0 +1,7 @@
+[
+  { "id": "flour", "name": "Мука", "unit": "мешок", "price": 1, "buy": true, "sell_default": false },
+  { "id": "bread", "name": "Хлеб", "unit": "буханка", "price": 3, "buy": false, "sell_default": true },
+  { "id": "cake", "name": "Торт", "unit": "шт.", "price": 20, "buy": false, "sell_default": true },
+  { "id": "pastry", "name": "Пирожные", "unit": "коробка", "price": 9, "buy": false, "sell_default": true,
+    "visible": { "type": "var", "subject": "hero", "var": "bake_xp", "field": "level", "op": ">=", "value": 2 } }
+]

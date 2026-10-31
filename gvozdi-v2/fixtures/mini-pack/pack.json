@@ -1,0 +1,21 @@
+{
+  "id": "mini_bakery",
+  "name": "Мини-пекарня",
+  "version": "0.1.0",
+  "description": "Маленькая пекарня для проверки движка: печь, помощники и заказы соседей.",
+  "names": { "money": "Монеты", "money_short": "мон.", "stress": "Усталость",
+             "slots": { "hand": "В руке" },
+             "roles": { "hero": "Хозяин", "worker": "Помощник", "family": "Семья", "pet": "Питомец" } },
+  "settings": {
+    "day_start": 6,
+    "day_end": 18,
+    "market_hours": 2,
+    "trade_hours": 2,
+    "trader_raw_target": { "flour": 6 },
+    "trade_open_when": { "type": "role", "subject": "self", "role": "worker" },
+    "shop": ["good_peel"],
+    "pools": { "daily": { "chance": 0.6 } },
+    "max_event_chain": 32
+  },
+  "start": { "event": "start_default", "hero": "baker" }
+}

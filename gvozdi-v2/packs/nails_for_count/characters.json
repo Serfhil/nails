@@ -1,0 +1,269 @@
+[
+ {
+  "id": "hero",
+  "name": "Демьян",
+  "role": "hero",
+  "role_name": "Кузнец",
+  "works": true,
+  "hire_pool": false,
+  "vars": {
+   "stress": 10
+  },
+  "slots": [
+   "hand",
+   "apron",
+   "belt"
+  ],
+  "modifiers": [],
+  "blurb": "Сын кузнеца. Руки помнят отцовскую науку, голова — пока не очень."
+ },
+ {
+  "id": "marfa",
+  "name": "Марфа",
+  "role": "family",
+  "role_name": "Жена",
+  "works": false,
+  "hire_pool": false,
+  "vars": {},
+  "slots": [],
+  "modifiers": [],
+  "blurb": "Жена. Печёт пироги, ведёт дом и знает, когда вы устали, раньше вас."
+ },
+ {
+  "id": "agrippina",
+  "name": "Тёща Агриппина",
+  "role": "family",
+  "role_name": "Тёща",
+  "works": false,
+  "hire_pool": false,
+  "vars": {},
+  "slots": [],
+  "modifiers": [],
+  "blurb": "Живёт в соседнем селе, но в гостях бывает чаще, чем хотелось бы.",
+  "visible": {
+   "type": "event_count",
+   "event": "mil_visit",
+   "op": ">=",
+   "value": 1
+  }
+ },
+ {
+  "id": "vasyatka",
+  "name": "Васятка",
+  "role": "family",
+  "role_name": "Сын",
+  "works": false,
+  "hire_pool": false,
+  "vars": {
+   "speed": 0.7,
+   "learn_speed": 1.8,
+   "defect": 0.08,
+   "hire_cost": 0,
+   "wage": 1
+  },
+  "slots": [
+   "hand"
+  ],
+  "modifiers": [
+   "vasya_eager"
+  ],
+  "blurb": "Сын. Восемь лет, нос в саже, глаза горят."
+ },
+ {
+  "id": "ugolyok",
+  "name": "Кот Уголёк",
+  "role": "pet",
+  "role_name": "Кот",
+  "works": false,
+  "hire_pool": false,
+  "vars": {},
+  "slots": [],
+  "modifiers": [],
+  "blurb": "Чёрный, как уголь. Спит на тёплой наковальне и ворует всё, что блестит."
+ },
+ {
+  "id": "eremka",
+  "name": "Ерёмка",
+  "role": "worker",
+  "works": true,
+  "hire_pool": true,
+  "vars": {
+   "speed": 1.3,
+   "defect": 0.1,
+   "learn_speed": 0.8,
+   "hire_cost": 12,
+   "wage": 2
+  },
+  "slots": [
+   "hand",
+   "apron"
+  ],
+  "modifiers": [
+   "eremka_rush"
+  ],
+  "blurb": "Шустрый, как воробей. Куёт быстро, а портит ещё быстрее."
+ },
+ {
+  "id": "frol",
+  "name": "Фрол",
+  "role": "worker",
+  "works": true,
+  "hire_pool": false,
+  "vars": {
+   "speed": 0.8,
+   "defect": 0.05,
+   "learn_speed": 1.6,
+   "hire_cost": 18,
+   "wage": 3
+  },
+  "slots": [
+   "hand",
+   "apron"
+  ],
+  "modifiers": [
+   "frol_trader"
+  ],
+  "blurb": "Неторопливый, зато всё схватывает и торгуется, как цыган на ярмарке."
+ },
+ {
+  "id": "timokha",
+  "name": "Тимоха",
+  "role": "worker",
+  "works": true,
+  "hire_pool": false,
+  "vars": {
+   "speed": 1,
+   "defect": 0.03,
+   "learn_speed": 1,
+   "hire_cost": 30,
+   "wage": 4,
+   "smith_xp": 15
+  },
+  "slots": [
+   "hand",
+   "apron"
+  ],
+  "modifiers": [
+   "timokha_steady"
+  ],
+  "blurb": "Ровный, как хорошая подкова. Не спешит, не устаёт, всё время поёт."
+ },
+ {
+  "id": "gordey",
+  "name": "Гордей",
+  "role": "worker",
+  "role_name": "Старый оружейник",
+  "works": true,
+  "hire_pool": false,
+  "vars": {
+   "speed": 1,
+   "defect": 0.04,
+   "learn_speed": 0.7,
+   "hire_cost": 60,
+   "wage": 6,
+   "smith_xp": 60,
+   "weapon_xp": 45
+  },
+  "slots": [
+   "hand",
+   "apron"
+  ],
+  "modifiers": [
+   "gordey_blade"
+  ],
+  "blurb": "Бывший оружейник княжеской дружины. Молчит, курит трубку, куёт клинки."
+ },
+ {
+  "id": "kuzma",
+  "name": "Кузьма",
+  "role": "worker",
+  "role_name": "Сосед",
+  "works": true,
+  "hire_pool": false,
+  "vars": {
+   "speed": 0.9,
+   "defect": 0.06,
+   "learn_speed": 1.2,
+   "hire_cost": 5,
+   "wage": 2,
+   "smith_xp": 12
+  },
+  "slots": [
+   "hand",
+   "apron"
+  ],
+  "modifiers": [
+   "kuzma_clumsy"
+  ],
+  "blurb": "Сосед. После свадьбы остепенился и просится в подручные. Руки растут откуда надо — но не сразу."
+ },
+ {
+  "id": "tikhon",
+  "name": "Тихон",
+  "role": "worker",
+  "role_name": "Заречный кузнец",
+  "works": true,
+  "hire_pool": false,
+  "vars": {
+   "speed": 1.1,
+   "defect": 0.03,
+   "learn_speed": 1,
+   "hire_cost": 40,
+   "wage": 5,
+   "smith_xp": 55
+  },
+  "slots": [
+   "hand",
+   "apron"
+  ],
+  "modifiers": [
+   "tikhon_pride"
+  ],
+  "blurb": "Бывший соперник из Заречья. Громкий, гордый и очень хороший кузнец."
+ },
+ {
+  "id": "dunya",
+  "name": "Дуняша",
+  "role": "worker",
+  "works": true,
+  "hire_pool": false,
+  "vars": {
+   "speed": 0.9,
+   "defect": 0.04,
+   "learn_speed": 1.4,
+   "hire_cost": 22,
+   "wage": 3
+  },
+  "slots": [
+   "hand",
+   "apron"
+  ],
+  "modifiers": [
+   "dunya_fine"
+  ],
+  "blurb": "Дочь бондаря. Пальцы тонкие, глаз острый, язык ещё острее."
+ },
+ {
+  "id": "stepan",
+  "name": "Степан",
+  "role": "worker",
+  "works": true,
+  "hire_pool": false,
+  "vars": {
+   "speed": 1,
+   "defect": 0.06,
+   "learn_speed": 0.8,
+   "hire_cost": 35,
+   "wage": 5,
+   "smith_xp": 40
+  },
+  "slots": [
+   "hand",
+   "apron"
+  ],
+  "modifiers": [
+   "stepan_strong"
+  ],
+  "blurb": "Бывший бурлак. Лемех поднимает одной рукой, а кружку — двумя."
+ }
+]

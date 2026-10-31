@@ -1,0 +1,39 @@
+[
+  { "id": "money", "name": "Монеты", "owner": "world", "start": 0, "min": -100, "format": "money" },
+  { "id": "stress", "name": "Усталость", "owner": "character", "start": 0, "min": 0, "max": 100,
+    "good": "down", "visible": { "type": "self_is_hero" },
+    "ladder": [
+      { "at": 0, "id": "fresh", "name": "Бодр", "modifiers": [] },
+      { "at": 70, "id": "tired", "name": "Вымотан", "modifiers": ["tired_slow"] },
+      { "at": 100, "id": "collapse", "name": "Валится с ног", "modifiers": [] }
+    ] },
+  { "id": "health", "name": "Здоровье", "owner": "character", "start": 100, "min": 0, "max": 100,
+    "floor_pct": 50 },
+  { "id": "bake_xp", "name": "Пекарское дело", "owner": "character", "start": 0, "min": 0,
+    "visible": { "any": [ { "type": "self_is_hero" }, { "type": "role", "subject": "self", "role": "worker" } ] },
+    "ladder": [
+      { "at": 0, "id": "novice", "name": "Новичок", "modifiers": ["clumsy"] },
+      { "at": 10, "id": "apprentice", "name": "Подмастерье", "modifiers": ["wage_apprentice"] },
+      { "at": 30, "id": "master", "name": "Мастер", "modifiers": ["wage_master"] }
+    ] },
+  { "id": "pastry_xp", "name": "Кондитерское дело", "owner": "character", "start": 0, "min": 0,
+    "visible": { "type": "var", "subject": "self", "var": "bake_xp", "field": "level", "op": ">=", "value": 2 } },
+  { "id": "speed", "name": "Скорость", "owner": "character", "start": 1, "min": 0,
+    "visible": { "any": [ { "type": "self_is_hero" }, { "type": "role", "subject": "self", "role": "worker" } ] } },
+  { "id": "defect", "name": "Брак", "owner": "character", "start": 0.05, "min": 0, "max": 1, "good": "down", "format": "pct",
+    "visible": { "any": [ { "type": "self_is_hero" }, { "type": "role", "subject": "self", "role": "worker" } ] } },
+  { "id": "learn_speed", "name": "Обучаемость", "owner": "character", "start": 1, "min": 0, "visible": false },
+  { "id": "sell_price", "name": "Цена продажи", "owner": "character", "start": 1, "min": 0, "visible": false },
+  { "id": "buy_price", "name": "Цена покупки", "owner": "character", "start": 1, "min": 0, "good": "down", "visible": false },
+  { "id": "commission", "name": "Доля торговца", "owner": "character", "start": 0.1, "min": 0, "max": 1, "good": "down", "visible": false },
+  { "id": "wage", "name": "Жалованье", "owner": "character", "start": 0, "min": 0, "format": "money", "good": "down",
+    "visible": { "type": "role", "subject": "self", "role": "worker" } },
+  { "id": "hire_cost", "name": "Цена найма", "owner": "character", "start": 0, "min": 0, "format": "money", "visible": false },
+  { "id": "household_expense", "name": "Расход дома", "owner": "world", "start": 1, "min": 0, "format": "money", "good": "down" },
+  { "id": "world_sell_price", "name": "Спрос", "owner": "world", "start": 1, "min": 0 },
+  { "id": "world_buy_price", "name": "Цены на рынке", "owner": "world", "start": 1, "min": 0, "good": "down" },
+  { "id": "max_workers", "name": "Мест для работников", "owner": "workshop", "start": 0, "min": 0 },
+  { "id": "equipment_slots", "name": "Мест для оборудования", "owner": "workshop", "start": 0, "min": 0 },
+  { "id": "upkeep", "name": "Содержание", "owner": "workshop", "start": 0, "min": 0, "format": "money", "good": "down" },
+  { "id": "freshness", "name": "Свежесть", "owner": "item", "start": 100, "min": 0, "max": 100 }
+]

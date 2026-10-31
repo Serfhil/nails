@@ -1,0 +1,297 @@
+[
+ {
+  "id": "hammer_father",
+  "name": "Отцовский молот",
+  "kind": "tool",
+  "slot": "hand",
+  "price": 0,
+  "modifiers": [
+   "father_hammer_mod"
+  ],
+  "description": "Рукоять вытерта отцовской ладонью до блеска."
+ },
+ {
+  "id": "hammer_good",
+  "name": "Добрый молот",
+  "kind": "tool",
+  "slot": "hand",
+  "price": 35,
+  "modifiers": [
+   "good_hammer_mod"
+  ],
+  "description": "Лёгкий, звонкий, сам просится в руку."
+ },
+ {
+  "id": "hammer_master",
+  "name": "Мастерский молот",
+  "kind": "tool",
+  "slot": "hand",
+  "price": 80,
+  "modifiers": [
+   "master_hammer_mod"
+  ],
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 3
+  },
+  "description": "Такой молот продают только тому, кто знает, что с ним делать."
+ },
+ {
+  "id": "leather_apron",
+  "name": "Кожаный фартук",
+  "kind": "tool",
+  "slot": "apron",
+  "price": 15,
+  "modifiers": [
+   "apron_mod"
+  ],
+  "description": "Толстая бычья кожа. Искры отскакивают."
+ },
+ {
+  "id": "long_tongs",
+  "name": "Длинные клещи",
+  "kind": "tool",
+  "slot": "belt",
+  "price": 20,
+  "modifiers": [
+   "tongs_mod"
+  ],
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 1
+  },
+  "description": "Держат заготовку цепко, как тёща — кошелёк."
+ },
+ {
+  "id": "bellows",
+  "name": "Кузнечные мехи",
+  "kind": "equipment",
+  "price": 50,
+  "line": "bellows",
+  "grade": 1,
+  "modifiers": [
+   "has_bellows"
+  ],
+  "description": "Раздувают горн так, что можно варить сталь."
+ },
+ {
+  "id": "double_bellows",
+  "name": "Двойные мехи",
+  "kind": "equipment",
+  "price": 90,
+  "line": "bellows",
+  "grade": 2,
+  "modifiers": [
+   "has_bellows",
+   "bellows_blast"
+  ],
+  "description": "Два меха в одну дуду: горн ревёт, сталь варится вдвое веселее."
+ },
+ {
+  "id": "grindstone",
+  "name": "Точильный круг",
+  "kind": "equipment",
+  "price": 45,
+  "line": "sharpener",
+  "grade": 1,
+  "modifiers": [
+   "has_grindstone"
+  ],
+  "description": "Без него топор — просто тяжёлая железка."
+ },
+ {
+  "id": "water_barrel",
+  "name": "Бочка с водой",
+  "kind": "equipment",
+  "price": 12,
+  "line": "fire_guard",
+  "grade": 1,
+  "modifiers": [
+   "water_ready"
+  ],
+  "description": "Стоит у горна на случай искры."
+ },
+ {
+  "id": "strongbox",
+  "name": "Сундук с замком",
+  "kind": "equipment",
+  "price": 35,
+  "line": "safe",
+  "grade": 1,
+  "modifiers": [
+   "money_locked"
+  ],
+  "description": "Дубовый, окованный, с хитрым замком."
+ },
+ {
+  "id": "horn_anvil",
+  "name": "Наковальня с рогом",
+  "kind": "equipment",
+  "price": 40,
+  "line": "anvil",
+  "grade": 1,
+  "modifiers": [
+   "anvil_speed",
+   "anvil_true"
+  ],
+  "description": "На роге гнётся всё, что круглое."
+ },
+ {
+  "id": "hood",
+  "name": "Вытяжной колпак",
+  "kind": "equipment",
+  "price": 30,
+  "line": "chimney",
+  "grade": 1,
+  "modifiers": [
+   "hood_draft"
+  ],
+  "description": "Медный колпак над горном. Сажа улетает в небо."
+ },
+ {
+  "id": "vise",
+  "name": "Слесарные тиски",
+  "kind": "equipment",
+  "price": 40,
+  "line": "vise",
+  "grade": 1,
+  "modifiers": [
+   "has_vise",
+   "vise_true"
+  ],
+  "description": "Чугунные челюсти: что зажали, то не вырвешь. Без них замка не собрать."
+ },
+ {
+  "id": "quench_trough",
+  "name": "Закалочная ванна",
+  "kind": "equipment",
+  "price": 35,
+  "line": "quench",
+  "grade": 1,
+  "modifiers": [
+   "quench_true"
+  ],
+  "description": "Дубовое корыто с маслом: тонкая работа не ведёт и не трескается."
+ },
+ {
+  "id": "twin_anvil",
+  "name": "Двурогая наковальня",
+  "kind": "equipment",
+  "price": 85,
+  "line": "anvil",
+  "grade": 2,
+  "modifiers": [
+   "twin_anvil_speed",
+   "twin_anvil_true"
+  ],
+  "description": "Полтонны шведского железа. Кузьма ходил смотреть, как на чудо."
+ },
+ {
+  "id": "foot_grindstone",
+  "name": "Ножное точило",
+  "kind": "equipment",
+  "price": 70,
+  "line": "sharpener",
+  "grade": 2,
+  "modifiers": [
+   "has_grindstone",
+   "foot_grind_true"
+  ],
+  "description": "Крутишь ногой, точишь двумя руками. Лезвия — как бритва."
+ },
+ {
+  "id": "brick_chimney",
+  "name": "Кирпичная труба",
+  "kind": "equipment",
+  "price": 60,
+  "line": "chimney",
+  "grade": 2,
+  "modifiers": [
+   "brick_draft"
+  ],
+  "description": "Высокая, с колпаком и задвижкой. Сажа в ней не копится."
+ },
+ {
+  "id": "big_hearth",
+  "name": "Большой горн",
+  "kind": "equipment",
+  "price": 110,
+  "line": "hearth",
+  "grade": 1,
+  "modifiers": [
+   "has_big_hearth",
+   "hearth_soot"
+  ],
+  "description": "Второй горн на целую телегу угля: в нём греют лемеха и тяжёлые поковки. Чадит изрядно."
+ },
+ {
+  "id": "spring_press",
+  "name": "Рессорный станок",
+  "kind": "equipment",
+  "price": 130,
+  "line": "press",
+  "grade": 1,
+  "modifiers": [
+   "has_spring_press"
+  ],
+  "description": "Гнёт стальные листы в рессоры для карет. Хитрая штука, заморская."
+ },
+ {
+  "id": "apron_master",
+  "name": "Фартук с нагрудником",
+  "kind": "tool",
+  "slot": "apron",
+  "price": 45,
+  "modifiers": [
+   "apron_master_mod"
+  ],
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 2
+  },
+  "description": "Двойная бычья кожа до самого горла."
+ },
+ {
+  "id": "tongs_master",
+  "name": "Клещи «волчья пасть»",
+  "kind": "tool",
+  "slot": "belt",
+  "price": 40,
+  "modifiers": [
+   "tongs_master_mod"
+  ],
+  "open_when": {
+   "type": "var",
+   "subject": "hero",
+   "var": "smith_xp",
+   "field": "level",
+   "op": ">=",
+   "value": 3
+  },
+  "description": "Зубастые клещи: заготовка в них сидит как влитая."
+ },
+ {
+  "id": "tikhon_hammer",
+  "name": "Тихонов молот",
+  "kind": "tool",
+  "slot": "hand",
+  "price": 0,
+  "modifiers": [
+   "tikhon_hammer_mod",
+   "tikhon_hammer_true"
+  ],
+  "description": "Молот соперника, отданный на память. Лёгкий, хитрый и злой."
+ }
+]

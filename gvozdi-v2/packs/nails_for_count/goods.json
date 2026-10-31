@@ -1,0 +1,186 @@
+[
+ {
+  "id": "iron",
+  "name": "Железо",
+  "unit": "крица",
+  "price": 2,
+  "buy": true,
+  "sell_default": false
+ },
+ {
+  "id": "coal",
+  "name": "Уголь",
+  "unit": "мешок",
+  "price": 1,
+  "buy": true,
+  "sell_default": false
+ },
+ {
+  "id": "nails",
+  "name": "Гвозди",
+  "unit": "связка",
+  "price": 4,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "horseshoes",
+  "name": "Подковы",
+  "unit": "четвёрка",
+  "price": 11,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "pots",
+  "name": "Котелки",
+  "unit": "шт.",
+  "price": 20,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "axes",
+  "name": "Топоры",
+  "unit": "шт.",
+  "price": 26,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "steel",
+  "name": "Сталь",
+  "unit": "брусок",
+  "price": 9,
+  "buy": false,
+  "sell_default": false
+ },
+ {
+  "id": "swords",
+  "name": "Мечи",
+  "unit": "шт.",
+  "price": 70,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "mail",
+  "name": "Кольчуги",
+  "unit": "шт.",
+  "price": 95,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "grilles",
+  "name": "Узорные решётки",
+  "unit": "шт.",
+  "price": 48,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "rose",
+  "name": "Кованая роза",
+  "unit": "шт.",
+  "price": 6,
+  "buy": false,
+  "sell_default": false
+ },
+ {
+  "id": "star_iron",
+  "name": "Небесное железо",
+  "unit": "кусок",
+  "price": 60,
+  "buy": false,
+  "sell_default": false
+ },
+ {
+  "id": "star_blade",
+  "name": "Звёздный клинок",
+  "unit": "шт.",
+  "price": 500,
+  "buy": false,
+  "sell_default": false
+ },
+ {
+  "id": "strip_iron",
+  "name": "Полосовое железо",
+  "unit": "полоса",
+  "price": 6,
+  "buy": false,
+  "sell_default": false
+ },
+ {
+  "id": "hinges",
+  "name": "Петли и скобы",
+  "unit": "связка",
+  "price": 13,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "scythes",
+  "name": "Косы",
+  "unit": "шт.",
+  "price": 36,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "plowshares",
+  "name": "Лемеха",
+  "unit": "шт.",
+  "price": 60,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "locks",
+  "name": "Замки",
+  "unit": "шт.",
+  "price": 65,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "chains",
+  "name": "Цепи",
+  "unit": "сажень",
+  "price": 95,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "springs",
+  "name": "Рессоры",
+  "unit": "пара",
+  "price": 120,
+  "buy": false,
+  "sell_default": true
+ },
+ {
+  "id": "bog_ore",
+  "name": "Болотная руда",
+  "unit": "корзина",
+  "price": 1,
+  "buy": false,
+  "sell_default": false
+ },
+ {
+  "id": "lucky_shoe",
+  "name": "Подкова на счастье",
+  "unit": "шт.",
+  "price": 5,
+  "buy": false,
+  "sell_default": false
+ },
+ {
+  "id": "contest_piece",
+  "name": "Работа на состязание",
+  "unit": "шт.",
+  "price": 40,
+  "buy": false,
+  "sell_default": false
+ }
+]

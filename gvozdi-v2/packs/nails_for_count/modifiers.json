@@ -1,0 +1,2034 @@
+[
+ {
+  "id": "tired_hands",
+  "name": "Устал",
+  "text": "Руки дрожат — брака больше",
+  "var": "defect",
+  "op": "add",
+  "value": 0.04,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "self_is_hero"
+    },
+    {
+     "type": "role",
+     "subject": "self",
+     "role": "worker"
+    }
+   ]
+  }
+ },
+ {
+  "id": "edge_slow",
+  "name": "На пределе",
+  "text": "Всё валится из рук",
+  "var": "speed",
+  "op": "pct",
+  "value": -20,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "self_is_hero"
+    },
+    {
+     "type": "role",
+     "subject": "self",
+     "role": "worker"
+    }
+   ]
+  }
+ },
+ {
+  "id": "edge_blur",
+  "name": "Глаз замылился",
+  "text": "Брак так и прёт",
+  "var": "defect",
+  "op": "add",
+  "value": 0.08,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "self_is_hero"
+    },
+    {
+     "type": "role",
+     "subject": "self",
+     "role": "worker"
+    }
+   ]
+  }
+ },
+ {
+  "id": "clumsy",
+  "name": "Неумеха",
+  "text": "Молот то и дело мажет мимо",
+  "var": "defect",
+  "op": "add",
+  "value": 0.12,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "self_is_hero"
+    },
+    {
+     "type": "role",
+     "subject": "self",
+     "role": "worker"
+    }
+   ]
+  }
+ },
+ {
+  "id": "wage_smith",
+  "name": "Ставка кузнеца",
+  "text": "Умелому — больше",
+  "var": "wage",
+  "op": "add",
+  "value": 1,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "type": "role",
+   "subject": "self",
+   "role": "worker"
+  }
+ },
+ {
+  "id": "wage_master",
+  "name": "Ставка мастера",
+  "text": "Мастер стоит дорого",
+  "var": "wage",
+  "op": "add",
+  "value": 2,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "type": "role",
+   "subject": "self",
+   "role": "worker"
+  }
+ },
+ {
+  "id": "wage_grand",
+  "name": "Ставка великого мастера",
+  "text": "Таких рук на всю округу — одни",
+  "var": "wage",
+  "op": "add",
+  "value": 3,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "type": "role",
+   "subject": "self",
+   "role": "worker"
+  }
+ },
+ {
+  "id": "grand_hand",
+  "name": "Железо само ложится",
+  "text": "Великий мастер работает играючи",
+  "var": "speed",
+  "op": "pct",
+  "value": 10,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "self_is_hero"
+    },
+    {
+     "type": "role",
+     "subject": "self",
+     "role": "worker"
+    }
+   ]
+  }
+ },
+ {
+  "id": "blade_clumsy",
+  "name": "Клинок не слушается",
+  "text": "Первые клинки часто трескаются при закалке",
+  "var": "defect",
+  "op": "add",
+  "value": 0.2,
+  "action_tags": [
+   "blade"
+  ],
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "has_modifier",
+     "subject": "self",
+     "template": "blade_lore"
+    },
+    {
+     "type": "var",
+     "subject": "self",
+     "var": "weapon_xp",
+     "op": ">",
+     "value": 0
+    }
+   ]
+  }
+ },
+ {
+  "id": "blade_sure",
+  "name": "Рука на клинок поставлена",
+  "text": "Клинки выходят ровные",
+  "var": "defect",
+  "op": "add",
+  "value": -0.04,
+  "action_tags": [
+   "blade"
+  ],
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "has_modifier",
+     "subject": "self",
+     "template": "blade_lore"
+    },
+    {
+     "type": "var",
+     "subject": "self",
+     "var": "weapon_xp",
+     "op": ">",
+     "value": 0
+    }
+   ]
+  }
+ },
+ {
+  "id": "blade_quick",
+  "name": "Быстрая закалка",
+  "text": "Клинок куётся вдвое веселее",
+  "var": "speed",
+  "op": "pct",
+  "value": 20,
+  "action_tags": [
+   "blade"
+  ],
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "has_modifier",
+     "subject": "self",
+     "template": "blade_lore"
+    },
+    {
+     "type": "var",
+     "subject": "self",
+     "var": "weapon_xp",
+     "op": ">",
+     "value": 0
+    }
+   ]
+  }
+ },
+ {
+  "id": "mail_slow",
+  "name": "Путается в кольцах",
+  "text": "Кольчуга плетётся медленно",
+  "var": "speed",
+  "op": "pct",
+  "value": -25,
+  "action_tags": [
+   "mail"
+  ],
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "has_modifier",
+     "subject": "self",
+     "template": "armor_lore"
+    },
+    {
+     "type": "var",
+     "subject": "self",
+     "var": "armor_xp",
+     "op": ">",
+     "value": 0
+    }
+   ]
+  }
+ },
+ {
+  "id": "mail_quick",
+  "name": "Кольца сами сплетаются",
+  "text": "Бронник плетёт быстро",
+  "var": "speed",
+  "op": "pct",
+  "value": 20,
+  "action_tags": [
+   "mail"
+  ],
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "has_modifier",
+     "subject": "self",
+     "template": "armor_lore"
+    },
+    {
+     "type": "var",
+     "subject": "self",
+     "var": "armor_xp",
+     "op": ">",
+     "value": 0
+    }
+   ]
+  }
+ },
+ {
+  "id": "art_eye",
+  "name": "Глаз художника",
+  "text": "Узор выходит с первого раза",
+  "var": "defect",
+  "op": "add",
+  "value": -0.05,
+  "action_tags": [
+   "art"
+  ],
+  "duration": {
+   "kind": "source"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "has_modifier",
+     "subject": "self",
+     "template": "art_lore"
+    },
+    {
+     "type": "var",
+     "subject": "self",
+     "var": "art_xp",
+     "op": ">",
+     "value": 0
+    }
+   ]
+  }
+ },
+ {
+  "id": "fame_bad",
+  "name": "Дурная слава",
+  "text": "Покупатели крестятся и обходят лавку стороной",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": -15,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "fame_county",
+  "name": "Знают в округе",
+  "text": "За вашим товаром приезжают из соседних сёл",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 5,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "fame_castle",
+  "name": "Слух дошёл до замка",
+  "text": "Ваш товар берут дороже",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 10,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "fame_great",
+  "name": "Слава на всё графство",
+  "text": "Клеймо вашей кузни — как печать качества",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 20,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "breakdown",
+  "name": "Слёг",
+  "text": "Лежит пластом и глядит в потолок",
+  "flag": true,
+  "incapacitates": true,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  },
+  "tags": [
+   "illness"
+  ]
+ },
+ {
+  "id": "overwork_scar",
+  "name": "Надрыв",
+  "text": "Сердце колет — усталость копится быстрее",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": 15,
+  "duration": {
+   "kind": "forever"
+  },
+  "stack": true,
+  "tags": [
+   "scar"
+  ]
+ },
+ {
+  "id": "cold",
+  "name": "Простуда",
+  "text": "Чихает прямо на наковальню",
+  "var": "speed",
+  "op": "pct",
+  "value": -25,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  },
+  "tags": [
+   "illness"
+  ]
+ },
+ {
+  "id": "pie_comfort",
+  "name": "Пирог Марфы",
+  "text": "Сыт и доволен — усталость копится медленнее",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -30,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  },
+  "tags": [
+   "family"
+  ]
+ },
+ {
+  "id": "evening_done",
+  "name": "Вечер уже был",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  },
+  "visible": false
+ },
+ {
+  "id": "marfa_warmth",
+  "name": "Тёплые вечера",
+  "flag": true,
+  "stack": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "wife_sulk",
+  "name": "Марфа дуется",
+  "text": "Дома холодно, хоть печь и топлена",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": 20,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  },
+  "tags": [
+   "family"
+  ]
+ },
+ {
+  "id": "rose_glow",
+  "name": "Марфа сияет",
+  "text": "Кованая роза стоит на окне, в доме лад",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -25,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  },
+  "tags": [
+   "family"
+  ]
+ },
+ {
+  "id": "mil_strain",
+  "name": "Тёща в доме",
+  "text": "Всё не так, всё не эдак",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": 25,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  },
+  "tags": [
+   "family"
+  ]
+ },
+ {
+  "id": "mil_favor",
+  "name": "Тёщина милость",
+  "flag": true,
+  "stack": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "hammer_lost",
+  "name": "Где молоток?!",
+  "text": "Кот опять что-то утащил под печку",
+  "var": "speed",
+  "op": "pct",
+  "value": -15,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  }
+ },
+ {
+  "id": "cat_friend",
+  "name": "Кошачья дружба",
+  "flag": true,
+  "stack": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "cat_guard",
+  "name": "Уголёк сторожит",
+  "text": "Кот спит на сундуке и слышит каждый шорох",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "son_forge",
+  "name": "Васятка у горна",
+  "flag": true,
+  "stack": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "son_letters",
+  "name": "Васятка за азбукой",
+  "flag": true,
+  "stack": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "son_bookkeeper",
+  "name": "Васятка ведёт счёт",
+  "text": "Сын-грамотей считает каждый грош: закупка дешевле",
+  "var": "buy_price",
+  "op": "pct",
+  "value": -10,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "holiday_joy",
+  "name": "Праздник",
+  "text": "Колокола звонят, на душе легко",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -40,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  }
+ },
+ {
+  "id": "song_mood",
+  "name": "Тимохина песня",
+  "text": "Под песню и молот легче",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -20,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  }
+ },
+ {
+  "id": "fair_prices",
+  "name": "Ярмарка в Заречье",
+  "text": "Купцы берут всё подряд и платят щедрее",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 20,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  }
+ },
+ {
+  "id": "lent_hammer",
+  "name": "Молот у Кузьмы",
+  "text": "Сосед взял лучший молот «на часок»",
+  "var": "speed",
+  "op": "pct",
+  "value": -10,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  }
+ },
+ {
+  "id": "sleepless",
+  "name": "Не выспался",
+  "text": "Всю ночь бродил за запрудой",
+  "var": "speed",
+  "op": "pct",
+  "value": -20,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  }
+ },
+ {
+  "id": "smithy_upgraded",
+  "name": "Кузня перестроена",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "count_known",
+  "name": "Знакомство с управляющим",
+  "text": "Пантелей, управляющий графа, вас запомнил",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "count_favor",
+  "name": "Милость графа",
+  "text": "Что берёт граф, то берут и все",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 10,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "bad_name",
+  "name": "Худая молва",
+  "text": "Говорят, кузнец слово не держит",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": -10,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  },
+  "tags": [
+   "reputation"
+  ]
+ },
+ {
+  "id": "in_debt",
+  "name": "Долг лавочнику",
+  "text": "Савва даёт в долг, но под проценты: всё дороже",
+  "var": "world_buy_price",
+  "op": "pct",
+  "value": 15,
+  "duration": {
+   "kind": "while",
+   "condition": {
+    "type": "var",
+    "subject": "world",
+    "var": "money",
+    "op": "<",
+    "value": 0
+   }
+  }
+ },
+ {
+  "id": "thief_watching",
+  "name": "Чужой взгляд",
+  "text": "Кто-то по ночам ходит у плетня и заглядывает в окна",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  }
+ },
+ {
+  "id": "grey_beard",
+  "name": "Седина в бороде",
+  "text": "Годы идут, а кузня всё та же",
+  "var": "speed",
+  "op": "pct",
+  "value": -10,
+  "duration": {
+   "kind": "while",
+   "condition": {
+    "not": {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded"
+    }
+   }
+  }
+ },
+ {
+  "id": "aching_back",
+  "name": "Спину ломит",
+  "text": "Старость не радость: устаёте быстрее",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": 25,
+  "duration": {
+   "kind": "while",
+   "condition": {
+    "not": {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "smithy_upgraded"
+    }
+   }
+  }
+ },
+ {
+  "id": "miller_thanks",
+  "name": "Благодарность мельника",
+  "flag": true,
+  "stack": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "gordey_hosted",
+  "name": "Гордей гостил",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "day_off",
+  "name": "Выходной",
+  "text": "Отдыхает дома",
+  "flag": true,
+  "incapacitates": true,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  },
+  "on_expire": [
+   {
+    "type": "add_modifier",
+    "template": "rested",
+    "target": "self"
+   }
+  ]
+ },
+ {
+  "id": "rested",
+  "name": "Отдохнул",
+  "text": "Работает живее",
+  "var": "speed",
+  "op": "pct",
+  "value": 15,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  }
+ },
+ {
+  "id": "grumpy",
+  "name": "Обида",
+  "text": "Работает спустя рукава",
+  "var": "defect",
+  "op": "add",
+  "value": 0.08,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  },
+  "show_numbers": false
+ },
+ {
+  "id": "blade_lore",
+  "name": "Секрет закалки",
+  "text": "Странник Гордей показал, как калить клинок",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "armor_lore",
+  "name": "Кольчужное плетение",
+  "text": "Сэр Бодун показал, как плетут кольчугу",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "art_lore",
+  "name": "Узорная ковка",
+  "text": "Ради Марфы выучились вить железные завитки",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "has_bellows",
+  "name": "Есть мехи",
+  "flag": true,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": false
+ },
+ {
+  "id": "has_grindstone",
+  "name": "Есть точильный круг",
+  "flag": true,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": false
+ },
+ {
+  "id": "bellows_blast",
+  "name": "Двойные мехи",
+  "text": "Горн ревёт — сталь и клинки куются быстрее",
+  "target": "hero",
+  "var": "speed",
+  "op": "pct",
+  "value": 15,
+  "action_tags": [
+   "craft"
+  ],
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "water_ready",
+  "name": "Бочка с водой",
+  "text": "Если полыхнёт — есть чем залить",
+  "flag": true,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "money_locked",
+  "name": "Сундук с замком",
+  "text": "Деньги под замком",
+  "flag": true,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "anvil_speed",
+  "name": "Наковальня с рогом",
+  "text": "Удобная наковальня — работа спорится",
+  "target": "hero",
+  "var": "speed",
+  "op": "pct",
+  "value": 10,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "anvil_true",
+  "name": "Ровная наковальня",
+  "text": "На ровном и брака меньше",
+  "target": "hero",
+  "var": "defect",
+  "op": "add",
+  "value": -0.03,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "hood_draft",
+  "name": "Вытяжной колпак",
+  "text": "Сажа уходит в небо, а не в трубу",
+  "target": "world",
+  "var": "soot",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -50,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "father_hammer_mod",
+  "name": "Отцовский молот",
+  "text": "Тяжёлый, родной, бьёт куда надо",
+  "var": "defect",
+  "op": "add",
+  "value": -0.02,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "good_hammer_mod",
+  "name": "Добрый молот",
+  "text": "Лёгкий и звонкий",
+  "var": "speed",
+  "op": "pct",
+  "value": 15,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "master_hammer_mod",
+  "name": "Мастерский молот",
+  "text": "Работа идёт вдвое веселее",
+  "var": "speed",
+  "op": "pct",
+  "value": 30,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "apron_mod",
+  "name": "Кожаный фартук",
+  "text": "Искры не жгут — у горна меньше устаёшь",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -15,
+  "action_tags": [
+   "craft"
+  ],
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "tongs_mod",
+  "name": "Длинные клещи",
+  "text": "Заготовка не выскальзывает",
+  "var": "defect",
+  "op": "add",
+  "value": -0.04,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "town_fame",
+  "name": "Вывеска мастерской",
+  "text": "Мастерскую видно с большой дороги",
+  "target": "world",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 5,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "town_draft",
+  "name": "Высокая труба",
+  "text": "Сажи оседает меньше",
+  "target": "world",
+  "var": "soot",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -30,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "water_hammer",
+  "name": "Водяной молот",
+  "text": "Колесо крутится, молот бьёт сам",
+  "target": "hero",
+  "var": "speed",
+  "op": "pct",
+  "value": 20,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "eremka_rush",
+  "name": "Торопыга",
+  "text": "Гвозди — пожалуйста, а тонкая работа выходит кривой",
+  "var": "defect",
+  "op": "add",
+  "value": 0.1,
+  "action_tags": [
+   "fine"
+  ],
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "frol_trader",
+  "name": "Торговая жилка",
+  "text": "Торгуется за каждый грош и себе берёт мало",
+  "var": "commission",
+  "op": "mult",
+  "value": 0.4,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "timokha_steady",
+  "name": "Ровный",
+  "text": "Не спешит, не устаёт, не ошибается",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -30,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "gordey_blade",
+  "name": "Рука оружейника",
+  "text": "Клинки у него не трескаются",
+  "var": "defect",
+  "op": "add",
+  "value": -0.05,
+  "action_tags": [
+   "blade"
+  ],
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "vasya_eager",
+  "name": "Глаза горят",
+  "text": "Хватает всё на лету",
+  "var": "learn_speed",
+  "op": "add",
+  "value": 0.5,
+  "show_numbers": false,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": {
+   "any": [
+    {
+     "type": "self_is_hero"
+    },
+    {
+     "type": "role",
+     "subject": "self",
+     "role": "worker"
+    }
+   ]
+  }
+ },
+ {
+  "id": "heart_deadline",
+  "name": "Сердце на волоске",
+  "text": "Надо успеть к знахарке Агафье, пока сердце не встало",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  },
+  "tags": [
+   "deadline"
+  ]
+ },
+ {
+  "id": "fire_deadline",
+  "name": "Крыша тлеет",
+  "text": "Прочистить трубу, пока не занялось по-настоящему",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  },
+  "tags": [
+   "deadline"
+  ]
+ },
+ {
+  "id": "shame_deadline",
+  "name": "Савва ждёт долг",
+  "text": "Выбраться из долгов, пока Савва не ославил на всю деревню",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  },
+  "tags": [
+   "deadline"
+  ]
+ },
+ {
+  "id": "old_age_deadline",
+  "name": "Последний срок",
+  "text": "Перестроить кузню, пока ещё есть силы",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 4
+  },
+  "tags": [
+   "deadline"
+  ]
+ },
+ {
+  "id": "goodwill_cold",
+  "name": "Чужак в деревне",
+  "text": "Соседи отворачиваются, покупатели тоже",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": -10,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "goodwill_kind",
+  "name": "Соседи помогают",
+  "text": "То молока принесут, то дров подкинут",
+  "var": "household_expense",
+  "op": "add",
+  "value": -1,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "goodwill_soul",
+  "name": "Душа деревни",
+  "text": "Вся деревня за вас — и работается легче",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -10,
+  "duration": {
+   "kind": "source"
+  },
+  "target": "hero"
+ },
+ {
+  "id": "has_vise",
+  "name": "Есть тиски",
+  "flag": true,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": false
+ },
+ {
+  "id": "vise_true",
+  "name": "Слесарные тиски",
+  "text": "Заготовка зажата намертво — меньше брака",
+  "var": "defect",
+  "op": "add",
+  "value": -0.02,
+  "duration": {
+   "kind": "source"
+  },
+  "target": "hero"
+ },
+ {
+  "id": "quench_true",
+  "name": "Закалочная ванна",
+  "text": "Тонкая работа не ведёт при закалке",
+  "var": "defect",
+  "op": "add",
+  "value": -0.04,
+  "duration": {
+   "kind": "source"
+  },
+  "target": "hero",
+  "action_tags": [
+   "fine"
+  ]
+ },
+ {
+  "id": "twin_anvil_speed",
+  "name": "Двурогая наковальня",
+  "text": "Большая наковальня — работа так и спорится",
+  "var": "speed",
+  "op": "pct",
+  "value": 20,
+  "duration": {
+   "kind": "source"
+  },
+  "target": "hero"
+ },
+ {
+  "id": "twin_anvil_true",
+  "name": "Ровная плита",
+  "text": "На широкой плите брака почти нет",
+  "var": "defect",
+  "op": "add",
+  "value": -0.04,
+  "duration": {
+   "kind": "source"
+  },
+  "target": "hero"
+ },
+ {
+  "id": "foot_grind_true",
+  "name": "Ножное точило",
+  "text": "Лезвия выходят как бритва",
+  "var": "defect",
+  "op": "add",
+  "value": -0.03,
+  "duration": {
+   "kind": "source"
+  },
+  "target": "hero",
+  "action_tags": [
+   "fine"
+  ]
+ },
+ {
+  "id": "brick_draft",
+  "name": "Кирпичная труба",
+  "text": "Высокая кирпичная труба почти не копится сажей",
+  "var": "soot",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -75,
+  "duration": {
+   "kind": "source"
+  },
+  "target": "world"
+ },
+ {
+  "id": "has_big_hearth",
+  "name": "Есть большой горн",
+  "flag": true,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": false
+ },
+ {
+  "id": "hearth_soot",
+  "name": "Большой горн",
+  "text": "Большой горн жрёт уголь и чадит",
+  "var": "soot",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": 25,
+  "duration": {
+   "kind": "source"
+  },
+  "target": "world"
+ },
+ {
+  "id": "has_spring_press",
+  "name": "Есть рессорный станок",
+  "flag": true,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": false
+ },
+ {
+  "id": "has_water_wheel",
+  "name": "Есть водяное колесо",
+  "flag": true,
+  "duration": {
+   "kind": "source"
+  },
+  "visible": false
+ },
+ {
+  "id": "apron_master_mod",
+  "name": "Фартук с нагрудником",
+  "text": "Жар не достаёт — у горна устаёшь куда меньше",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -25,
+  "duration": {
+   "kind": "source"
+  },
+  "action_tags": [
+   "craft"
+  ]
+ },
+ {
+  "id": "tongs_master_mod",
+  "name": "Клещи «волчья пасть»",
+  "text": "Держат так, что заготовка и не шелохнётся",
+  "var": "defect",
+  "op": "add",
+  "value": -0.06,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "tikhon_hammer_mod",
+  "name": "Тихонов молот",
+  "text": "Чужой молот, а бьёт как свой",
+  "var": "speed",
+  "op": "pct",
+  "value": 25,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "tikhon_hammer_true",
+  "name": "Тихонова закалка",
+  "text": "Молот с хитрым бойком — меньше брака",
+  "var": "defect",
+  "op": "add",
+  "value": -0.03,
+  "duration": {
+   "kind": "source"
+  }
+ },
+ {
+  "id": "yard_sign",
+  "name": "Кузнечный двор",
+  "text": "К большому двору едут из самого города",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 10,
+  "duration": {
+   "kind": "source"
+  },
+  "target": "world"
+ },
+ {
+  "id": "yard_draft",
+  "name": "Две трубы",
+  "text": "Сажа делится на две трубы",
+  "var": "soot",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -40,
+  "duration": {
+   "kind": "source"
+  },
+  "target": "world"
+ },
+ {
+  "id": "yard_built",
+  "name": "Кузнечный двор построен",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "river_built",
+  "name": "Мастерская у запруды построена",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "bog_known",
+  "name": "Болотная руда",
+  "text": "Дед Евсей показал, где копать болотную руду",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "kuzma_wait1",
+  "name": "Кузьма ждёт ответа",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  },
+  "visible": false,
+  "on_expire": [
+   {
+    "type": "run_event",
+    "event": "kuzma_test_ev"
+   }
+  ]
+ },
+ {
+  "id": "kuzma_wait2",
+  "name": "Свадьба на носу",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  },
+  "visible": false,
+  "on_expire": [
+   {
+    "type": "run_event",
+    "event": "kuzma_wedding_ev"
+   }
+  ]
+ },
+ {
+  "id": "kuzma_lie",
+  "name": "Подкова с чужим клеймом",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "kuzma_taught",
+  "name": "Кузьма выучился",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "kuzma_truth",
+  "name": "Сказали Пелагее правду",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "kuzma_done",
+  "name": "Свадьба Кузьмы сыграна",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "wedding_joy",
+  "name": "Гуляли на свадьбе",
+  "text": "На душе так легко, что молот сам летает",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -50,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  }
+ },
+ {
+  "id": "wedding_hangover",
+  "name": "Голова после свадьбы",
+  "text": "Плясали до петухов — теперь всё из рук валится",
+  "var": "speed",
+  "op": "pct",
+  "value": -25,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  }
+ },
+ {
+  "id": "pelageya_milk",
+  "name": "Пелагеино молоко",
+  "text": "Пелагея каждое утро приносит кринку молока",
+  "var": "household_expense",
+  "op": "add",
+  "value": -1,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "rival_forge",
+  "name": "Кузня Тихона",
+  "text": "В Заречье сбивают цены — ваши покупатели уходят к Тихону",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": -20,
+  "duration": {
+   "kind": "while",
+   "condition": {
+    "not": {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "rival_done"
+    }
+   }
+  },
+  "tags": [
+   "rival"
+  ]
+ },
+ {
+  "id": "rival_done",
+  "name": "Спор с Тихоном решён",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "rival_wait",
+  "name": "Ждём, пока Тихон уедет",
+  "text": "Тихон сбивает цены; говорят, к зиме подастся в город",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 10
+  },
+  "on_expire": [
+   {
+    "type": "run_event",
+    "event": "tikhon_leaves"
+   }
+  ]
+ },
+ {
+  "id": "rival_gloat",
+  "name": "Тихон хвастается",
+  "text": "Тихон всем показывает венок победителя",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 6
+  },
+  "on_expire": [
+   {
+    "type": "run_event",
+    "event": "tikhon_leaves"
+   }
+  ]
+ },
+ {
+  "id": "rival_beaten",
+  "name": "Победитель состязания",
+  "text": "Все хотят товар от мастера, побившего Тихона",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 15,
+  "duration": {
+   "kind": "days",
+   "n": 7
+  }
+ },
+ {
+  "id": "rival_split",
+  "name": "Покупатели поделены",
+  "text": "Заречье теперь Тихоново",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": -5,
+  "duration": {
+   "kind": "forever"
+  },
+  "may_be_permanent": true
+ },
+ {
+  "id": "bridge_out",
+  "name": "Мост снесло",
+  "text": "Обозы едут в обход — на рынке всё втридорога",
+  "var": "world_buy_price",
+  "op": "pct",
+  "value": 30,
+  "duration": {
+   "kind": "while",
+   "condition": {
+    "not": {
+     "type": "has_modifier",
+     "subject": "world",
+     "template": "bridge_fixed"
+    }
+   }
+  }
+ },
+ {
+  "id": "bridge_fixed",
+  "name": "Мост стоит",
+  "flag": true,
+  "duration": {
+   "kind": "forever"
+  },
+  "visible": false
+ },
+ {
+  "id": "bridge_slow",
+  "name": "Мост чинят без вас",
+  "text": "Графские плотники обещали поставить мост через неделю",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 6
+  },
+  "on_expire": [
+   {
+    "type": "run_event",
+    "event": "bridge_by_count"
+   }
+  ]
+ },
+ {
+  "id": "bridge_name",
+  "name": "Демьянов мост",
+  "text": "Мост назвали вашим именем — купцы едут прямо к вам",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 5,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "tax_debt",
+  "name": "Недоимка",
+  "text": "Мытарь ждёт подать три дня, потом возьмёт с лихвой",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  },
+  "on_expire": [
+   {
+    "type": "run_event",
+    "event": "tax_penalty"
+   }
+  ]
+ },
+ {
+  "id": "marfa_sick_strain",
+  "name": "Марфа хворает",
+  "text": "Дом на вас, Марфа в жару — усталость копится куда быстрее",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": 35,
+  "duration": {
+   "kind": "days",
+   "n": 5
+  },
+  "tags": [
+   "family"
+  ]
+ },
+ {
+  "id": "sick_house",
+  "name": "Лекарства и знахарки",
+  "text": "На травы и отвары уходит прорва денег",
+  "var": "household_expense",
+  "op": "add",
+  "value": 2,
+  "duration": {
+   "kind": "days",
+   "n": 5
+  }
+ },
+ {
+  "id": "marfa_grateful",
+  "name": "Марфа на ногах",
+  "text": "Марфа поправилась и хлопочет вокруг вас",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -20,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  },
+  "tags": [
+   "family"
+  ]
+ },
+ {
+  "id": "wage_raise",
+  "name": "Прибавка",
+  "text": "Хозяин прибавил жалованья",
+  "var": "wage",
+  "op": "add",
+  "value": 1,
+  "duration": {
+   "kind": "forever"
+  },
+  "stack": true,
+  "may_be_permanent": true
+ },
+ {
+  "id": "workers_glad",
+  "name": "Довольны хозяином",
+  "text": "Работают с огоньком",
+  "var": "speed",
+  "op": "pct",
+  "value": 15,
+  "duration": {
+   "kind": "days",
+   "n": 5
+  }
+ },
+ {
+  "id": "workers_sulk",
+  "name": "Дуются на хозяина",
+  "text": "Ходят вразвалочку и вздыхают",
+  "var": "speed",
+  "op": "pct",
+  "value": -25,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  }
+ },
+ {
+  "id": "bruised",
+  "name": "Фингал",
+  "text": "Глаз заплыл — молотом мажет",
+  "var": "speed",
+  "op": "pct",
+  "value": -30,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  }
+ },
+ {
+  "id": "frost_fuel",
+  "name": "Лютый мороз",
+  "text": "Дров уходит втрое",
+  "var": "household_expense",
+  "op": "add",
+  "value": 3,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  }
+ },
+ {
+  "id": "frost_chill",
+  "name": "Пальцы стынут",
+  "text": "На морозе и работа тяжелее",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": 20,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  }
+ },
+ {
+  "id": "great_fair_prices",
+  "name": "Покровская ярмарка",
+  "text": "Съехалось полграфства — товар рвут из рук",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 40,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  }
+ },
+ {
+  "id": "iron_dear",
+  "name": "Железо втридорога",
+  "text": "Обоз с крицей застрял в грязи",
+  "var": "world_buy_price",
+  "op": "pct",
+  "value": 40,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  }
+ },
+ {
+  "id": "coal_dear",
+  "name": "Угольщики запили",
+  "text": "Угля мало, цены кусаются",
+  "var": "world_buy_price",
+  "op": "pct",
+  "value": 20,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  }
+ },
+ {
+  "id": "rain_gloom",
+  "name": "Затяжные дожди",
+  "text": "Сыро, темно, тоскливо",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": 15,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  }
+ },
+ {
+  "id": "mil_household",
+  "name": "Тёща живёт с вами",
+  "text": "Лишний рот, да ещё какой",
+  "var": "household_expense",
+  "op": "add",
+  "value": 1,
+  "duration": {
+   "kind": "forever"
+  },
+  "may_be_permanent": true
+ },
+ {
+  "id": "mil_cooks",
+  "name": "Тёщины щи",
+  "text": "Тёща ворчит, зато кормит на убой",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -10,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "hungover",
+  "name": "Похмелье",
+  "text": "Голова гудит громче наковальни",
+  "var": "speed",
+  "op": "pct",
+  "value": -20,
+  "duration": {
+   "kind": "days",
+   "n": 2
+  }
+ },
+ {
+  "id": "tavern_done",
+  "name": "Уже сидели в кабаке",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  },
+  "visible": false
+ },
+ {
+  "id": "church_peace",
+  "name": "После обедни",
+  "text": "На душе тихо и светло",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -15,
+  "duration": {
+   "kind": "days",
+   "n": 1
+  }
+ },
+ {
+  "id": "fair_trip_done",
+  "name": "Недавно были на ярмарке",
+  "flag": true,
+  "duration": {
+   "kind": "days",
+   "n": 7
+  },
+  "visible": false
+ },
+ {
+  "id": "marfa_happy",
+  "name": "Марфа в новом платке",
+  "text": "Марфа светится, и в доме лад",
+  "var": "stress",
+  "applies_to": "change",
+  "direction": "gain",
+  "op": "pct",
+  "value": -25,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  },
+  "tags": [
+   "family"
+  ]
+ },
+ {
+  "id": "firewood",
+  "name": "Дрова наколоты",
+  "text": "Своих дров полная поленница",
+  "var": "household_expense",
+  "op": "add",
+  "value": -2,
+  "duration": {
+   "kind": "days",
+   "n": 3
+  }
+ },
+ {
+  "id": "count_patron",
+  "name": "Покровительство графа",
+  "text": "Кузнец, которому граф доверил казну",
+  "var": "world_sell_price",
+  "op": "pct",
+  "value": 10,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "dunya_fine",
+  "name": "Тонкие пальцы",
+  "text": "Тонкую работу делает без единой помарки",
+  "var": "defect",
+  "op": "add",
+  "value": -0.04,
+  "duration": {
+   "kind": "forever"
+  },
+  "action_tags": [
+   "fine"
+  ]
+ },
+ {
+  "id": "stepan_strong",
+  "name": "Силач",
+  "text": "Тяжёлую работу делает играючи",
+  "var": "speed",
+  "op": "pct",
+  "value": 35,
+  "duration": {
+   "kind": "forever"
+  },
+  "action_tags": [
+   "heavy"
+  ]
+ },
+ {
+  "id": "kuzma_clumsy",
+  "name": "Руки-крюки",
+  "text": "Старается, но до кузнеца ему далеко",
+  "var": "defect",
+  "op": "add",
+  "value": 0.06,
+  "duration": {
+   "kind": "forever"
+  }
+ },
+ {
+  "id": "tikhon_pride",
+  "name": "Гордый мастер",
+  "text": "Работает быстро — себе доказывает",
+  "var": "speed",
+  "op": "pct",
+  "value": 15,
+  "duration": {
+   "kind": "forever"
+  }
+ }
+]
